@@ -603,7 +603,7 @@ def _decision_color(decision: str) -> tuple[int, int, int]:
 
 def draw_overlay(
     frame: np.ndarray,
-    model_predictions: Sequence[ModelPrediction],   # exactly 5 model rows
+    model_predictions: Sequence[ModelPrediction],
     ensemble: ModelPrediction | None,
     frame_index: int,
     fps: float,
@@ -618,102 +618,110 @@ def draw_overlay(
     fail_threshold: float,
 ) -> np.ndarray:
     annotated = frame.copy()
-    height, width = annotated.shape[:2]
+    h, w = annotated.shape[:2]
 
-    num_rows    = len(model_predictions) + (1 if ensemble else 0)
-    panel_width  = min(740, width - 20)
-    panel_height = min(180 + 82 * num_rows, height - 20)
+    # ── Layout constants ──────────────────────────────────────────────────
+    COLS      = 3
+    ROWS      = 2
+    gap       = 6
+    header_h  = 28
+    panel_w   = (w - (COLS + 1) * gap) // COLS
+    panel_h   = min(max(85, h // 5), 135)
+    title_h   = max(22, panel_h // 5)
+    grid_h    = ROWS * panel_h + (ROWS + 1) * gap
+    grid_y0   = h - grid_h - gap
 
-    overlay = annotated.copy()
-    cv2.rectangle(overlay, (10, 10), (10 + panel_width, 10 + panel_height), (15, 15, 15), -1)
-    cv2.addWeighted(overlay, 0.72, annotated, 0.28, 0, annotated)
-
-    y = 36
-    cv2.putText(annotated, "DEMO LIVE TEST  [TOP-6]", (24, y),
-                cv2.FONT_HERSHEY_SIMPLEX, 0.9, (240, 240, 240), 2, cv2.LINE_AA)
-    y += 28
-
-    status  = "PAUSED" if paused else "RUNNING"
-    gt_text = "awaiting 1/2" if pending_ground_truth else (last_ground_truth or "-")
-    top_line = (
-        f"frame={frame_index} fps={fps:.1f} status={status}  "
-        f"ensemble P/F/U={ensemble_counts['PASS']}/{ensemble_counts['FAIL']}/{ensemble_counts['UNCERTAIN']}"
-    )
-    cv2.putText(annotated, top_line, (24, y),
-                cv2.FONT_HERSHEY_SIMPLEX, 0.55, (220, 220, 220), 1, cv2.LINE_AA)
-    y += 22
-    cv2.putText(
-        annotated,
-        f"source={source_label}  size={frame_size_text}  gt={gt_text}  "
-        f"thr PASS≤{pass_threshold:.2f} FAIL≥{fail_threshold:.2f}",
-        (24, y), cv2.FONT_HERSHEY_SIMPLEX, 0.48, (200, 200, 200), 1, cv2.LINE_AA,
-    )
-    y += 26
-
-    for line in startup_lines[:4]:
-        cv2.putText(annotated, line, (24, y),
-                    cv2.FONT_HERSHEY_SIMPLEX, 0.46, (180, 210, 255), 1, cv2.LINE_AA)
-        y += 16
-    if startup_lines:
-        y += 6
-
-    # ── Model rows ────────────────────────────────────────────────────────
-    for pred in model_predictions:
-        color = _decision_color(pred.decision)
-
-        cv2.putText(annotated, f"{pred.model_name} [{pred.model_type}]",
-                    (24, y), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 1, cv2.LINE_AA)
-        y += 20
-        cv2.putText(
-            annotated,
-            f"decision={pred.decision}  class={pred.class_name}  "
-            f"defect_prob={pred.defect_prob:.3f}  lat={pred.latency_ms:.0f}ms",
-            (24, y), cv2.FONT_HERSHEY_SIMPLEX, 0.48, color, 1, cv2.LINE_AA,
-        )
-        y += 18
-
-        # single defect probability bar
-        draw_probability_bar(annotated, 24, y - 8, 200, 10, pred.defect_prob, color)
-        cv2.putText(annotated, f"defect={pred.defect_prob:.3f}",
-                    (232, y), cv2.FONT_HERSHEY_SIMPLEX, 0.43, (210, 210, 210), 1, cv2.LINE_AA)
-        y += 22
-
-    # ── Ensemble row ──────────────────────────────────────────────────────
+    all_panels: list[ModelPrediction] = list(model_predictions)
     if ensemble is not None:
-        # Separator
-        cv2.line(annotated, (20, y), (20 + panel_width - 20, y), (120, 120, 120), 1)
-        y += 10
+        all_panels.append(ensemble)
 
-        e_color = _decision_color(ensemble.decision)
+    # ── Header strip ──────────────────────────────────────────────────────
+    hdr_bg = annotated.copy()
+    cv2.rectangle(hdr_bg, (0, 0), (w, header_h), (10, 10, 10), -1)
+    cv2.addWeighted(hdr_bg, 0.82, annotated, 0.18, 0, annotated)
 
-        # Highlight strip behind ensemble label
-        strip_y1 = y - 14
-        strip_y2 = y + 54
-        strip_overlay = annotated.copy()
-        cv2.rectangle(strip_overlay, (12, strip_y1), (12 + panel_width - 4, strip_y2), (30, 30, 30), -1)
-        cv2.addWeighted(strip_overlay, 0.6, annotated, 0.4, 0, annotated)
-        cv2.rectangle(annotated, (12, strip_y1), (12 + panel_width - 4, strip_y2), e_color, 1)
-
-        cv2.putText(annotated, f"▶ {ensemble.model_name}",
-                    (24, y), cv2.FONT_HERSHEY_SIMPLEX, 0.72, (255, 255, 0), 2, cv2.LINE_AA)
-        y += 24
-        cv2.putText(
-            annotated,
-            f"VERDICT: {ensemble.decision}   mean_defect={ensemble.defect_prob:.3f}",
-            (24, y), cv2.FONT_HERSHEY_SIMPLEX, 0.65, e_color, 2, cv2.LINE_AA,
-        )
-        y += 22
-        draw_probability_bar(annotated, 24, y - 8, 280, 12, ensemble.defect_prob, e_color)
-        cv2.putText(annotated, f"PASS≤{pass_threshold:.2f}  FAIL≥{fail_threshold:.2f}",
-                    (312, y), cv2.FONT_HERSHEY_SIMPLEX, 0.43, (200, 200, 200), 1, cv2.LINE_AA)
-        y += 16
-
-    help_text = "SPACE=capture  g+1/2=GT PASS/FAIL  p=pause  q=quit"
-    cv2.putText(
-        annotated, help_text,
-        (24, min(height - 18, 10 + panel_height - 8)),
-        cv2.FONT_HERSHEY_SIMPLEX, 0.46, (240, 240, 240), 1, cv2.LINE_AA,
+    status  = "PAUSED" if paused else "LIVE"
+    gt_text = "awaiting 1/2" if pending_ground_truth else (last_ground_truth or "-")
+    hdr = (
+        f"TOP-6  frame={frame_index}  fps={fps:.1f}  {status}  "
+        f"ensemble P/F/U={ensemble_counts['PASS']}/{ensemble_counts['FAIL']}/{ensemble_counts['UNCERTAIN']}  "
+        f"thr PASS\u2264{pass_threshold:.2f} FAIL\u2265{fail_threshold:.2f}  "
+        f"gt={gt_text}  {frame_size_text}    "
+        "SPACE=cap  p=pause  q=quit"
     )
+    cv2.putText(annotated, hdr, (8, header_h - 7),
+                cv2.FONT_HERSHEY_SIMPLEX, 0.40, (220, 220, 220), 1, cv2.LINE_AA)
+
+    # ── Grid background ───────────────────────────────────────────────────
+    grid_bg = annotated.copy()
+    cv2.rectangle(grid_bg, (0, grid_y0 - gap), (w, h), (12, 12, 12), -1)
+    cv2.addWeighted(grid_bg, 0.80, annotated, 0.20, 0, annotated)
+
+    # ── Individual panels (3 × 2 grid) ───────────────────────────────────
+    for i, pred in enumerate(all_panels):
+        row = i // COLS
+        col = i % COLS
+        x0 = gap + col * (panel_w + gap)
+        y0 = grid_y0 + gap + row * (panel_h + gap)
+        x1 = x0 + panel_w
+        y1 = y0 + panel_h
+
+        color        = _decision_color(pred.decision)
+        is_ensemble  = pred.model_type == "ensemble"
+        border_thick = 3 if is_ensemble else 2
+
+        # Title bar background
+        cv2.rectangle(annotated, (x0, y0), (x1, y0 + title_h), (38, 38, 38), -1)
+
+        # Model name in title bar
+        name_label = f"\u25b6 {pred.model_name}" if is_ensemble else pred.model_name
+        cv2.putText(
+            annotated, name_label,
+            (x0 + 5, y0 + title_h - 5),
+            cv2.FONT_HERSHEY_SIMPLEX,
+            0.48 if is_ensemble else 0.42,
+            (255, 255, 0) if is_ensemble else (240, 240, 240),
+            1, cv2.LINE_AA,
+        )
+
+        # Colored perimeter border drawn over title bar so it frames everything
+        cv2.rectangle(annotated, (x0, y0), (x1, y1), color, border_thick)
+        if is_ensemble:
+            # Extra inner rect to make ensemble border more prominent
+            cv2.rectangle(annotated, (x0 + 3, y0 + 3), (x1 - 3, y1 - 3), color, 1)
+
+        # Content starts below title bar
+        cy = y0 + title_h + 14
+
+        # Decision text
+        if is_ensemble:
+            cv2.putText(annotated, f"VERDICT: {pred.decision}",
+                        (x0 + 5, cy), cv2.FONT_HERSHEY_SIMPLEX, 0.60, color, 2, cv2.LINE_AA)
+        else:
+            cv2.putText(annotated, pred.decision,
+                        (x0 + 5, cy), cv2.FONT_HERSHEY_SIMPLEX, 0.58, color, 1, cv2.LINE_AA)
+        cy += 17
+
+        # defect_prob value
+        prob_label = f"mean_defect={pred.defect_prob:.3f}" if is_ensemble else f"defect={pred.defect_prob:.3f}"
+        cv2.putText(annotated, prob_label,
+                    (x0 + 5, cy), cv2.FONT_HERSHEY_SIMPLEX, 0.40, (210, 210, 210), 1, cv2.LINE_AA)
+        cy += 13
+
+        # Probability bar filling most of panel width
+        bar_w = panel_w - 12
+        draw_probability_bar(annotated, x0 + 5, cy - 7, bar_w, 9, pred.defect_prob, color)
+        cy += 11
+
+        # Model type + latency (skip for ensemble)
+        if not is_ensemble:
+            cv2.putText(
+                annotated,
+                f"[{pred.model_type}]  {pred.latency_ms:.0f}ms",
+                (x0 + 5, cy),
+                cv2.FONT_HERSHEY_SIMPLEX, 0.36, (140, 140, 140), 1, cv2.LINE_AA,
+            )
+
     return annotated
 
 

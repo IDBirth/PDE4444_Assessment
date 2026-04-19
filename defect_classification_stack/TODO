@@ -7,20 +7,6 @@ Organise all top 10 models and thier run into a single folder for documentation 
 
 inside defect_classification_stackmodel/ a model_optimized folder sould be created and .engine for each model in the top 10 list should be added to optimized for this gpu should be made
 
-Dataset quality
-Reduce dependence on the 360-degree deterministic rotation sweep as the primary augmentation strategy. It creates volume, but it is too synthetic and too correlated to substitute for more real PASS samples.
-
-Add a pre-training dataset summary artifact that saves class counts, source-group counts, and duplicate-removal statistics into one report. This should be generated automatically after cleanup/balancing/splitting.
-
-Add a check that prevents training on an obviously imbalanced `data/processed` split unless the imbalance is intentional and acknowledged. This would have caught the later rerun condition earlier.
-
-Persist a small held-out demo set manifest for the five genuinely unseen live-demo samples so they are not accidentally reused during training or augmentation.
-
-Metrics and reporting
 Fix the positive-class ambiguity across the experiment stack. Several scripts infer class order alphabetically and then compute binary precision/recall/F1, which can silently make `non_defect` the positive class instead of `defect`.
-
-Save a full YOLO test evaluation bundle: confusion matrix, classification report, per-image predictions CSV, and explicit PASS/FAIL mapping. Do not rely only on top-1/top-5 for the final comparison.
-
-Separate "headline accuracy" from "engineering safety metric" in the final tables. For the assessment, defect recall / false-PASS rate needs to be visible, not just aggregate accuracy or top-1.
 
 Create one final report table with consistent metric semantics across all model families. Do not mirror YOLO top-1 into an F1 column in the aggregate ranking.

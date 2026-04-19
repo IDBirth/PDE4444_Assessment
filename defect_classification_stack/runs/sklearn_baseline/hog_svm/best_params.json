@@ -1,0 +1,5 @@
+{
+  "clf__kernel": "rbf",
+  "clf__gamma": "scale",
+  "clf__C": 25.0
+}

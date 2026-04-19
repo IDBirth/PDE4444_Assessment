@@ -1,0 +1,4 @@
+Optimiser: nelder_mead
+Description: zero-order  | Nelder-Mead (derivative-free)
+MLP params: 1217
+PCA components: 20

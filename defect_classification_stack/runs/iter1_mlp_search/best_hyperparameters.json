@@ -1,0 +1,6 @@
+{
+  "hidden_sizes": "(256,)",
+  "activation": "elu",
+  "dropout": "0.4",
+  "lr": "0.001"
+}

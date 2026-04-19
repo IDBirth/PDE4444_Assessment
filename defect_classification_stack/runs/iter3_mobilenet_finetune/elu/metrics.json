@@ -1,0 +1,7 @@
+{
+  "model_name": "mobilenet_elu",
+  "accuracy": 0.9492753623188406,
+  "precision": 0.9078947368421053,
+  "recall": 1.0,
+  "f1": 0.9517241379310345
+}

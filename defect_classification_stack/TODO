@@ -1,0 +1,18 @@
+Multi-model side-by-side mode — load YOLO26n and the fine-tuned MobileNetV2 ELU at the same time and display both decisions on the overlay. Demonstrates your best two models simultaneously and lets you answer "why YOLO over MobileNet?" live.
+
+Session evidence log — auto-write a demo_session_<timestamp>.json + demo_session_<timestamp>.md containing every decision (timestamp, model, class, confidence, latency, capture path). At end-of-session, print a summary table (total frames, PASS count, FAIL count, mean latency, mean confidence). This gives you the "saved examples of live PASS/FAIL decisions" the rubric wants.
+
+Hotkeys for the demo flow:
+
+SPACE — capture & log a frame manually (good for the moment when you hold up an unseen cup)
+g then 1/2 — assert ground truth (PASS/FAIL) → running accuracy displayed
+p — pause inference
+q — quit + write summary
+Medium-impact
+Better overlay — probability bar for both classes, FPS counter, running PASS/FAIL counts, model name. Currently shows only top-1 confidence.
+
+Confidence threshold flag — --confidence-threshold 0.6 so low-confidence frames show "UNCERTAIN" rather than forcing a binary call. Useful talking point on model limitations.
+
+Auto-detect model type — handle both *.pt YOLO weights and PyTorch state_dicts (your MobileNetV2 checkpoints) without separate scripts.
+
+Graceful missing-model handling — current script crashes hard. Print available models in runs/ and exit cleanly.

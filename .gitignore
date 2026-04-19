@@ -1,0 +1,56 @@
+.DS_Store
+1st_validation_training/
+.claude/
+.venv
+.Main_Docs/
+zeroq_cup_classification_scaffold/
+ZeroQ_Dataset/
+.codex
+
+__MACOSX/
+
+processed.zip
+raw.zip
+
+Main_Docs/
+# Local runtimes and caches. These can contain binaries over GitHub's
+# 100 MB per-file limit and should never be committed.
+.venv/
+.pytest_cache/
+
+**/__pycache__/
+*.py[cod]
+
+# Local report build artefacts
+*.rtfd/
+Main_Docs/.tmp_report*
+Main_Docs/__pycache__/
+
+zeroq_cup_classification_scaffold/data/**
+!zeroq_cup_classification_scaffold/data/
+!zeroq_cup_classification_scaffold/data/raw/
+!zeroq_cup_classification_scaffold/data/raw/defective/
+!zeroq_cup_classification_scaffold/data/raw/non_defective/
+!zeroq_cup_classification_scaffold/data/interim/
+!zeroq_cup_classification_scaffold/data/interim/augmented/
+!zeroq_cup_classification_scaffold/data/interim/augmented/defective/
+!zeroq_cup_classification_scaffold/data/interim/augmented/non_defective/
+!zeroq_cup_classification_scaffold/data/interim/cleaned/
+!zeroq_cup_classification_scaffold/data/interim/cleaned/defective/
+!zeroq_cup_classification_scaffold/data/interim/cleaned/non_defective/
+!zeroq_cup_classification_scaffold/data/processed/
+!zeroq_cup_classification_scaffold/data/processed/train/
+!zeroq_cup_classification_scaffold/data/processed/train/defective/
+!zeroq_cup_classification_scaffold/data/processed/train/non_defective/
+!zeroq_cup_classification_scaffold/data/processed/val/
+!zeroq_cup_classification_scaffold/data/processed/val/defective/
+!zeroq_cup_classification_scaffold/data/processed/val/non_defective/
+!zeroq_cup_classification_scaffold/data/processed/test/
+!zeroq_cup_classification_scaffold/data/processed/test/defective/
+!zeroq_cup_classification_scaffold/data/processed/test/non_defective/
+!zeroq_cup_classification_scaffold/data/**/.gitkeep
+
+run_capture/
+
+# Local Claude config
+.claude/settings.local.json

@@ -1,0 +1,11 @@
+{
+  "model_name": "/Users/bilalbaslar/Documents/MDX/PDE4444/Assiment/zeroq_cup_classification_scaffold/models/yolo26n-cls.pt",
+  "classes": [
+    "defect",
+    "non_defect"
+  ],
+  "top1": 0.9855072498321533,
+  "top5": 1.0,
+  "fitness": 0.9927536249160767,
+  "save_dir": "/Users/bilalbaslar/Documents/MDX/PDE4444/runs/classify/runs/iter1_yolo/train"
+}

@@ -1,0 +1,4 @@
+Optimiser: adam
+Description: first-order | Adam (adaptive moments)
+MLP params: 1217
+PCA components: 20

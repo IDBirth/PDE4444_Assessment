@@ -1,0 +1,7 @@
+{
+  "model_name": "mobilenet_leaky_relu",
+  "accuracy": 0.9420289855072463,
+  "precision": 0.8961038961038961,
+  "recall": 1.0,
+  "f1": 0.9452054794520548
+}

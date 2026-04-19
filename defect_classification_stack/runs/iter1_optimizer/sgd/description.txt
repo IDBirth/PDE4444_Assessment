@@ -1,0 +1,4 @@
+Optimiser: sgd
+Description: first-order | SGD (mini-batch gradient descent)
+MLP params: 1217
+PCA components: 20

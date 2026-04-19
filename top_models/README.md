@@ -34,14 +34,17 @@ top_models/
 ├── README.md                   ← this file
 ├── manifest.csv                ← machine-readable scoreboard
 ├── eval_all.py                 ← re-evaluate all checkpoints on test set
-├── model_optimized/            ← TensorRT .engine files (see below)
-│   └── export_engines.py       ← generates .engine files (requires TensorRT)
 └── 01_yolo26n_320/
-│   └── model.pt  →  ../../runs3/iter1_yolo_320/train/weights/best.pt
+│   └── model.pt                ← copy of runs3/iter1_yolo_320/train/weights/best.pt
 ├── 02_yolo26s_320/
-│   └── model.pt  →  ../../runs3/iter2_yolo_s/train/weights/best.pt
+│   └── model.pt                ← copy of runs3/iter2_yolo_s/train/weights/best.pt
 ... (10 subdirs total)
 ```
+
+All checkpoints are **PyTorch .pt files** — no TensorRT engine / ONNX /
+TorchScript export is produced by the project. Load directly via
+`torch.load(...)` or `YOLO(path)` / `ultralytics.YOLO(path)` for YOLO
+classify checkpoints.
 
 ## Re-evaluating on the test set
 
@@ -51,18 +54,6 @@ cd /home/ubu/Desktop/Assessment
     --data-dir defect_classification_stack/runs/data_balanced \
     --output-dir top_models/eval_results
 ```
-
-## TensorRT .engine files
-
-Optimised engines for RTX 4090 (CUDA 13, TensorRT 10) live in `model_optimized/`.
-Generate them:
-
-```bash
-.venv/bin/python top_models/model_optimized/export_engines.py
-```
-
-TensorRT must be installed: `pip install tensorrt` (or system TRT from CUDA toolkit).
-ONNX export works without TRT and serves as an intermediate format.
 
 ## Data
 

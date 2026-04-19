@@ -34,14 +34,13 @@ data/  -> ../zeroq_cup_classification_scaffold/data
 
 The canonical entrypoint is the orchestration script at the repo root. It
 runs every step — raw data → balanced splits → all model families →
-aggregated report → optimised engines — and is resumable (each step is
-skipped if its output already exists; use `--force` to re-run).
+aggregated report — and is resumable (each step is skipped if its output
+already exists; use `--force` to re-run). All models are saved as PyTorch
+`.pt` checkpoints.
 
 ```bash
 cd ..                                   # back to repo root
-.venv/bin/python run_pipeline.py \
-    --runs-dir runs_new \
-    --engine-format onnx                 # or --engine-format all --engine-half
+.venv/bin/python run_pipeline.py --runs-dir runs_new
 ```
 
 - Outputs are written under `--runs-dir` (default `runs_new/`).

@@ -1,0 +1,5424 @@
+{
+  "session_name": "demo_top6_20260419_213833",
+  "started_at": "2026-04-19T21:38:33.175644",
+  "ended_at": "2026-04-19T21:39:29.459590",
+  "source": "https://api.baslarlabs.ae/video_feed",
+  "last_frame_index": 49,
+  "thresholds": {
+    "pass": 0.4,
+    "fail": 0.7
+  },
+  "models": [
+    {
+      "name": "YOLO26n-320",
+      "path": "/home/ubu/Desktop/Assessment/runs3/iter1_yolo_320/train/weights/best.pt",
+      "type": "yolo",
+      "class_names": [
+        "defective",
+        "non_defective"
+      ]
+    },
+    {
+      "name": "YOLO26s-320",
+      "path": "/home/ubu/Desktop/Assessment/runs3/iter2_yolo_s/train/weights/best.pt",
+      "type": "yolo",
+      "class_names": [
+        "defective",
+        "non_defective"
+      ]
+    },
+    {
+      "name": "MNet-SELU(r3)",
+      "path": "/home/ubu/Desktop/Assessment/runs3/iter3_mobilenet_finetune/selu/model.pt",
+      "type": "mobilenet",
+      "class_names": [
+        "defect",
+        "non_defect"
+      ]
+    },
+    {
+      "name": "MLP-boost(r3)",
+      "path": "/home/ubu/Desktop/Assessment/runs3/iter1_mlp_boost/best_model.pt",
+      "type": "mlp",
+      "class_names": [
+        "defect",
+        "non_defect"
+      ]
+    },
+    {
+      "name": "MNet-ELU(r1)",
+      "path": "/home/ubu/Desktop/Assessment/defect_classification_stack/runs/iter3_mobilenet_finetune/elu/model.pt",
+      "type": "mobilenet",
+      "class_names": [
+        "defect",
+        "non_defect"
+      ]
+    }
+  ],
+  "captures": [],
+  "events": [
+    {
+      "timestamp": "2026-04-19T21:38:38.404546",
+      "frame_index": 1,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999998807907104,
+      "defect_prob": 0.9999998807907104,
+      "latency_ms": 218.49436599950423,
+      "probabilities": {
+        "defect": 0.9999998807907104,
+        "non_defect": 1.731677485850014e-07
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:38.453715",
+      "frame_index": 1,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999529123306274,
+      "defect_prob": 0.9999529123306274,
+      "latency_ms": 49.1349160001846,
+      "probabilities": {
+        "defect": 0.9999529123306274,
+        "non_defect": 4.7097950300667435e-05
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:38.494603",
+      "frame_index": 1,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9775206856429577,
+      "defect_prob": 0.9775206856429577,
+      "latency_ms": 40.84972800046671,
+      "probabilities": {
+        "defect": 0.9775206856429577,
+        "non_defect": 0.022479314357042313
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:38.507011",
+      "frame_index": 1,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999961243765938,
+      "defect_prob": 0.9999961243765938,
+      "latency_ms": 12.375577000057092,
+      "probabilities": {
+        "defect": 0.9999961243765938,
+        "non_defect": 3.875623406202067e-06
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:38.520990",
+      "frame_index": 1,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9774035811424255,
+      "defect_prob": 0.9774035811424255,
+      "latency_ms": 13.945822000096086,
+      "probabilities": {
+        "defect": 0.9774035811424255,
+        "non_defect": 0.022596418857574463
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:38.521024",
+      "frame_index": 1,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.990974636856663,
+      "defect_prob": 0.990974636856663,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.009025363143337017,
+        "defect": 0.990974636856663
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:38.990624",
+      "frame_index": 2,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999997615814209,
+      "defect_prob": 0.9999997615814209,
+      "latency_ms": 12.02899900090415,
+      "probabilities": {
+        "defect": 0.9999997615814209,
+        "non_defect": 1.9293860020752618e-07
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:39.001307",
+      "frame_index": 2,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999771118164062,
+      "defect_prob": 0.9999771118164062,
+      "latency_ms": 10.65356300023268,
+      "probabilities": {
+        "defect": 0.9999771118164062,
+        "non_defect": 2.2885760699864477e-05
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:39.011593",
+      "frame_index": 2,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9687471687793732,
+      "defect_prob": 0.9687471687793732,
+      "latency_ms": 10.254096003336599,
+      "probabilities": {
+        "defect": 0.9687471687793732,
+        "non_defect": 0.03125283122062683
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:39.018662",
+      "frame_index": 2,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999963648949688,
+      "defect_prob": 0.9999963648949688,
+      "latency_ms": 7.040067001071293,
+      "probabilities": {
+        "defect": 0.9999963648949688,
+        "non_defect": 3.635105031207786e-06
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:39.028848",
+      "frame_index": 2,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9857109077274799,
+      "defect_prob": 0.9857109077274799,
+      "latency_ms": 10.158730001421645,
+      "probabilities": {
+        "defect": 0.9857109077274799,
+        "non_defect": 0.014289092272520065
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:39.028880",
+      "frame_index": 2,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9908862629599298,
+      "defect_prob": 0.9908862629599298,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.009113737040070236,
+        "defect": 0.9908862629599298
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:39.277462",
+      "frame_index": 3,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999998807907104,
+      "defect_prob": 0.9999998807907104,
+      "latency_ms": 10.331115001463331,
+      "probabilities": {
+        "defect": 0.9999998807907104,
+        "non_defect": 6.663240981197305e-08
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:39.288571",
+      "frame_index": 3,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999562501907349,
+      "defect_prob": 0.9999562501907349,
+      "latency_ms": 11.079161999077769,
+      "probabilities": {
+        "defect": 0.9999562501907349,
+        "non_defect": 4.3691808969015256e-05
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:39.301506",
+      "frame_index": 3,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9737722426652908,
+      "defect_prob": 0.9737722426652908,
+      "latency_ms": 12.904060000437312,
+      "probabilities": {
+        "defect": 0.9737722426652908,
+        "non_defect": 0.026227757334709167
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:39.308955",
+      "frame_index": 3,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999960720897434,
+      "defect_prob": 0.9999960720897434,
+      "latency_ms": 7.419165001920192,
+      "probabilities": {
+        "defect": 0.9999960720897434,
+        "non_defect": 3.927910256606992e-06
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:39.318914",
+      "frame_index": 3,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9924708916805685,
+      "defect_prob": 0.9924708916805685,
+      "latency_ms": 9.931002001394518,
+      "probabilities": {
+        "defect": 0.9924708916805685,
+        "non_defect": 0.007529108319431543
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:39.318941",
+      "frame_index": 3,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9932390674834096,
+      "defect_prob": 0.9932390674834096,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.006760932516590379,
+        "defect": 0.9932390674834096
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:40.015675",
+      "frame_index": 4,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999998807907104,
+      "defect_prob": 0.9999998807907104,
+      "latency_ms": 10.70345200059819,
+      "probabilities": {
+        "defect": 0.9999998807907104,
+        "non_defect": 8.492688863270814e-08
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:40.026593",
+      "frame_index": 4,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999606609344482,
+      "defect_prob": 0.9999606609344482,
+      "latency_ms": 10.886418000154663,
+      "probabilities": {
+        "defect": 0.9999606609344482,
+        "non_defect": 3.932589606847614e-05
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:40.038260",
+      "frame_index": 4,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9527491815388203,
+      "defect_prob": 0.9527491815388203,
+      "latency_ms": 11.628621999989264,
+      "probabilities": {
+        "defect": 0.9527491815388203,
+        "non_defect": 0.04725081846117973
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:40.047910",
+      "frame_index": 4,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999969121993217,
+      "defect_prob": 0.9999969121993217,
+      "latency_ms": 9.617380001145648,
+      "probabilities": {
+        "defect": 0.9999969121993217,
+        "non_defect": 3.0878006782586453e-06
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:40.057443",
+      "frame_index": 4,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9811606965959072,
+      "defect_prob": 0.9811606965959072,
+      "latency_ms": 9.504008001385955,
+      "probabilities": {
+        "defect": 0.9811606965959072,
+        "non_defect": 0.01883930340409279
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:40.057470",
+      "frame_index": 4,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9867734664118416,
+      "defect_prob": 0.9867734664118416,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.013226533588158396,
+        "defect": 0.9867734664118416
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:40.801819",
+      "frame_index": 5,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999998807907104,
+      "defect_prob": 0.9999998807907104,
+      "latency_ms": 12.194532999274088,
+      "probabilities": {
+        "defect": 0.9999998807907104,
+        "non_defect": 9.389653143898613e-08
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:40.812196",
+      "frame_index": 5,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999434947967529,
+      "defect_prob": 0.9999434947967529,
+      "latency_ms": 10.348129999329103,
+      "probabilities": {
+        "defect": 0.9999434947967529,
+        "non_defect": 5.6505261454731226e-05
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:40.822096",
+      "frame_index": 5,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9705638885498047,
+      "defect_prob": 0.9705638885498047,
+      "latency_ms": 9.868043998721987,
+      "probabilities": {
+        "defect": 0.9705638885498047,
+        "non_defect": 0.029436111450195312
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:40.829215",
+      "frame_index": 5,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999972976609115,
+      "defect_prob": 0.9999972976609115,
+      "latency_ms": 7.092094001563964,
+      "probabilities": {
+        "defect": 0.9999972976609115,
+        "non_defect": 2.702339088500594e-06
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:40.838778",
+      "frame_index": 5,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9816142376512289,
+      "defect_prob": 0.9816142376512289,
+      "latency_ms": 9.534730997984298,
+      "probabilities": {
+        "defect": 0.9816142376512289,
+        "non_defect": 0.018385762348771095
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:40.838806",
+      "frame_index": 5,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9904237598898817,
+      "defect_prob": 0.9904237598898817,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.009576240110118261,
+        "defect": 0.9904237598898817
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:41.533659",
+      "frame_index": 6,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999997615814209,
+      "defect_prob": 0.9999997615814209,
+      "latency_ms": 10.30441900002188,
+      "probabilities": {
+        "defect": 0.9999997615814209,
+        "non_defect": 1.981360213676453e-07
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:41.544641",
+      "frame_index": 6,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999364614486694,
+      "defect_prob": 0.9999364614486694,
+      "latency_ms": 10.95217900001444,
+      "probabilities": {
+        "defect": 0.9999364614486694,
+        "non_defect": 6.355085497489199e-05
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:41.556899",
+      "frame_index": 6,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9767498467117548,
+      "defect_prob": 0.9767498467117548,
+      "latency_ms": 12.227066999912495,
+      "probabilities": {
+        "defect": 0.9767498467117548,
+        "non_defect": 0.0232501532882452
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:41.563707",
+      "frame_index": 6,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999976826973125,
+      "defect_prob": 0.9999976826973125,
+      "latency_ms": 6.77826000173809,
+      "probabilities": {
+        "defect": 0.9999976826973125,
+        "non_defect": 2.317302687515621e-06
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:41.573009",
+      "frame_index": 6,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9847329240292311,
+      "defect_prob": 0.9847329240292311,
+      "latency_ms": 9.273507999751018,
+      "probabilities": {
+        "defect": 0.9847329240292311,
+        "non_defect": 0.015267075970768929
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:41.573038",
+      "frame_index": 6,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9922833352936777,
+      "defect_prob": 0.9922833352936777,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.007716664706322263,
+        "defect": 0.9922833352936777
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:42.251095",
+      "frame_index": 7,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999998807907104,
+      "defect_prob": 0.9999998807907104,
+      "latency_ms": 11.398269998608157,
+      "probabilities": {
+        "defect": 0.9999998807907104,
+        "non_defect": 1.3070675208837201e-07
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:42.261464",
+      "frame_index": 7,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999560117721558,
+      "defect_prob": 0.9999560117721558,
+      "latency_ms": 10.339422999095405,
+      "probabilities": {
+        "defect": 0.9999560117721558,
+        "non_defect": 4.403149432619102e-05
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:42.271603",
+      "frame_index": 7,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.978219399228692,
+      "defect_prob": 0.978219399228692,
+      "latency_ms": 10.10837099966011,
+      "probabilities": {
+        "defect": 0.978219399228692,
+        "non_defect": 0.021780600771307945
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:42.278833",
+      "frame_index": 7,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999978764615207,
+      "defect_prob": 0.9999978764615207,
+      "latency_ms": 7.202439999673516,
+      "probabilities": {
+        "defect": 0.9999978764615207,
+        "non_defect": 2.123538479281706e-06
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:42.288532",
+      "frame_index": 7,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9868821185082197,
+      "defect_prob": 0.9868821185082197,
+      "latency_ms": 9.671021001850022,
+      "probabilities": {
+        "defect": 0.9868821185082197,
+        "non_defect": 0.013117881491780281
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:42.288561",
+      "frame_index": 7,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9930110573522597,
+      "defect_prob": 0.9930110573522597,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.006988942647740304,
+        "defect": 0.9930110573522597
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:42.914517",
+      "frame_index": 8,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999997615814209,
+      "defect_prob": 0.9999997615814209,
+      "latency_ms": 11.933536003198242,
+      "probabilities": {
+        "defect": 0.9999997615814209,
+        "non_defect": 1.8653048527994542e-07
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:42.924556",
+      "frame_index": 8,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.99994957447052,
+      "defect_prob": 0.99994957447052,
+      "latency_ms": 10.010046997194877,
+      "probabilities": {
+        "defect": 0.99994957447052,
+        "non_defect": 5.044612771598622e-05
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:42.934237",
+      "frame_index": 8,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9645430110394955,
+      "defect_prob": 0.9645430110394955,
+      "latency_ms": 9.65064599949983,
+      "probabilities": {
+        "defect": 0.9645430110394955,
+        "non_defect": 0.03545698896050453
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:42.941131",
+      "frame_index": 8,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999987875667102,
+      "defect_prob": 0.9999987875667102,
+      "latency_ms": 6.864831997518195,
+      "probabilities": {
+        "defect": 0.9999987875667102,
+        "non_defect": 1.2124332897656132e-06
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:42.950819",
+      "frame_index": 8,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9810849502682686,
+      "defect_prob": 0.9810849502682686,
+      "latency_ms": 9.659888000896899,
+      "probabilities": {
+        "defect": 0.9810849502682686,
+        "non_defect": 0.018915049731731415
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:42.950847",
+      "frame_index": 8,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.989115216985283,
+      "defect_prob": 0.989115216985283,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.010884783014716959,
+        "defect": 0.989115216985283
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:43.566668",
+      "frame_index": 9,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 1.0,
+      "defect_prob": 1.0,
+      "latency_ms": 10.305304000212345,
+      "probabilities": {
+        "defect": 1.0,
+        "non_defect": 5.486514353947314e-08
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:43.577020",
+      "frame_index": 9,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999455213546753,
+      "defect_prob": 0.9999455213546753,
+      "latency_ms": 10.323752998374403,
+      "probabilities": {
+        "defect": 0.9999455213546753,
+        "non_defect": 5.44164031452965e-05
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:43.589231",
+      "frame_index": 9,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9340170845389366,
+      "defect_prob": 0.9340170845389366,
+      "latency_ms": 12.180652000097325,
+      "probabilities": {
+        "defect": 0.9340170845389366,
+        "non_defect": 0.06598291546106339
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:43.595939",
+      "frame_index": 9,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999982379015364,
+      "defect_prob": 0.9999982379015364,
+      "latency_ms": 6.679547997919144,
+      "probabilities": {
+        "defect": 0.9999982379015364,
+        "non_defect": 1.7620984635868808e-06
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:43.605047",
+      "frame_index": 9,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9791599679738283,
+      "defect_prob": 0.9791599679738283,
+      "latency_ms": 9.08120700114523,
+      "probabilities": {
+        "defect": 0.9791599679738283,
+        "non_defect": 0.020840032026171684
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:43.605075",
+      "frame_index": 9,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9826241623537953,
+      "defect_prob": 0.9826241623537953,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.01737583764620465,
+        "defect": 0.9826241623537953
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:44.173406",
+      "frame_index": 10,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999998807907104,
+      "defect_prob": 0.9999998807907104,
+      "latency_ms": 10.382779000792652,
+      "probabilities": {
+        "defect": 0.9999998807907104,
+        "non_defect": 1.6621677900729992e-07
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:44.183664",
+      "frame_index": 10,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.999971866607666,
+      "defect_prob": 0.999971866607666,
+      "latency_ms": 10.22702800037223,
+      "probabilities": {
+        "defect": 0.999971866607666,
+        "non_defect": 2.808747194649186e-05
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:44.193427",
+      "frame_index": 10,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9684190191328526,
+      "defect_prob": 0.9684190191328526,
+      "latency_ms": 9.731504000228597,
+      "probabilities": {
+        "defect": 0.9684190191328526,
+        "non_defect": 0.031580980867147446
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:44.200682",
+      "frame_index": 10,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999983986160714,
+      "defect_prob": 0.9999983986160714,
+      "latency_ms": 7.22401299935882,
+      "probabilities": {
+        "defect": 0.9999983986160714,
+        "non_defect": 1.6013839285733411e-06
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:44.211726",
+      "frame_index": 10,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9841145016252995,
+      "defect_prob": 0.9841145016252995,
+      "latency_ms": 11.00298000164912,
+      "probabilities": {
+        "defect": 0.9841145016252995,
+        "non_defect": 0.015885498374700546
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:44.211779",
+      "frame_index": 10,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9905007333545199,
+      "defect_prob": 0.9905007333545199,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.009499266645480064,
+        "defect": 0.9905007333545199
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:45.315589",
+      "frame_index": 11,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999998807907104,
+      "defect_prob": 0.9999998807907104,
+      "latency_ms": 11.999324000498746,
+      "probabilities": {
+        "defect": 0.9999998807907104,
+        "non_defect": 7.378730515483767e-08
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:45.325791",
+      "frame_index": 11,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999206066131592,
+      "defect_prob": 0.9999206066131592,
+      "latency_ms": 10.170713998377323,
+      "probabilities": {
+        "defect": 0.9999206066131592,
+        "non_defect": 7.940269279060885e-05
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:45.335459",
+      "frame_index": 11,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9840742126107216,
+      "defect_prob": 0.9840742126107216,
+      "latency_ms": 9.637316998123424,
+      "probabilities": {
+        "defect": 0.9840742126107216,
+        "non_defect": 0.015925787389278412
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:45.342413",
+      "frame_index": 11,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999985698984801,
+      "defect_prob": 0.9999985698984801,
+      "latency_ms": 6.926319998456165,
+      "probabilities": {
+        "defect": 0.9999985698984801,
+        "non_defect": 1.4301015198725509e-06
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:45.351859",
+      "frame_index": 11,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9928194070234895,
+      "defect_prob": 0.9928194070234895,
+      "latency_ms": 9.417067998583661,
+      "probabilities": {
+        "defect": 0.9928194070234895,
+        "non_defect": 0.007180592976510525
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:45.351887",
+      "frame_index": 11,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9953625353873121,
+      "defect_prob": 0.9953625353873121,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.0046374646126878805,
+        "defect": 0.9953625353873121
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:45.639638",
+      "frame_index": 12,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999997615814209,
+      "defect_prob": 0.9999997615814209,
+      "latency_ms": 9.83444099983899,
+      "probabilities": {
+        "defect": 0.9999997615814209,
+        "non_defect": 2.1556887475071562e-07
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:45.650172",
+      "frame_index": 12,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999711513519287,
+      "defect_prob": 0.9999711513519287,
+      "latency_ms": 10.502381999685895,
+      "probabilities": {
+        "defect": 0.9999711513519287,
+        "non_defect": 2.8815675250370987e-05
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:45.662617",
+      "frame_index": 12,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9700165037065744,
+      "defect_prob": 0.9700165037065744,
+      "latency_ms": 12.413952998031164,
+      "probabilities": {
+        "defect": 0.9700165037065744,
+        "non_defect": 0.02998349629342556
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:45.669588",
+      "frame_index": 12,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999987525134202,
+      "defect_prob": 0.9999987525134202,
+      "latency_ms": 6.939339000382461,
+      "probabilities": {
+        "defect": 0.9999987525134202,
+        "non_defect": 1.2474865798139945e-06
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:45.679230",
+      "frame_index": 12,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9840094801038504,
+      "defect_prob": 0.9840094801038504,
+      "latency_ms": 9.61527199979173,
+      "probabilities": {
+        "defect": 0.9840094801038504,
+        "non_defect": 0.015990519896149635
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:45.679260",
+      "frame_index": 12,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9907991298514389,
+      "defect_prob": 0.9907991298514389,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.00920087014856108,
+        "defect": 0.9907991298514389
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:46.396100",
+      "frame_index": 13,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999996423721313,
+      "defect_prob": 0.9999996423721313,
+      "latency_ms": 10.815192999871215,
+      "probabilities": {
+        "defect": 0.9999996423721313,
+        "non_defect": 4.0271260104418616e-07
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:46.406178",
+      "frame_index": 13,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999419450759888,
+      "defect_prob": 0.9999419450759888,
+      "latency_ms": 10.045967999758432,
+      "probabilities": {
+        "defect": 0.9999419450759888,
+        "non_defect": 5.807471097796224e-05
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:46.416178",
+      "frame_index": 13,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9690888915210962,
+      "defect_prob": 0.9690888915210962,
+      "latency_ms": 9.969112001272151,
+      "probabilities": {
+        "defect": 0.9690888915210962,
+        "non_defect": 0.03091110847890377
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:46.423087",
+      "frame_index": 13,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999987693553294,
+      "defect_prob": 0.9999987693553294,
+      "latency_ms": 6.880602999444818,
+      "probabilities": {
+        "defect": 0.9999987693553294,
+        "non_defect": 1.230644670613401e-06
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:46.433494",
+      "frame_index": 13,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.981953538954258,
+      "defect_prob": 0.981953538954258,
+      "latency_ms": 10.377455000707414,
+      "probabilities": {
+        "defect": 0.981953538954258,
+        "non_defect": 0.018046461045742035
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:46.433523",
+      "frame_index": 13,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9901965574557607,
+      "defect_prob": 0.9901965574557607,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.00980344254423926,
+        "defect": 0.9901965574557607
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:47.130664",
+      "frame_index": 14,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 1.0,
+      "defect_prob": 1.0,
+      "latency_ms": 12.812265002139611,
+      "probabilities": {
+        "defect": 1.0,
+        "non_defect": 5.222194232601396e-08
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:47.141122",
+      "frame_index": 14,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999707937240601,
+      "defect_prob": 0.9999707937240601,
+      "latency_ms": 10.4288729999098,
+      "probabilities": {
+        "defect": 0.9999707937240601,
+        "non_defect": 2.9237784474389628e-05
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:47.150949",
+      "frame_index": 14,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9711149036884308,
+      "defect_prob": 0.9711149036884308,
+      "latency_ms": 9.795383000891889,
+      "probabilities": {
+        "defect": 0.9711149036884308,
+        "non_defect": 0.028885096311569214
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:47.157866",
+      "frame_index": 14,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999989524339981,
+      "defect_prob": 0.9999989524339981,
+      "latency_ms": 6.888340998557396,
+      "probabilities": {
+        "defect": 0.9999989524339981,
+        "non_defect": 1.0475660019437782e-06
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:47.167325",
+      "frame_index": 14,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9833128545433283,
+      "defect_prob": 0.9833128545433283,
+      "latency_ms": 9.430940001038834,
+      "probabilities": {
+        "defect": 0.9833128545433283,
+        "non_defect": 0.016687145456671715
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:47.167353",
+      "frame_index": 14,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9908795008779634,
+      "defect_prob": 0.9908795008779634,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.009120499122036607,
+        "defect": 0.9908795008779634
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:48.250091",
+      "frame_index": 15,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999996423721313,
+      "defect_prob": 0.9999996423721313,
+      "latency_ms": 9.8792009994213,
+      "probabilities": {
+        "defect": 0.9999996423721313,
+        "non_defect": 3.478808139334433e-07
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:48.260569",
+      "frame_index": 15,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999065399169922,
+      "defect_prob": 0.9999065399169922,
+      "latency_ms": 10.447691998706432,
+      "probabilities": {
+        "defect": 0.9999065399169922,
+        "non_defect": 9.350039181299508e-05
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:48.272900",
+      "frame_index": 15,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9477277100086212,
+      "defect_prob": 0.9477277100086212,
+      "latency_ms": 12.300992999371374,
+      "probabilities": {
+        "defect": 0.9477277100086212,
+        "non_defect": 0.052272289991378784
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:48.279801",
+      "frame_index": 15,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999987402940178,
+      "defect_prob": 0.9999987402940178,
+      "latency_ms": 6.870107001304859,
+      "probabilities": {
+        "defect": 0.9999987402940178,
+        "non_defect": 1.259705982192827e-06
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:48.289131",
+      "frame_index": 15,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.972804382443428,
+      "defect_prob": 0.972804382443428,
+      "latency_ms": 9.301211997808423,
+      "probabilities": {
+        "defect": 0.972804382443428,
+        "non_defect": 0.02719561755657196
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:48.289159",
+      "frame_index": 15,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9840874030070381,
+      "defect_prob": 0.9840874030070381,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.01591259699296188,
+        "defect": 0.9840874030070381
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:48.773855",
+      "frame_index": 16,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999998807907104,
+      "defect_prob": 0.9999998807907104,
+      "latency_ms": 10.412840001663426,
+      "probabilities": {
+        "defect": 0.9999998807907104,
+        "non_defect": 7.834448467747279e-08
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:48.784178",
+      "frame_index": 16,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999618530273438,
+      "defect_prob": 0.9999618530273438,
+      "latency_ms": 10.2931970031932,
+      "probabilities": {
+        "defect": 0.9999618530273438,
+        "non_defect": 3.819795529125258e-05
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:48.794184",
+      "frame_index": 16,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9669439010322094,
+      "defect_prob": 0.9669439010322094,
+      "latency_ms": 9.974597000109497,
+      "probabilities": {
+        "defect": 0.9669439010322094,
+        "non_defect": 0.033056098967790604
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:48.801083",
+      "frame_index": 16,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.999998862563416,
+      "defect_prob": 0.999998862563416,
+      "latency_ms": 6.8707499995070975,
+      "probabilities": {
+        "defect": 0.999998862563416,
+        "non_defect": 1.137436584031093e-06
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:48.810320",
+      "frame_index": 16,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9795266408473253,
+      "defect_prob": 0.9795266408473253,
+      "latency_ms": 9.210737000103109,
+      "probabilities": {
+        "defect": 0.9795266408473253,
+        "non_defect": 0.020473359152674675
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:48.810349",
+      "frame_index": 16,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.989286227652201,
+      "defect_prob": 0.989286227652201,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.010713772347799022,
+        "defect": 0.989286227652201
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:49.629128",
+      "frame_index": 17,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999998807907104,
+      "defect_prob": 0.9999998807907104,
+      "latency_ms": 12.599877998582087,
+      "probabilities": {
+        "defect": 0.9999998807907104,
+        "non_defect": 7.235543364458863e-08
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:49.641618",
+      "frame_index": 17,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999287128448486,
+      "defect_prob": 0.9999287128448486,
+      "latency_ms": 12.454724997951416,
+      "probabilities": {
+        "defect": 0.9999287128448486,
+        "non_defect": 7.128939614631236e-05
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:49.651510",
+      "frame_index": 17,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9514399580657482,
+      "defect_prob": 0.9514399580657482,
+      "latency_ms": 9.860657999524847,
+      "probabilities": {
+        "defect": 0.9514399580657482,
+        "non_defect": 0.048560041934251785
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:49.658528",
+      "frame_index": 17,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999988358508745,
+      "defect_prob": 0.9999988358508745,
+      "latency_ms": 6.989658999373205,
+      "probabilities": {
+        "defect": 0.9999988358508745,
+        "non_defect": 1.1641491255431902e-06
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:49.667805",
+      "frame_index": 17,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9681253135204315,
+      "defect_prob": 0.9681253135204315,
+      "latency_ms": 9.24707599915564,
+      "probabilities": {
+        "defect": 0.9681253135204315,
+        "non_defect": 0.03187468647956848
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:49.667832",
+      "frame_index": 17,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9838985402145226,
+      "defect_prob": 0.9838985402145226,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.01610145978547739,
+        "defect": 0.9838985402145226
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:50.406030",
+      "frame_index": 18,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999998807907104,
+      "defect_prob": 0.9999998807907104,
+      "latency_ms": 10.656311998900492,
+      "probabilities": {
+        "defect": 0.9999998807907104,
+        "non_defect": 1.2786098579908867e-07
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:50.416879",
+      "frame_index": 18,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999207258224487,
+      "defect_prob": 0.9999207258224487,
+      "latency_ms": 10.818058999575442,
+      "probabilities": {
+        "defect": 0.9999207258224487,
+        "non_defect": 7.927967089926824e-05
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:50.429249",
+      "frame_index": 18,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9665785506367683,
+      "defect_prob": 0.9665785506367683,
+      "latency_ms": 12.339002001681365,
+      "probabilities": {
+        "defect": 0.9665785506367683,
+        "non_defect": 0.03342144936323166
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:50.436446",
+      "frame_index": 18,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999990459291439,
+      "defect_prob": 0.9999990459291439,
+      "latency_ms": 7.165202001488069,
+      "probabilities": {
+        "defect": 0.9999990459291439,
+        "non_defect": 9.54070856096223e-07
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:50.445942",
+      "frame_index": 18,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9778943881392479,
+      "defect_prob": 0.9778943881392479,
+      "latency_ms": 9.467965999647276,
+      "probabilities": {
+        "defect": 0.9778943881392479,
+        "non_defect": 0.022105611860752106
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:50.445976",
+      "frame_index": 18,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9888785182636639,
+      "defect_prob": 0.9888785182636639,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.011121481736336092,
+        "defect": 0.9888785182636639
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:51.613970",
+      "frame_index": 19,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999998807907104,
+      "defect_prob": 0.9999998807907104,
+      "latency_ms": 10.769614000309957,
+      "probabilities": {
+        "defect": 0.9999998807907104,
+        "non_defect": 1.1810443822923844e-07
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:51.624276",
+      "frame_index": 19,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999395608901978,
+      "defect_prob": 0.9999395608901978,
+      "latency_ms": 10.274252999806777,
+      "probabilities": {
+        "defect": 0.9999395608901978,
+        "non_defect": 6.048713839845732e-05
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:51.634229",
+      "frame_index": 19,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9671248383820057,
+      "defect_prob": 0.9671248383820057,
+      "latency_ms": 9.92384100027266,
+      "probabilities": {
+        "defect": 0.9671248383820057,
+        "non_defect": 0.03287516161799431
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:51.641199",
+      "frame_index": 19,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999987634223544,
+      "defect_prob": 0.9999987634223544,
+      "latency_ms": 6.940933002624661,
+      "probabilities": {
+        "defect": 0.9999987634223544,
+        "non_defect": 1.236577645613579e-06
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:51.650613",
+      "frame_index": 19,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.982893031090498,
+      "defect_prob": 0.982893031090498,
+      "latency_ms": 9.385303001181455,
+      "probabilities": {
+        "defect": 0.982893031090498,
+        "non_defect": 0.01710696890950203
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:51.650643",
+      "frame_index": 19,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9899912149151533,
+      "defect_prob": 0.9899912149151533,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.010008785084846705,
+        "defect": 0.9899912149151533
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:52.652557",
+      "frame_index": 20,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999998807907104,
+      "defect_prob": 0.9999998807907104,
+      "latency_ms": 11.962409000261687,
+      "probabilities": {
+        "defect": 0.9999998807907104,
+        "non_defect": 1.0041782871894611e-07
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:52.662947",
+      "frame_index": 20,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999661445617676,
+      "defect_prob": 0.9999661445617676,
+      "latency_ms": 10.360645999753615,
+      "probabilities": {
+        "defect": 0.9999661445617676,
+        "non_defect": 3.386865137144923e-05
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:52.672621",
+      "frame_index": 20,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9719427786767483,
+      "defect_prob": 0.9719427786767483,
+      "latency_ms": 9.643329001846723,
+      "probabilities": {
+        "defect": 0.9719427786767483,
+        "non_defect": 0.028057221323251724
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:52.680061",
+      "frame_index": 20,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999990394030647,
+      "defect_prob": 0.9999990394030647,
+      "latency_ms": 7.410079000692349,
+      "probabilities": {
+        "defect": 0.9999990394030647,
+        "non_defect": 9.605969353287946e-07
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:52.690232",
+      "frame_index": 20,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9890449345111847,
+      "defect_prob": 0.9890449345111847,
+      "latency_ms": 10.134926000318956,
+      "probabilities": {
+        "defect": 0.9890449345111847,
+        "non_defect": 0.010955065488815308
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:52.690264",
+      "frame_index": 20,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9921905555886952,
+      "defect_prob": 0.9921905555886952,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.007809444411304822,
+        "defect": 0.9921905555886952
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:53.648197",
+      "frame_index": 21,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999998807907104,
+      "defect_prob": 0.9999998807907104,
+      "latency_ms": 9.985943001083797,
+      "probabilities": {
+        "defect": 0.9999998807907104,
+        "non_defect": 7.366299570321644e-08
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:53.659312",
+      "frame_index": 21,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.999941349029541,
+      "defect_prob": 0.999941349029541,
+      "latency_ms": 11.083841000072425,
+      "probabilities": {
+        "defect": 0.999941349029541,
+        "non_defect": 5.859019802301191e-05
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:53.671691",
+      "frame_index": 21,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9659728966653347,
+      "defect_prob": 0.9659728966653347,
+      "latency_ms": 12.349799002549844,
+      "probabilities": {
+        "defect": 0.9659728966653347,
+        "non_defect": 0.0340271033346653
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:53.678825",
+      "frame_index": 21,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999989757058074,
+      "defect_prob": 0.9999989757058074,
+      "latency_ms": 7.103121999534778,
+      "probabilities": {
+        "defect": 0.9999989757058074,
+        "non_defect": 1.0242941925753257e-06
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:53.688239",
+      "frame_index": 21,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9797170013189316,
+      "defect_prob": 0.9797170013189316,
+      "latency_ms": 9.386476001964184,
+      "probabilities": {
+        "defect": 0.9797170013189316,
+        "non_defect": 0.02028299868106842
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:53.688267",
+      "frame_index": 21,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.989126020702065,
+      "defect_prob": 0.989126020702065,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.010873979297934988,
+        "defect": 0.989126020702065
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:54.671826",
+      "frame_index": 22,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 1.0,
+      "defect_prob": 1.0,
+      "latency_ms": 12.05555999695207,
+      "probabilities": {
+        "defect": 1.0,
+        "non_defect": 4.410969012269561e-08
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:54.687199",
+      "frame_index": 22,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9998914003372192,
+      "defect_prob": 0.9998914003372192,
+      "latency_ms": 15.334096002334263,
+      "probabilities": {
+        "defect": 0.9998914003372192,
+        "non_defect": 0.0001085315816453658
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:54.699814",
+      "frame_index": 22,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9607922323048115,
+      "defect_prob": 0.9607922323048115,
+      "latency_ms": 12.574129999848083,
+      "probabilities": {
+        "defect": 0.9607922323048115,
+        "non_defect": 0.03920776769518852
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:54.707169",
+      "frame_index": 22,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999990954806321,
+      "defect_prob": 0.9999990954806321,
+      "latency_ms": 7.32014499953948,
+      "probabilities": {
+        "defect": 0.9999990954806321,
+        "non_defect": 9.045193678502983e-07
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:54.717154",
+      "frame_index": 22,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.966200552880764,
+      "defect_prob": 0.966200552880764,
+      "latency_ms": 9.954499000741635,
+      "probabilities": {
+        "defect": 0.966200552880764,
+        "non_defect": 0.03379944711923599
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:54.717183",
+      "frame_index": 22,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9853766562006854,
+      "defect_prob": 0.9853766562006854,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.014623343799314625,
+        "defect": 0.9853766562006854
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:55.913709",
+      "frame_index": 23,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999998807907104,
+      "defect_prob": 0.9999998807907104,
+      "latency_ms": 12.038052998832427,
+      "probabilities": {
+        "defect": 0.9999998807907104,
+        "non_defect": 8.915620952620884e-08
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:55.923907",
+      "frame_index": 23,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999126195907593,
+      "defect_prob": 0.9999126195907593,
+      "latency_ms": 10.166265001316788,
+      "probabilities": {
+        "defect": 0.9999126195907593,
+        "non_defect": 8.741443161852658e-05
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:55.933692",
+      "frame_index": 23,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9425106346607208,
+      "defect_prob": 0.9425106346607208,
+      "latency_ms": 9.753263999300543,
+      "probabilities": {
+        "defect": 0.9425106346607208,
+        "non_defect": 0.057489365339279175
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:55.940845",
+      "frame_index": 23,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999989844422998,
+      "defect_prob": 0.9999989844422998,
+      "latency_ms": 7.124485997337615,
+      "probabilities": {
+        "defect": 0.9999989844422998,
+        "non_defect": 1.0155577001569327e-06
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:55.950262",
+      "frame_index": 23,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9907077820971608,
+      "defect_prob": 0.9907077820971608,
+      "latency_ms": 9.389907001605025,
+      "probabilities": {
+        "defect": 0.9907077820971608,
+        "non_defect": 0.009292217902839184
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:55.950290",
+      "frame_index": 23,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9866259803163302,
+      "defect_prob": 0.9866259803163302,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.013374019683669802,
+        "defect": 0.9866259803163302
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:57.044949",
+      "frame_index": 24,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999996423721313,
+      "defect_prob": 0.9999996423721313,
+      "latency_ms": 12.169219000497833,
+      "probabilities": {
+        "defect": 0.9999996423721313,
+        "non_defect": 4.068822079261736e-07
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:57.058430",
+      "frame_index": 24,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999467134475708,
+      "defect_prob": 0.9999467134475708,
+      "latency_ms": 13.44165499904193,
+      "probabilities": {
+        "defect": 0.9999467134475708,
+        "non_defect": 5.330699059413746e-05
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:57.070843",
+      "frame_index": 24,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9707859605550766,
+      "defect_prob": 0.9707859605550766,
+      "latency_ms": 12.379308001982281,
+      "probabilities": {
+        "defect": 0.9707859605550766,
+        "non_defect": 0.0292140394449234
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:57.077798",
+      "frame_index": 24,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.999999150735448,
+      "defect_prob": 0.999999150735448,
+      "latency_ms": 6.925859001057688,
+      "probabilities": {
+        "defect": 0.999999150735448,
+        "non_defect": 8.492645520163933e-07
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:57.087384",
+      "frame_index": 24,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9803724680095911,
+      "defect_prob": 0.9803724680095911,
+      "latency_ms": 9.559354999510106,
+      "probabilities": {
+        "defect": 0.9803724680095911,
+        "non_defect": 0.019627531990408897
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:57.087412",
+      "frame_index": 24,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9902207870239635,
+      "defect_prob": 0.9902207870239635,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.009779212976036455,
+        "defect": 0.9902207870239635
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:58.313448",
+      "frame_index": 25,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999998807907104,
+      "defect_prob": 0.9999998807907104,
+      "latency_ms": 12.729080001008697,
+      "probabilities": {
+        "defect": 0.9999998807907104,
+        "non_defect": 8.441590892971362e-08
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:58.326419",
+      "frame_index": 25,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999091625213623,
+      "defect_prob": 0.9999091625213623,
+      "latency_ms": 12.934235001011984,
+      "probabilities": {
+        "defect": 0.9999091625213623,
+        "non_defect": 9.082058386411518e-05
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:58.338877",
+      "frame_index": 25,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9850810142233968,
+      "defect_prob": 0.9850810142233968,
+      "latency_ms": 12.32216200151015,
+      "probabilities": {
+        "defect": 0.9850810142233968,
+        "non_defect": 0.014918985776603222
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:58.345823",
+      "frame_index": 25,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999984589283031,
+      "defect_prob": 0.9999984589283031,
+      "latency_ms": 6.9166229986876715,
+      "probabilities": {
+        "defect": 0.9999984589283031,
+        "non_defect": 1.5410716969199711e-06
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:58.355507",
+      "frame_index": 25,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9864480411633849,
+      "defect_prob": 0.9864480411633849,
+      "latency_ms": 9.65685399933136,
+      "probabilities": {
+        "defect": 0.9864480411633849,
+        "non_defect": 0.013551958836615086
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:58.355536",
+      "frame_index": 25,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9942873115254315,
+      "defect_prob": 0.9942873115254315,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.005712688474568517,
+        "defect": 0.9942873115254315
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:59.856046",
+      "frame_index": 26,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999998807907104,
+      "defect_prob": 0.9999998807907104,
+      "latency_ms": 12.956929000210948,
+      "probabilities": {
+        "defect": 0.9999998807907104,
+        "non_defect": 6.75308555742049e-08
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:59.866264",
+      "frame_index": 26,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999101161956787,
+      "defect_prob": 0.9999101161956787,
+      "latency_ms": 10.190025997871999,
+      "probabilities": {
+        "defect": 0.9999101161956787,
+        "non_defect": 8.987924957182258e-05
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:59.876312",
+      "frame_index": 26,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9633214101195335,
+      "defect_prob": 0.9633214101195335,
+      "latency_ms": 10.01790300142602,
+      "probabilities": {
+        "defect": 0.9633214101195335,
+        "non_defect": 0.03667858988046646
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:59.883373",
+      "frame_index": 26,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.999999999427433,
+      "defect_prob": 0.999999999427433,
+      "latency_ms": 7.031557001027977,
+      "probabilities": {
+        "defect": 0.999999999427433,
+        "non_defect": 5.725669938172473e-10
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:59.892731",
+      "frame_index": 26,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.987741063348949,
+      "defect_prob": 0.987741063348949,
+      "latency_ms": 9.331851000752067,
+      "probabilities": {
+        "defect": 0.987741063348949,
+        "non_defect": 0.012258936651051044
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:38:59.892771",
+      "frame_index": 26,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.990194493976461,
+      "defect_prob": 0.990194493976461,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.009805506023539023,
+        "defect": 0.990194493976461
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:02.124395",
+      "frame_index": 27,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 1.0,
+      "defect_prob": 1.0,
+      "latency_ms": 9.925592003128259,
+      "probabilities": {
+        "defect": 1.0,
+        "non_defect": 7.17860978993734e-11
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:02.135394",
+      "frame_index": 27,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 1.0,
+      "defect_prob": 1.0,
+      "latency_ms": 10.965493002004223,
+      "probabilities": {
+        "defect": 1.0,
+        "non_defect": 4.7744645570446664e-08
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:02.148548",
+      "frame_index": 27,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.958465252071619,
+      "defect_prob": 0.958465252071619,
+      "latency_ms": 13.114909997966606,
+      "probabilities": {
+        "defect": 0.958465252071619,
+        "non_defect": 0.041534747928380966
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:02.155464",
+      "frame_index": 27,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 1.0,
+      "defect_prob": 1.0,
+      "latency_ms": 6.884627997351345,
+      "probabilities": {
+        "defect": 1.0,
+        "non_defect": 0.0
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:02.165150",
+      "frame_index": 27,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9550944082438946,
+      "defect_prob": 0.9550944082438946,
+      "latency_ms": 9.658844999648863,
+      "probabilities": {
+        "defect": 0.9550944082438946,
+        "non_defect": 0.04490559175610542
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:02.165180",
+      "frame_index": 27,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9827119320631027,
+      "defect_prob": 0.9827119320631027,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.0172880679368973,
+        "defect": 0.9827119320631027
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:04.351398",
+      "frame_index": 28,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8240064978599548,
+      "defect_prob": 0.17599347233772278,
+      "latency_ms": 11.004332998709287,
+      "probabilities": {
+        "defect": 0.17599347233772278,
+        "non_defect": 0.8240064978599548
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:04.362131",
+      "frame_index": 28,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.743193507194519,
+      "defect_prob": 0.25680646300315857,
+      "latency_ms": 10.703572999773314,
+      "probabilities": {
+        "defect": 0.25680646300315857,
+        "non_defect": 0.743193507194519
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:04.372692",
+      "frame_index": 28,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8377062082290649,
+      "defect_prob": 0.16229379177093506,
+      "latency_ms": 10.527114998694742,
+      "probabilities": {
+        "defect": 0.16229379177093506,
+        "non_defect": 0.8377062082290649
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:04.380151",
+      "frame_index": 28,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999999999999987,
+      "defect_prob": 0.9999999999999987,
+      "latency_ms": 7.429258999763988,
+      "probabilities": {
+        "defect": 0.9999999999999987,
+        "non_defect": 1.3867903992111183e-15
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:04.389893",
+      "frame_index": 28,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "UNCERTAIN",
+      "confidence": 0.5973226726055145,
+      "defect_prob": 0.5973226726055145,
+      "latency_ms": 9.713114999613026,
+      "probabilities": {
+        "defect": 0.5973226726055145,
+        "non_defect": 0.4026773273944855
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:04.389920",
+      "frame_index": 28,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "non_defect",
+      "decision": "UNCERTAIN",
+      "confidence": 0.5615167200565341,
+      "defect_prob": 0.4384832799434659,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.5615167200565341,
+        "defect": 0.4384832799434659
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:06.271131",
+      "frame_index": 29,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8274570107460022,
+      "defect_prob": 0.17254295945167542,
+      "latency_ms": 13.125918001605896,
+      "probabilities": {
+        "defect": 0.17254295945167542,
+        "non_defect": 0.8274570107460022
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:06.288159",
+      "frame_index": 29,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.7441627979278564,
+      "defect_prob": 0.25583723187446594,
+      "latency_ms": 16.992568998830393,
+      "probabilities": {
+        "defect": 0.25583723187446594,
+        "non_defect": 0.7441627979278564
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:06.299230",
+      "frame_index": 29,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "UNCERTAIN",
+      "confidence": 0.5103254914283752,
+      "defect_prob": 0.5103254914283752,
+      "latency_ms": 11.029846999008441,
+      "probabilities": {
+        "defect": 0.5103254914283752,
+        "non_defect": 0.48967450857162476
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:06.306564",
+      "frame_index": 29,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999999999999984,
+      "defect_prob": 0.9999999999999984,
+      "latency_ms": 7.2979579999810085,
+      "probabilities": {
+        "defect": 0.9999999999999984,
+        "non_defect": 1.6075150091669722e-15
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:06.317842",
+      "frame_index": 29,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "UNCERTAIN",
+      "confidence": 0.685913622379303,
+      "defect_prob": 0.685913622379303,
+      "latency_ms": 11.241030999372015,
+      "probabilities": {
+        "defect": 0.685913622379303,
+        "non_defect": 0.314086377620697
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:06.317873",
+      "frame_index": 29,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "defect",
+      "decision": "UNCERTAIN",
+      "confidence": 0.5249238610267636,
+      "defect_prob": 0.5249238610267636,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.4750761389732364,
+        "defect": 0.5249238610267636
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:08.067477",
+      "frame_index": 30,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9912022352218628,
+      "defect_prob": 0.9912022352218628,
+      "latency_ms": 10.140007998415967,
+      "probabilities": {
+        "defect": 0.9912022352218628,
+        "non_defect": 0.008797810412943363
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:08.078557",
+      "frame_index": 30,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9297895431518555,
+      "defect_prob": 0.9297895431518555,
+      "latency_ms": 11.049840999476146,
+      "probabilities": {
+        "defect": 0.9297895431518555,
+        "non_defect": 0.07021040469408035
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:08.090994",
+      "frame_index": 30,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.909497357904911,
+      "defect_prob": 0.909497357904911,
+      "latency_ms": 12.40492000215454,
+      "probabilities": {
+        "defect": 0.909497357904911,
+        "non_defect": 0.09050264209508896
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:08.097886",
+      "frame_index": 30,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999999973500218,
+      "defect_prob": 0.9999999973500218,
+      "latency_ms": 6.86167099775048,
+      "probabilities": {
+        "defect": 0.9999999973500218,
+        "non_defect": 2.6499782368460956e-09
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:08.107536",
+      "frame_index": 30,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.8217978924512863,
+      "defect_prob": 0.8217978924512863,
+      "latency_ms": 9.624033002182841,
+      "probabilities": {
+        "defect": 0.8217978924512863,
+        "non_defect": 0.17820210754871368
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:08.107572",
+      "frame_index": 30,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9304574052159875,
+      "defect_prob": 0.9304574052159875,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.06954259478401248,
+        "defect": 0.9304574052159875
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:09.485132",
+      "frame_index": 31,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "UNCERTAIN",
+      "confidence": 0.5779973864555359,
+      "defect_prob": 0.5779973864555359,
+      "latency_ms": 11.626709001575364,
+      "probabilities": {
+        "defect": 0.5779973864555359,
+        "non_defect": 0.4220025837421417
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:09.495308",
+      "frame_index": 31,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.8207616806030273,
+      "defect_prob": 0.8207616806030273,
+      "latency_ms": 10.143643001356395,
+      "probabilities": {
+        "defect": 0.8207616806030273,
+        "non_defect": 0.17923828959465027
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:09.505283",
+      "frame_index": 31,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.7044733762741089,
+      "defect_prob": 0.7044733762741089,
+      "latency_ms": 9.943790999386692,
+      "probabilities": {
+        "defect": 0.7044733762741089,
+        "non_defect": 0.2955266237258911
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:09.512254",
+      "frame_index": 31,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9999999950670224,
+      "defect_prob": 0.9999999950670224,
+      "latency_ms": 6.942787000298267,
+      "probabilities": {
+        "defect": 0.9999999950670224,
+        "non_defect": 4.932977581972864e-09
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:09.521769",
+      "frame_index": 31,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "UNCERTAIN",
+      "confidence": 0.5529194474220276,
+      "defect_prob": 0.5529194474220276,
+      "latency_ms": 9.485918999416754,
+      "probabilities": {
+        "defect": 0.5529194474220276,
+        "non_defect": 0.4470805525779724
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:09.521796",
+      "frame_index": 31,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.7312303771643445,
+      "defect_prob": 0.7312303771643445,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.26876962283565553,
+        "defect": 0.7312303771643445
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:10.650017",
+      "frame_index": 32,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.9989776611328125,
+      "defect_prob": 0.0010223444551229477,
+      "latency_ms": 11.991088002105244,
+      "probabilities": {
+        "defect": 0.0010223444551229477,
+        "non_defect": 0.9989776611328125
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:10.660120",
+      "frame_index": 32,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9625832438468933,
+      "defect_prob": 0.9625832438468933,
+      "latency_ms": 10.072008000861388,
+      "probabilities": {
+        "defect": 0.9625832438468933,
+        "non_defect": 0.037416741251945496
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:10.669969",
+      "frame_index": 32,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9624494910240173,
+      "defect_prob": 0.9624494910240173,
+      "latency_ms": 9.818931001063902,
+      "probabilities": {
+        "defect": 0.9624494910240173,
+        "non_defect": 0.037550508975982666
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:10.676940",
+      "frame_index": 32,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 1.0,
+      "defect_prob": 1.0,
+      "latency_ms": 6.941755000298144,
+      "probabilities": {
+        "defect": 1.0,
+        "non_defect": 3.0961540838370467e-31
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:10.686239",
+      "frame_index": 32,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.7753237634897232,
+      "defect_prob": 0.7753237634897232,
+      "latency_ms": 9.271830000216141,
+      "probabilities": {
+        "defect": 0.7753237634897232,
+        "non_defect": 0.2246762365102768
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:10.686266",
+      "frame_index": 32,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.7402757685631514,
+      "defect_prob": 0.7402757685631514,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.25972423143684864,
+        "defect": 0.7402757685631514
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:11.634631",
+      "frame_index": 33,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.9907152652740479,
+      "defect_prob": 0.009284727275371552,
+      "latency_ms": 9.96867300273152,
+      "probabilities": {
+        "defect": 0.009284727275371552,
+        "non_defect": 0.9907152652740479
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:11.645486",
+      "frame_index": 33,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.7275537848472595,
+      "defect_prob": 0.2724462151527405,
+      "latency_ms": 10.824593999132048,
+      "probabilities": {
+        "defect": 0.2724462151527405,
+        "non_defect": 0.7275537848472595
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:11.657901",
+      "frame_index": 33,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9749346822500229,
+      "defect_prob": 0.9749346822500229,
+      "latency_ms": 12.384259000100428,
+      "probabilities": {
+        "defect": 0.9749346822500229,
+        "non_defect": 0.025065317749977112
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:11.664834",
+      "frame_index": 33,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 1.0,
+      "defect_prob": 1.0,
+      "latency_ms": 6.9032789979246445,
+      "probabilities": {
+        "defect": 1.0,
+        "non_defect": 1.5598995763519185e-31
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:11.674313",
+      "frame_index": 33,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.7341354191303253,
+      "defect_prob": 0.7341354191303253,
+      "latency_ms": 9.451079997234046,
+      "probabilities": {
+        "defect": 0.7341354191303253,
+        "non_defect": 0.2658645808696747
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:11.674343",
+      "frame_index": 33,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "defect",
+      "decision": "UNCERTAIN",
+      "confidence": 0.5981602087616921,
+      "defect_prob": 0.5981602087616921,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.40183979123830793,
+        "defect": 0.5981602087616921
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:12.548101",
+      "frame_index": 34,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8827326893806458,
+      "defect_prob": 0.11726728081703186,
+      "latency_ms": 10.536865000176476,
+      "probabilities": {
+        "defect": 0.11726728081703186,
+        "non_defect": 0.8827326893806458
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:12.558153",
+      "frame_index": 34,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.8825625777244568,
+      "defect_prob": 0.8825625777244568,
+      "latency_ms": 10.020361998613225,
+      "probabilities": {
+        "defect": 0.8825625777244568,
+        "non_defect": 0.11743747442960739
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:12.568093",
+      "frame_index": 34,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9491743333637714,
+      "defect_prob": 0.9491743333637714,
+      "latency_ms": 9.90871599788079,
+      "probabilities": {
+        "defect": 0.9491743333637714,
+        "non_defect": 0.05082566663622856
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:12.575053",
+      "frame_index": 34,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 1.0,
+      "defect_prob": 1.0,
+      "latency_ms": 6.929895000212127,
+      "probabilities": {
+        "defect": 1.0,
+        "non_defect": 2.6822387779266327e-31
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:12.584445",
+      "frame_index": 34,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.7451649904251099,
+      "defect_prob": 0.7451649904251099,
+      "latency_ms": 9.363115997985005,
+      "probabilities": {
+        "defect": 0.7451649904251099,
+        "non_defect": 0.25483500957489014
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:12.584474",
+      "frame_index": 34,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.738833836466074,
+      "defect_prob": 0.738833836466074,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.26116616353392597,
+        "defect": 0.738833836466074
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:13.395270",
+      "frame_index": 35,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.7117603421211243,
+      "defect_prob": 0.7117603421211243,
+      "latency_ms": 11.978249000094365,
+      "probabilities": {
+        "defect": 0.7117603421211243,
+        "non_defect": 0.28823962807655334
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:13.405387",
+      "frame_index": 35,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.933732807636261,
+      "defect_prob": 0.933732807636261,
+      "latency_ms": 10.086426002089866,
+      "probabilities": {
+        "defect": 0.933732807636261,
+        "non_defect": 0.0662672221660614
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:13.415339",
+      "frame_index": 35,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9226189851760864,
+      "defect_prob": 0.9226189851760864,
+      "latency_ms": 9.91988600071636,
+      "probabilities": {
+        "defect": 0.9226189851760864,
+        "non_defect": 0.07738101482391357
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:13.422324",
+      "frame_index": 35,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 1.0,
+      "defect_prob": 1.0,
+      "latency_ms": 6.956613997317618,
+      "probabilities": {
+        "defect": 1.0,
+        "non_defect": 4.5212722114321567e-29
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:13.432145",
+      "frame_index": 35,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "defect",
+      "decision": "UNCERTAIN",
+      "confidence": 0.5120863318443298,
+      "defect_prob": 0.5120863318443298,
+      "latency_ms": 9.793576999072684,
+      "probabilities": {
+        "defect": 0.5120863318443298,
+        "non_defect": 0.48791366815567017
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:13.432176",
+      "frame_index": 35,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.8160396933555603,
+      "defect_prob": 0.8160396933555603,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.18396030664443974,
+        "defect": 0.8160396933555603
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:14.444357",
+      "frame_index": 36,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.9852638244628906,
+      "defect_prob": 0.014736156910657883,
+      "latency_ms": 10.610194000037154,
+      "probabilities": {
+        "defect": 0.014736156910657883,
+        "non_defect": 0.9852638244628906
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:14.455566",
+      "frame_index": 36,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.8756089806556702,
+      "defect_prob": 0.8756089806556702,
+      "latency_ms": 11.175124000146752,
+      "probabilities": {
+        "defect": 0.8756089806556702,
+        "non_defect": 0.12439105659723282
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:14.468368",
+      "frame_index": 36,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.7489060759544373,
+      "defect_prob": 0.25109392404556274,
+      "latency_ms": 12.764777002303163,
+      "probabilities": {
+        "defect": 0.25109392404556274,
+        "non_defect": 0.7489060759544373
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:14.475730",
+      "frame_index": 36,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9970091795548797,
+      "defect_prob": 0.9970091795548797,
+      "latency_ms": 7.330533000640571,
+      "probabilities": {
+        "defect": 0.9970091795548797,
+        "non_defect": 0.0029908204451203346
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:14.485290",
+      "frame_index": 36,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6735076904296875,
+      "defect_prob": 0.3264923095703125,
+      "latency_ms": 9.531313000479713,
+      "probabilities": {
+        "defect": 0.3264923095703125,
+        "non_defect": 0.6735076904296875
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:14.485317",
+      "frame_index": 36,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "non_defect",
+      "decision": "UNCERTAIN",
+      "confidence": 0.5070118898525834,
+      "defect_prob": 0.4929881101474166,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.5070118898525834,
+        "defect": 0.4929881101474166
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:15.234434",
+      "frame_index": 37,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.9440093636512756,
+      "defect_prob": 0.05599060654640198,
+      "latency_ms": 10.38917600089917,
+      "probabilities": {
+        "defect": 0.05599060654640198,
+        "non_defect": 0.9440093636512756
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:15.245830",
+      "frame_index": 37,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.8556264638900757,
+      "defect_prob": 0.8556264638900757,
+      "latency_ms": 11.362631001247792,
+      "probabilities": {
+        "defect": 0.8556264638900757,
+        "non_defect": 0.14437353610992432
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:15.256150",
+      "frame_index": 37,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.7458311319351196,
+      "defect_prob": 0.25416886806488037,
+      "latency_ms": 10.285071999533102,
+      "probabilities": {
+        "defect": 0.25416886806488037,
+        "non_defect": 0.7458311319351196
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:15.263165",
+      "frame_index": 37,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.9270230084657669,
+      "defect_prob": 0.9270230084657669,
+      "latency_ms": 6.985846997849876,
+      "probabilities": {
+        "defect": 0.9270230084657669,
+        "non_defect": 0.0729769915342331
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:15.272638",
+      "frame_index": 37,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6420282125473022,
+      "defect_prob": 0.35797178745269775,
+      "latency_ms": 9.44652999896789,
+      "probabilities": {
+        "defect": 0.35797178745269775,
+        "non_defect": 0.6420282125473022
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:15.272673",
+      "frame_index": 37,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "non_defect",
+      "decision": "UNCERTAIN",
+      "confidence": 0.5098438531160354,
+      "defect_prob": 0.4901561468839645,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.5098438531160354,
+        "defect": 0.4901561468839645
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:16.220045",
+      "frame_index": 38,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8971413373947144,
+      "defect_prob": 0.10285864770412445,
+      "latency_ms": 12.630847999389516,
+      "probabilities": {
+        "defect": 0.10285864770412445,
+        "non_defect": 0.8971413373947144
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:16.230554",
+      "frame_index": 38,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.8749504685401917,
+      "defect_prob": 0.8749504685401917,
+      "latency_ms": 10.48157200057176,
+      "probabilities": {
+        "defect": 0.8749504685401917,
+        "non_defect": 0.12504951655864716
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:16.240494",
+      "frame_index": 38,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8052718639373779,
+      "defect_prob": 0.19472813606262207,
+      "latency_ms": 9.908378000545781,
+      "probabilities": {
+        "defect": 0.19472813606262207,
+        "non_defect": 0.8052718639373779
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:16.248113",
+      "frame_index": 38,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.776416227221489,
+      "defect_prob": 0.776416227221489,
+      "latency_ms": 7.587918000353966,
+      "probabilities": {
+        "defect": 0.776416227221489,
+        "non_defect": 0.22358377277851105
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:16.258018",
+      "frame_index": 38,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6319628357887268,
+      "defect_prob": 0.3680371642112732,
+      "latency_ms": 9.874479997961316,
+      "probabilities": {
+        "defect": 0.3680371642112732,
+        "non_defect": 0.6319628357887268
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:16.258047",
+      "frame_index": 38,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "non_defect",
+      "decision": "UNCERTAIN",
+      "confidence": 0.5366018712520599,
+      "defect_prob": 0.46339812874794006,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.5366018712520599,
+        "defect": 0.46339812874794006
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:17.387594",
+      "frame_index": 39,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.9768611788749695,
+      "defect_prob": 0.023138834163546562,
+      "latency_ms": 9.960606999811716,
+      "probabilities": {
+        "defect": 0.023138834163546562,
+        "non_defect": 0.9768611788749695
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:17.398376",
+      "frame_index": 39,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.789262592792511,
+      "defect_prob": 0.789262592792511,
+      "latency_ms": 10.751324000011664,
+      "probabilities": {
+        "defect": 0.789262592792511,
+        "non_defect": 0.21073737740516663
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:17.410895",
+      "frame_index": 39,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.7525005340576172,
+      "defect_prob": 0.2474994659423828,
+      "latency_ms": 12.483063997933641,
+      "probabilities": {
+        "defect": 0.2474994659423828,
+        "non_defect": 0.7525005340576172
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:17.417679",
+      "frame_index": 39,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.7698753178119659,
+      "defect_prob": 0.7698753178119659,
+      "latency_ms": 6.754090998583706,
+      "probabilities": {
+        "defect": 0.7698753178119659,
+        "non_defect": 0.23012468218803406
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:17.427127",
+      "frame_index": 39,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6224257349967957,
+      "defect_prob": 0.37757426500320435,
+      "latency_ms": 9.422315000847448,
+      "probabilities": {
+        "defect": 0.37757426500320435,
+        "non_defect": 0.6224257349967957
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:17.427159",
+      "frame_index": 39,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "non_defect",
+      "decision": "UNCERTAIN",
+      "confidence": 0.5585299048572778,
+      "defect_prob": 0.4414700951427221,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.5585299048572778,
+        "defect": 0.4414700951427221
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:18.362076",
+      "frame_index": 40,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.9734704494476318,
+      "defect_prob": 0.026529591530561447,
+      "latency_ms": 10.7040529983351,
+      "probabilities": {
+        "defect": 0.026529591530561447,
+        "non_defect": 0.9734704494476318
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:18.372025",
+      "frame_index": 40,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.7568557858467102,
+      "defect_prob": 0.7568557858467102,
+      "latency_ms": 9.920615997543791,
+      "probabilities": {
+        "defect": 0.7568557858467102,
+        "non_defect": 0.2431441694498062
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:18.382446",
+      "frame_index": 40,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.7765016555786133,
+      "defect_prob": 0.22349834442138672,
+      "latency_ms": 10.388844999397406,
+      "probabilities": {
+        "defect": 0.22349834442138672,
+        "non_defect": 0.7765016555786133
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:18.389661",
+      "frame_index": 40,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.78264220058918,
+      "defect_prob": 0.78264220058918,
+      "latency_ms": 7.17917699876125,
+      "probabilities": {
+        "defect": 0.78264220058918,
+        "non_defect": 0.21735779941082
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:18.399582",
+      "frame_index": 40,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.7780284881591797,
+      "defect_prob": 0.2219715118408203,
+      "latency_ms": 9.890249999443768,
+      "probabilities": {
+        "defect": 0.2219715118408203,
+        "non_defect": 0.7780284881591797
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:18.399608",
+      "frame_index": 40,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "non_defect",
+      "decision": "UNCERTAIN",
+      "confidence": 0.5977005131542683,
+      "defect_prob": 0.40229948684573175,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.5977005131542683,
+        "defect": 0.40229948684573175
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:19.362607",
+      "frame_index": 41,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.9430519938468933,
+      "defect_prob": 0.05694800615310669,
+      "latency_ms": 12.601964001078159,
+      "probabilities": {
+        "defect": 0.05694800615310669,
+        "non_defect": 0.9430519938468933
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:19.372954",
+      "frame_index": 41,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.8288677930831909,
+      "defect_prob": 0.8288677930831909,
+      "latency_ms": 10.317244999896502,
+      "probabilities": {
+        "defect": 0.8288677930831909,
+        "non_defect": 0.1711321771144867
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:19.383126",
+      "frame_index": 41,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8892773985862732,
+      "defect_prob": 0.1107226014137268,
+      "latency_ms": 10.139347999938764,
+      "probabilities": {
+        "defect": 0.1107226014137268,
+        "non_defect": 0.8892773985862732
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:19.390205",
+      "frame_index": 41,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.7832469195127487,
+      "defect_prob": 0.7832469195127487,
+      "latency_ms": 7.045944999845233,
+      "probabilities": {
+        "defect": 0.7832469195127487,
+        "non_defect": 0.21675308048725128
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:19.399811",
+      "frame_index": 41,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.7598356008529663,
+      "defect_prob": 0.2401643991470337,
+      "latency_ms": 9.571809001499787,
+      "probabilities": {
+        "defect": 0.2401643991470337,
+        "non_defect": 0.7598356008529663
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:19.399840",
+      "frame_index": 41,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "non_defect",
+      "decision": "UNCERTAIN",
+      "confidence": 0.5960100561380386,
+      "defect_prob": 0.40398994386196135,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.5960100561380386,
+        "defect": 0.40398994386196135
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:20.250602",
+      "frame_index": 42,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.9686230421066284,
+      "defect_prob": 0.031376905739307404,
+      "latency_ms": 10.5977819985128,
+      "probabilities": {
+        "defect": 0.031376905739307404,
+        "non_defect": 0.9686230421066284
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:20.262013",
+      "frame_index": 42,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.8293428421020508,
+      "defect_prob": 0.8293428421020508,
+      "latency_ms": 11.37869499871158,
+      "probabilities": {
+        "defect": 0.8293428421020508,
+        "non_defect": 0.1706571727991104
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:20.274970",
+      "frame_index": 42,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.7980341911315918,
+      "defect_prob": 0.2019658088684082,
+      "latency_ms": 12.927646999742137,
+      "probabilities": {
+        "defect": 0.2019658088684082,
+        "non_defect": 0.7980341911315918
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:20.281916",
+      "frame_index": 42,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.7762593775987625,
+      "defect_prob": 0.7762593775987625,
+      "latency_ms": 6.915318001119886,
+      "probabilities": {
+        "defect": 0.7762593775987625,
+        "non_defect": 0.2237406224012375
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:20.291457",
+      "frame_index": 42,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.7595106363296509,
+      "defect_prob": 0.24048936367034912,
+      "latency_ms": 9.513991997664561,
+      "probabilities": {
+        "defect": 0.24048936367034912,
+        "non_defect": 0.7595106363296509
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:20.291493",
+      "frame_index": 42,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "non_defect",
+      "decision": "UNCERTAIN",
+      "confidence": 0.5841131404042244,
+      "defect_prob": 0.4158868595957756,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.5841131404042244,
+        "defect": 0.4158868595957756
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:21.078216",
+      "frame_index": 43,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.9615328907966614,
+      "defect_prob": 0.03846707567572594,
+      "latency_ms": 10.77075600187527,
+      "probabilities": {
+        "defect": 0.03846707567572594,
+        "non_defect": 0.9615328907966614
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:21.088460",
+      "frame_index": 43,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.8030139207839966,
+      "defect_prob": 0.8030139207839966,
+      "latency_ms": 10.213151999778347,
+      "probabilities": {
+        "defect": 0.8030139207839966,
+        "non_defect": 0.19698601961135864
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:21.098647",
+      "frame_index": 43,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6747667789459229,
+      "defect_prob": 0.32523322105407715,
+      "latency_ms": 10.153531999094412,
+      "probabilities": {
+        "defect": 0.32523322105407715,
+        "non_defect": 0.6747667789459229
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:21.106140",
+      "frame_index": 43,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.8256663829088211,
+      "defect_prob": 0.8256663829088211,
+      "latency_ms": 7.174731999839423,
+      "probabilities": {
+        "defect": 0.8256663829088211,
+        "non_defect": 0.1743336170911789
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:21.115546",
+      "frame_index": 43,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6423113346099854,
+      "defect_prob": 0.35768866539001465,
+      "latency_ms": 9.372637003252748,
+      "probabilities": {
+        "defect": 0.35768866539001465,
+        "non_defect": 0.6423113346099854
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:21.115576",
+      "frame_index": 43,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "non_defect",
+      "decision": "UNCERTAIN",
+      "confidence": 0.5299861468374729,
+      "defect_prob": 0.4700138531625271,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.5299861468374729,
+        "defect": 0.4700138531625271
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:22.088582",
+      "frame_index": 44,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.9571205973625183,
+      "defect_prob": 0.04287940263748169,
+      "latency_ms": 11.934343001485104,
+      "probabilities": {
+        "defect": 0.04287940263748169,
+        "non_defect": 0.9571205973625183
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:22.098492",
+      "frame_index": 44,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.76686692237854,
+      "defect_prob": 0.76686692237854,
+      "latency_ms": 9.87962499857531,
+      "probabilities": {
+        "defect": 0.76686692237854,
+        "non_defect": 0.23313303291797638
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:22.108202",
+      "frame_index": 44,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.727537989616394,
+      "defect_prob": 0.27246201038360596,
+      "latency_ms": 9.679668000899255,
+      "probabilities": {
+        "defect": 0.27246201038360596,
+        "non_defect": 0.727537989616394
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:22.115023",
+      "frame_index": 44,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.8468149304389954,
+      "defect_prob": 0.8468149304389954,
+      "latency_ms": 6.794081000407459,
+      "probabilities": {
+        "defect": 0.8468149304389954,
+        "non_defect": 0.15318506956100464
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:22.124840",
+      "frame_index": 44,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8116276264190674,
+      "defect_prob": 0.18837237358093262,
+      "latency_ms": 9.790480999072315,
+      "probabilities": {
+        "defect": 0.18837237358093262,
+        "non_defect": 0.8116276264190674
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:22.124875",
+      "frame_index": 44,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "non_defect",
+      "decision": "UNCERTAIN",
+      "confidence": 0.5765208721160888,
+      "defect_prob": 0.4234791278839111,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.5765208721160888,
+        "defect": 0.4234791278839111
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:23.110770",
+      "frame_index": 45,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.9607877135276794,
+      "defect_prob": 0.03921227157115936,
+      "latency_ms": 10.901503002969548,
+      "probabilities": {
+        "defect": 0.03921227157115936,
+        "non_defect": 0.9607877135276794
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:23.127286",
+      "frame_index": 45,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.7371967434883118,
+      "defect_prob": 0.7371967434883118,
+      "latency_ms": 16.480147001857404,
+      "probabilities": {
+        "defect": 0.7371967434883118,
+        "non_defect": 0.2628032863140106
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:23.144900",
+      "frame_index": 45,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.7088885307312012,
+      "defect_prob": 0.29111146926879883,
+      "latency_ms": 17.57269899826497,
+      "probabilities": {
+        "defect": 0.29111146926879883,
+        "non_defect": 0.7088885307312012
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:23.155333",
+      "frame_index": 45,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.856829971075058,
+      "defect_prob": 0.856829971075058,
+      "latency_ms": 10.393618002126459,
+      "probabilities": {
+        "defect": 0.856829971075058,
+        "non_defect": 0.14317002892494202
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:23.167244",
+      "frame_index": 45,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6216052770614624,
+      "defect_prob": 0.3783947229385376,
+      "latency_ms": 11.872883998876205,
+      "probabilities": {
+        "defect": 0.3783947229385376,
+        "non_defect": 0.6216052770614624
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:23.167287",
+      "frame_index": 45,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "non_defect",
+      "decision": "UNCERTAIN",
+      "confidence": 0.5394509643316269,
+      "defect_prob": 0.46054903566837313,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.5394509643316269,
+        "defect": 0.46054903566837313
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:24.051629",
+      "frame_index": 46,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.9803243279457092,
+      "defect_prob": 0.019675640389323235,
+      "latency_ms": 11.067952000303194,
+      "probabilities": {
+        "defect": 0.019675640389323235,
+        "non_defect": 0.9803243279457092
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:24.069264",
+      "frame_index": 46,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "UNCERTAIN",
+      "confidence": 0.5960706472396851,
+      "defect_prob": 0.5960706472396851,
+      "latency_ms": 17.599669998162426,
+      "probabilities": {
+        "defect": 0.5960706472396851,
+        "non_defect": 0.4039294123649597
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:24.087348",
+      "frame_index": 46,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6042110919952393,
+      "defect_prob": 0.39578890800476074,
+      "latency_ms": 18.043371001112973,
+      "probabilities": {
+        "defect": 0.39578890800476074,
+        "non_defect": 0.6042110919952393
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:24.097165",
+      "frame_index": 46,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.8594841659069061,
+      "defect_prob": 0.8594841659069061,
+      "latency_ms": 9.775239999726182,
+      "probabilities": {
+        "defect": 0.8594841659069061,
+        "non_defect": 0.14051583409309387
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:24.107064",
+      "frame_index": 46,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6213849782943726,
+      "defect_prob": 0.37861502170562744,
+      "latency_ms": 9.865247997367987,
+      "probabilities": {
+        "defect": 0.37861502170562744,
+        "non_defect": 0.6213849782943726
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:24.107099",
+      "frame_index": 46,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "non_defect",
+      "decision": "UNCERTAIN",
+      "confidence": 0.5500731233507394,
+      "defect_prob": 0.4499268766492605,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.5500731233507394,
+        "defect": 0.4499268766492605
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:25.496362",
+      "frame_index": 47,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.9221518635749817,
+      "defect_prob": 0.07784812897443771,
+      "latency_ms": 12.798333998944145,
+      "probabilities": {
+        "defect": 0.07784812897443771,
+        "non_defect": 0.9221518635749817
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:25.509940",
+      "frame_index": 47,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "UNCERTAIN",
+      "confidence": 0.642850935459137,
+      "defect_prob": 0.642850935459137,
+      "latency_ms": 13.544853998610051,
+      "probabilities": {
+        "defect": 0.642850935459137,
+        "non_defect": 0.35714903473854065
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:25.519591",
+      "frame_index": 47,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8951858282089233,
+      "defect_prob": 0.10481417179107666,
+      "latency_ms": 9.61838299917872,
+      "probabilities": {
+        "defect": 0.10481417179107666,
+        "non_defect": 0.8951858282089233
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:25.526496",
+      "frame_index": 47,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.86851005256176,
+      "defect_prob": 0.86851005256176,
+      "latency_ms": 6.87859499885235,
+      "probabilities": {
+        "defect": 0.86851005256176,
+        "non_defect": 0.13148994743824005
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:25.535829",
+      "frame_index": 47,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8903030157089233,
+      "defect_prob": 0.10969698429107666,
+      "latency_ms": 9.30416000119294,
+      "probabilities": {
+        "defect": 0.10969698429107666,
+        "non_defect": 0.8903030157089233
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:25.535857",
+      "frame_index": 47,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6392559453845024,
+      "defect_prob": 0.3607440546154976,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.6392559453845024,
+        "defect": 0.3607440546154976
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:27.021310",
+      "frame_index": 48,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.9850478172302246,
+      "defect_prob": 0.014952176250517368,
+      "latency_ms": 11.499365002237028,
+      "probabilities": {
+        "defect": 0.014952176250517368,
+        "non_defect": 0.9850478172302246
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:27.035096",
+      "frame_index": 48,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.7344215512275696,
+      "defect_prob": 0.7344215512275696,
+      "latency_ms": 13.749069003097247,
+      "probabilities": {
+        "defect": 0.7344215512275696,
+        "non_defect": 0.26557841897010803
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:27.055973",
+      "frame_index": 48,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.814437747001648,
+      "defect_prob": 0.18556225299835205,
+      "latency_ms": 20.835171002545394,
+      "probabilities": {
+        "defect": 0.18556225299835205,
+        "non_defect": 0.814437747001648
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:27.064516",
+      "frame_index": 48,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.8995843306183815,
+      "defect_prob": 0.8995843306183815,
+      "latency_ms": 8.501983000314794,
+      "probabilities": {
+        "defect": 0.8995843306183815,
+        "non_defect": 0.1004156693816185
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:27.074264",
+      "frame_index": 48,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6850817799568176,
+      "defect_prob": 0.3149182200431824,
+      "latency_ms": 9.713761999591952,
+      "probabilities": {
+        "defect": 0.3149182200431824,
+        "non_defect": 0.6850817799568176
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:27.074295",
+      "frame_index": 48,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "non_defect",
+      "decision": "UNCERTAIN",
+      "confidence": 0.5701122937723995,
+      "defect_prob": 0.4298877062276006,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.5701122937723995,
+        "defect": 0.4298877062276006
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:28.556961",
+      "frame_index": 49,
+      "source_label": "stream",
+      "model_name": "YOLO26n-320",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.955825686454773,
+      "defect_prob": 0.04417433217167854,
+      "latency_ms": 11.075307000282919,
+      "probabilities": {
+        "defect": 0.04417433217167854,
+        "non_defect": 0.955825686454773
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:28.570965",
+      "frame_index": 49,
+      "source_label": "stream",
+      "model_name": "YOLO26s-320",
+      "model_type": "yolo",
+      "class_name": "defect",
+      "decision": "UNCERTAIN",
+      "confidence": 0.6570273041725159,
+      "defect_prob": 0.6570273041725159,
+      "latency_ms": 13.967143997433595,
+      "probabilities": {
+        "defect": 0.6570273041725159,
+        "non_defect": 0.34297269582748413
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:28.583727",
+      "frame_index": 49,
+      "source_label": "stream",
+      "model_name": "MNet-SELU(r3)",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6939113736152649,
+      "defect_prob": 0.3060886263847351,
+      "latency_ms": 12.72688199969707,
+      "probabilities": {
+        "defect": 0.3060886263847351,
+        "non_defect": 0.6939113736152649
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:28.590924",
+      "frame_index": 49,
+      "source_label": "stream",
+      "model_name": "MLP-boost(r3)",
+      "model_type": "mlp",
+      "class_name": "defect",
+      "decision": "FAIL",
+      "confidence": 0.8882006928324699,
+      "defect_prob": 0.8882006928324699,
+      "latency_ms": 7.167710999055998,
+      "probabilities": {
+        "defect": 0.8882006928324699,
+        "non_defect": 0.11179930716753006
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:28.600881",
+      "frame_index": 49,
+      "source_label": "stream",
+      "model_name": "MNet-ELU(r1)",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.7196521162986755,
+      "defect_prob": 0.28034788370132446,
+      "latency_ms": 9.929248997650575,
+      "probabilities": {
+        "defect": 0.28034788370132446,
+        "non_defect": 0.7196521162986755
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T21:39:28.600906",
+      "frame_index": 49,
+      "source_label": "stream",
+      "model_name": "ENSEMBLE (5 models)",
+      "model_type": "ensemble",
+      "class_name": "non_defect",
+      "decision": "UNCERTAIN",
+      "confidence": 0.5648322321474553,
+      "defect_prob": 0.4351677678525448,
+      "latency_ms": 0.0,
+      "probabilities": {
+        "non_defect": 0.5648322321474553,
+        "defect": 0.4351677678525448
+      },
+      "ground_truth": null,
+      "capture_path": null
+    }
+  ],
+  "summary": {
+    "total_events": 294,
+    "per_model": {
+      "YOLO26n-320": {
+        "total": 49,
+        "PASS": 19,
+        "FAIL": 29,
+        "UNCERTAIN": 1,
+        "gt_checked": 0,
+        "gt_correct": 0,
+        "mean_latency_ms": 15.501890877945995,
+        "mean_confidence": 0.9635930049176119,
+        "running_accuracy": null
+      },
+      "YOLO26s-320": {
+        "total": 49,
+        "PASS": 3,
+        "FAIL": 43,
+        "UNCERTAIN": 3,
+        "gt_checked": 0,
+        "gt_correct": 0,
+        "mean_latency_ms": 12.134298428371002,
+        "mean_confidence": 0.9079753501074654,
+        "running_accuracy": null
+      },
+      "MNet-SELU(r3)": {
+        "total": 49,
+        "PASS": 15,
+        "FAIL": 33,
+        "UNCERTAIN": 1,
+        "gt_checked": 0,
+        "gt_correct": 0,
+        "mean_latency_ms": 12.066056183821459,
+        "mean_confidence": 0.8874433733408853,
+        "running_accuracy": null
+      },
+      "MLP-boost(r3)": {
+        "total": 49,
+        "PASS": 0,
+        "FAIL": 49,
+        "UNCERTAIN": 0,
+        "gt_checked": 0,
+        "gt_correct": 0,
+        "mean_latency_ms": 7.35161502019096,
+        "mean_confidence": 0.9562759081706722,
+        "running_accuracy": null
+      },
+      "MNet-ELU(r1)": {
+        "total": 49,
+        "PASS": 14,
+        "FAIL": 31,
+        "UNCERTAIN": 4,
+        "gt_checked": 0,
+        "gt_correct": 0,
+        "mean_latency_ms": 9.7822744897638,
+        "mean_confidence": 0.8525903986253757,
+        "running_accuracy": null
+      },
+      "ENSEMBLE (5 models)": {
+        "total": 49,
+        "PASS": 1,
+        "FAIL": 32,
+        "UNCERTAIN": 16,
+        "gt_checked": 0,
+        "gt_correct": 0,
+        "mean_latency_ms": 0.0,
+        "mean_confidence": 0.8207229743119986,
+        "running_accuracy": null
+      }
+    }
+  }
+}

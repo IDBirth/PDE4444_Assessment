@@ -57,13 +57,8 @@ run_capture/
 # Local Claude config
 .claude/settings.local.json
 
-# Model weight files — large binaries, not tracked in git.
-# Use Git LFS or download separately; see top_models/README.md.
-#top_models/**/*.pt
-#top_models/**/*.onnx
-#top_models/**/*.engine
-#top_models/**/*.torchscript
-#top_models/model_optimized/__pycache__/
+# Model weight files — the 10 .pt checkpoints under top_models/ ARE tracked
+# (uncommented intentionally). Training run outputs (runs*/) are not.
 defect_classification_stack/runs/
 runs2/
 runs3/

@@ -6,6 +6,8 @@ from pathlib import Path
 
 import pandas as pd
 from ultralytics import YOLO
+from ultralytics.data.dataset import ClassificationDataset
+from ultralytics.models.yolo.classify import ClassificationTrainer
 
 from common import ensure_dir, infer_class_names, set_seed
 
@@ -13,6 +15,13 @@ from common import ensure_dir, infer_class_names, set_seed
 def find_metrics_csv(project_dir: Path) -> Path | None:
     candidates = sorted(project_dir.rglob("results.csv"))
     return candidates[0] if candidates else None
+
+
+class NoAugClassificationTrainer(ClassificationTrainer):
+    """Force the training split onto the non-augmented classification transform path."""
+
+    def build_dataset(self, img_path: str, mode: str = "train", batch=None):
+        return ClassificationDataset(root=img_path, args=self.args, augment=False, prefix=mode)
 
 
 def main() -> None:
@@ -39,7 +48,9 @@ def main() -> None:
         raise ValueError(f"Expected 2 classes, found {len(class_names)}: {class_names}")
 
     model = YOLO(args.model)
+    print("[INFO] Ultralytics online augmentation: disabled")
     results = model.train(
+        trainer=NoAugClassificationTrainer,
         data=str(args.data_dir),
         epochs=args.epochs,
         imgsz=args.imgsz,

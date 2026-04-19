@@ -1,3 +1,10 @@
+# yolo26_t1
+python /home/ubu/Desktop/Assessment/defect_classification_stack/demo_live_test_with_video.py \
+   --model /home/ubu/Desktop/Assessment/defect_classification_stack/models/PDE4444_T1_best.pt \
+   --stream-url "https://api.baslarlabs.ae/video_feed" \
+   --auth-user 'zeroq' \
+   --auth-password '#@45459xQw'
+
 # yolo26n_cls_320
 python /home/ubu/Desktop/Assessment/defect_classification_stack/demo_live_test_with_video.py \
    --model /home/ubu/Desktop/Assessment/runs3/iter1_yolo_320/train/weights/best.pt \
@@ -74,6 +81,16 @@ cd /home/ubu/Desktop/Assessment
     --stream-url "https://api.baslarlabs.ae/video_feed" \
     --auth-user 'zeroq' \
     --auth-password '#@45459xQw'
+
+cd /home/ubu/Desktop/Assessment
+.venv/bin/python defect_classification_stack/demo_live_test_with_video_top6.py \
+    --stream-url "https://api.baslarlabs.ae/video_feed" \
+    --auth-user zeroq --auth-password '#@45459xQw' \
+    --models top_models/01_yolo26n_320/model.pt \
+             top_models/02_yolo26s_320/model.pt \
+             top_models/03_mobilenet_selu_r3/model.pt \
+             top_models/04_mlp_boost_r3/model.pt \
+             top_models/05_mobilenet_elu_r1/model.pt
 
 
 Next:

@@ -3,9 +3,10 @@
 End-to-end orchestration script — PDE4444 Defect Classification Pipeline.
 
 Runs the complete workflow from raw images → balanced splits → trained models
-→ aggregated report → exported engines. Every artefact is written under
---runs-dir and every step is resumable (skipped if its output already exists
-and --force is not set).
+→ aggregated report. Every artefact is written under --runs-dir and every
+step is resumable (skipped if its output already exists and --force is not
+set). All models are saved as PyTorch .pt checkpoints; no engine/ONNX/
+TorchScript export is performed.
 
 Usage:
     cd /home/ubu/Desktop/Assessment
@@ -24,7 +25,6 @@ Steps executed:
      8. YOLO26s-cls (img=320, batch=64, epochs=50)
      9. 5-fold cross-validation (HOG + SVM / MLP)
     10. Aggregate all results + comparison chart
-    11. Export top-10 model checkpoints to ONNX (and optionally TensorRT)
 
 Resuming: any step whose output directory exists and is non-empty is skipped.
 Use --force to re-run, or --steps N M ... to run a subset.
@@ -122,7 +122,7 @@ def step_build_dataset(py: str, data_dir: Path, force: bool) -> bool:
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Full PDE4444 pipeline — raw data to exported engines."
+        description="Full PDE4444 pipeline — raw data to aggregated report."
     )
     parser.add_argument(
         "--runs-dir", type=Path, default=REPO_ROOT / "runs_new",
@@ -137,18 +137,8 @@ def main() -> None:
         help="Re-run steps even if output directory already exists."
     )
     parser.add_argument(
-        "--steps", nargs="+", type=int, default=list(range(0, 12)),
-        metavar="N", help="Run only these step numbers (default: 0-11)."
-    )
-    parser.add_argument(
-        "--engine-format", default="onnx",
-        choices=["onnx", "engine", "torchscript", "all"],
-        help="Format for step 11 export (default: onnx; use 'engine' or 'all' "
-             "if TensorRT is installed)."
-    )
-    parser.add_argument(
-        "--engine-half", action="store_true",
-        help="Use FP16 for ONNX/engine export (recommended for RTX 4090)."
+        "--steps", nargs="+", type=int, default=list(range(0, 11)),
+        metavar="N", help="Run only these step numbers (default: 0-10)."
     )
     args = parser.parse_args()
 
@@ -283,21 +273,6 @@ def main() -> None:
                  "10. aggregate results + comparison chart")
         if not ok:
             errors.append("step 10 — aggregate")
-
-    # ── Step 11: export top-10 engines ──────────────────────────────────────
-    if 11 in args.steps:
-        export_script = REPO_ROOT / "top_models" / "model_optimized" / "export_engines.py"
-        manifest      = REPO_ROOT / "top_models" / "manifest.csv"
-        if not export_script.exists() or not manifest.exists():
-            print("  [SKIP] export step — top_models/ not yet populated. "
-                  "Manifest must be refreshed from the scoreboard before exporting.")
-        else:
-            cmd = [py, str(export_script), "--format", args.engine_format]
-            if args.engine_half:
-                cmd.append("--half")
-            ok = run(cmd, f"11. export top-10 checkpoints → {args.engine_format}")
-            if not ok:
-                errors.append("step 11 — engine export")
 
     # ── Summary ─────────────────────────────────────────────────────────────
     print(f"\n{'='*70}")

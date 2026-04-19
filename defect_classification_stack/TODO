@@ -1,22 +1,3 @@
-Multi-model side-by-side mode — load YOLO26n and the fine-tuned MobileNetV2 ELU at the same time and display both decisions on the overlay. Demonstrates your best two models simultaneously and lets you answer "why YOLO over MobileNet?" live.
-
-Session evidence log — auto-write a demo_session_<timestamp>.json + demo_session_<timestamp>.md containing every decision (timestamp, model, class, confidence, latency, capture path). At end-of-session, print a summary table (total frames, PASS count, FAIL count, mean latency, mean confidence). This gives you the "saved examples of live PASS/FAIL decisions" the rubric wants.
-
-Hotkeys for the demo flow:
-
-SPACE — capture & log a frame manually (good for the moment when you hold up an unseen cup)
-g then 1/2 — assert ground truth (PASS/FAIL) → running accuracy displayed
-p — pause inference
-q — quit + write summary
-Medium-impact
-Better overlay — probability bar for both classes, FPS counter, running PASS/FAIL counts, model name. Currently shows only top-1 confidence.
-
-Confidence threshold flag — --confidence-threshold 0.6 so low-confidence frames show "UNCERTAIN" rather than forcing a binary call. Useful talking point on model limitations.
-
-Auto-detect model type — handle both *.pt YOLO weights and PyTorch state_dicts (your MobileNetV2 checkpoints) without separate scripts.
-
-Graceful missing-model handling — current script crashes hard. Print available models in runs/ and exit cleanly.
-
 Workflow integrity
 Choose one canonical dataset state and freeze it for the final submission. Right now the repo mixes the balanced `defect/non_defect` experiment snapshot with the later imbalanced `defective/non_defective` processed split, which makes the final story harder to defend.
 
@@ -46,9 +27,3 @@ Create one final report table with consistent metric semantics across all model 
 
 Demo readiness
 Unify the demo entry point. Decide whether `demo_live_test.py` or `infer_yolo26_cls_stream.py` is the final script and document one exact command for the assessment day.
-
-Move stream credentials out of commands and source files into environment variables or a local config that is excluded from git. This reduces risk and makes the demo safer to run on another machine.
-
-Add an offline demo mode that runs the same overlay and logging flow on a folder of unseen test images or a local video file. That gives a reliable fallback if the live stream fails.
-
-Add explicit setup-status overlays during demo startup: stream connected, auth mode used, model loaded, class names detected, and current frame size. That will make technical questioning easier to handle live.

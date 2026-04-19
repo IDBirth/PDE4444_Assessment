@@ -32,13 +32,26 @@ data/  -> ../zeroq_cup_classification_scaffold/data
 
 ## Quick start
 
-```bash
-# 1. Install dependencies
-pip install -r requirements.txt
+The canonical entrypoint is the orchestration script at the repo root. It
+runs every step — raw data → balanced splits → all model families →
+aggregated report → optimised engines — and is resumable (each step is
+skipped if its output already exists; use `--force` to re-run).
 
-# 2. Run everything
-bash run.sh data/processed runs/
+```bash
+cd ..                                   # back to repo root
+.venv/bin/python run_pipeline.py \
+    --runs-dir runs_new \
+    --engine-format onnx                 # or --engine-format all --engine-half
 ```
+
+- Outputs are written under `--runs-dir` (default `runs_new/`).
+- The balanced dataset is built on first run from the raw scaffold data
+  at `zeroq_cup_classification_scaffold/data/raw/{defective,non_defective}/`.
+- Re-run a subset with e.g. `--steps 4 6 10` (MLP → MobileNet FT → aggregate).
+- The scoreboard is `runs_new/final_report/all_results.csv`.
+
+`run.sh` in this directory is the legacy per-script launcher and is kept
+for reference only; prefer `run_pipeline.py`.
 
 Or run individual scripts:
 
@@ -94,8 +107,10 @@ python train_cross_validation.py \
 python train_keras_mlp_random_search.py \
   --data-dir   data/processed \
   --output-dir runs/mlp_hparam_search \
-  --max-trials 12 \
-  --img-size 64
+  --max-trials 24 \
+  --img-size 96 \
+  --batch-size 64 \
+  --epochs 35
 ```
 
 ### YOLO26n classification
@@ -104,7 +119,7 @@ python train_keras_mlp_random_search.py \
 python train_yolo26_cls.py \
   --data-dir   data/processed \
   --output-dir runs/yolo26_cls \
-  --epochs 30
+  --imgsz 320 --batch 64 --epochs 50
 ```
 
 ### Aggregate comparison table

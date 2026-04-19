@@ -51,11 +51,15 @@ def collect_all(runs_dir: Path) -> pd.DataFrame:
             rows.append(m)
 
     # --- MLP hparam search ---
-    p = runs_dir / "iter1_mlp_search" / "metrics.json"
-    m = load_metrics_json(p)
-    if m:
-        m["category"] = "MLP HParam Search"
-        rows.append(m)
+    # Match any iter*mlp* directory so variants like iter1_mlp_search and
+    # iter1_mlp_boost are both picked up.
+    for mlp_dir in sorted(runs_dir.glob("iter*mlp*")):
+        p = mlp_dir / "metrics.json"
+        m = load_metrics_json(p)
+        if m:
+            m.setdefault("model_name", mlp_dir.name)
+            m["category"] = "MLP HParam Search"
+            rows.append(m)
 
     # --- MobileNetV2 frozen ---
     mob_dir = runs_dir / "iter2_mobilenet"
@@ -76,21 +80,31 @@ def collect_all(runs_dir: Path) -> pd.DataFrame:
             rows.append(m)
 
     # --- YOLO ---
-    p = runs_dir / "iter1_yolo" / "metrics.json"
-    m = load_metrics_json(p)
-    if m:
+    # YOLO reports top-1 classification accuracy, not binary F1.
+    # top-1 is stored in the accuracy column only. F1/precision/recall are
+    # left as None because YOLO does not report per-class binary metrics.
+    # Match any iter*yolo* directory so 26n, 26s, and _320 variants are picked up.
+    for yolo_dir in sorted(runs_dir.glob("iter*yolo*")):
+        p = yolo_dir / "metrics.json"
+        m = load_metrics_json(p)
+        if not m:
+            continue
+        model_name = m.get("model_name") or yolo_dir.name
         rows.append({
-            "model_name": "yolo26n_cls",
+            "model_name": model_name,
             "accuracy":   m.get("top1", None),
+            "top1_acc":   m.get("top1", None),
+            "fitness":    m.get("fitness", None),
             "precision":  None,
             "recall":     None,
-            "f1":         m.get("top1", None),
+            "f1":         None,   # top-1 != F1; left blank to avoid misleading ranking
             "category":   "YOLO (pretrained)",
         })
 
     df = pd.DataFrame(rows)
     df["accuracy"] = pd.to_numeric(df["accuracy"], errors="coerce")
     df["f1"]       = pd.to_numeric(df.get("f1", None), errors="coerce")
+    # Sort by F1 for models that have it; YOLO sorts by accuracy separately
     return df.sort_values("f1", ascending=False, na_position="last")
 
 
@@ -164,9 +178,11 @@ def main() -> None:
     print(df[["model_name", "category", "accuracy", "precision",
               "recall", "f1"]].to_string(index=False))
 
-    best = df.dropna(subset=["f1"]).iloc[0]
-    print(f"\n>>> BEST MODEL: {best['model_name']}  "
-          f"(F1={best['f1']:.4f}  Acc={best['accuracy']:.4f})")
+    best_f1 = df.dropna(subset=["f1"]).iloc[0]
+    best_acc = df.dropna(subset=["accuracy"]).sort_values("accuracy", ascending=False).iloc[0]
+    print(f"\n>>> BEST by F1:  {best_f1['model_name']}  (F1={best_f1['f1']:.4f}  Acc={best_f1['accuracy']:.4f})")
+    print(f">>> BEST by Acc: {best_acc['model_name']}  (Acc={best_acc['accuracy']:.4f})"
+          + (f"  [top-1 accuracy, no F1]" if pd.isna(best_acc.get("f1", np.nan)) else ""))
 
 
 if __name__ == "__main__":

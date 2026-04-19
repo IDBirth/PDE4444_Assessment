@@ -56,3 +56,9 @@ run_capture/
 
 # Local Claude config
 .claude/settings.local.json
+
+# Model weight files — large binaries, not tracked in git.
+# Use Git LFS or download separately; see top_models/README.md.
+top_models/**/*.pt
+runs*/
+defect_classification_stack/runs/

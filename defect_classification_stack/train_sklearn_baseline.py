@@ -79,9 +79,10 @@ def evaluate_and_save(name: str, search, X_test, y_test, class_names, output_dir
     metrics = Metrics(
         model_name=name,
         accuracy=float(accuracy_score(y_test, y_pred)),
-        precision=float(precision_score(y_test, y_pred, zero_division=0)),
-        recall=float(recall_score(y_test, y_pred, zero_division=0)),
-        f1=float(f1_score(y_test, y_pred, zero_division=0)),
+        # pos_label=0: "defect"=0 alphabetically — defect is the positive class
+        precision=float(precision_score(y_test, y_pred, pos_label=0, zero_division=0)),
+        recall=float(recall_score(y_test, y_pred, pos_label=0, zero_division=0)),
+        f1=float(f1_score(y_test, y_pred, pos_label=0, zero_division=0)),
     )
 
     model_dir = ensure_dir(output_dir / name)

@@ -186,12 +186,22 @@ def build_mlp_transform(img_size: int) -> transforms.Compose:
 
 # ── MobileNet helpers ────────────────────────────────────────────────────────
 
-def build_mobilenet_transform() -> transforms.Compose:
+# Fine-tuned checkpoints were trained at 256, frozen-backbone checkpoints at 224.
+# Any path containing one of these markers is treated as 256; otherwise 224.
+_MOBILENET_FT_MARKERS = ("finetune", "iter3_mobilenet", "ft_")
+
+
+def infer_mobilenet_img_size(path: Path) -> int:
+    lower = "/".join(p.lower() for p in path.parts)
+    return 256 if any(m in lower for m in _MOBILENET_FT_MARKERS) else 224
+
+
+def build_mobilenet_transform(img_size: int = 224) -> transforms.Compose:
     mean = [0.485, 0.456, 0.406]
     std  = [0.229, 0.224, 0.225]
     return transforms.Compose([
         transforms.ToPILImage(),
-        transforms.Resize((224, 224)),
+        transforms.Resize((img_size, img_size)),
         transforms.ToTensor(),
         transforms.Normalize(mean, std),
     ])
@@ -303,7 +313,9 @@ class DemoModel:
             act = detect_activation_from_path(model_path)
             self.class_names  = infer_class_names_from_report(model_path)
             self._mobilenet   = build_mobilenet_model(act, model_path)
-            self._transform   = build_mobilenet_transform()
+            img_size          = infer_mobilenet_img_size(model_path)
+            self._transform   = build_mobilenet_transform(img_size)
+            self._mobilenet_img_size = img_size
         elif self.model_type == "mlp":
             self.class_names      = infer_class_names_from_report(model_path)
             self._mlp, self._mlp_img_size = build_mlp_model_from_checkpoint(model_path)
@@ -883,11 +895,22 @@ def main() -> None:
         p if p.is_absolute() else resolve_input_path(p)
         for p in args.models
     ]
-    display_names = (
-        args.model_names
-        if args.model_names and len(args.model_names) == len(model_paths)
-        else DEFAULT_DISPLAY_NAMES[:len(model_paths)]
-    )
+
+    # Display names: honour --model-names if it matches, otherwise use defaults
+    # and fall back to the checkpoint's parent-directory name for any extras so
+    # the caller never silently loses a model they passed.
+    if args.model_names:
+        if len(args.model_names) != len(model_paths):
+            raise SystemExit(
+                f"[ERROR] --model-names has {len(args.model_names)} entries "
+                f"but --models has {len(model_paths)}; they must match."
+            )
+        display_names = list(args.model_names)
+    else:
+        display_names = list(DEFAULT_DISPLAY_NAMES[:len(model_paths)])
+        for p in model_paths[len(display_names):]:
+            stem = p.parent.name or p.stem
+            display_names.append(stem[:18])
 
     print(f"[INFO] Loading {len(model_paths)} models on {DEVICE}...")
     try:

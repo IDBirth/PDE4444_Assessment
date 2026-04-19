@@ -220,9 +220,10 @@ def train_activation(
     run_dir = ensure_dir(output_dir / act_name)
 
     y_pred, y_true = predict_all(model, test_loader)
-    tp = int(((y_pred == 1) & (y_true == 1)).sum())
-    fp = int(((y_pred == 1) & (y_true == 0)).sum())
-    fn = int(((y_pred == 0) & (y_true == 1)).sum())
+    # pos_label=0: ImageFolder sorts "defect"=0, "non_defect"=1. Defect is positive.
+    tp = int(((y_pred == 0) & (y_true == 0)).sum())
+    fp = int(((y_pred == 0) & (y_true == 1)).sum())
+    fn = int(((y_pred == 1) & (y_true == 0)).sum())
     precision = tp / max(tp + fp, 1)
     recall    = tp / max(tp + fn, 1)
     f1 = (2 * precision * recall) / max(precision + recall, 1e-12)

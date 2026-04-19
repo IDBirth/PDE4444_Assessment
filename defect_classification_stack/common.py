@@ -118,13 +118,16 @@ def compute_binary_metrics(
     y_true: Sequence[int],
     y_pred: Sequence[int],
     model_name: str,
+    pos_label: int = 0,
 ) -> Metrics:
+    # pos_label=0 because ImageFolder sorts classes alphabetically:
+    # "defect"=0, "non_defect"=1. Defect is the positive class for QC.
     return Metrics(
         model_name=model_name,
         accuracy=float(accuracy_score(y_true, y_pred)),
-        precision=float(precision_score(y_true, y_pred, zero_division=0)),
-        recall=float(recall_score(y_true, y_pred, zero_division=0)),
-        f1=float(f1_score(y_true, y_pred, zero_division=0)),
+        precision=float(precision_score(y_true, y_pred, pos_label=pos_label, zero_division=0)),
+        recall=float(recall_score(y_true, y_pred, pos_label=pos_label, zero_division=0)),
+        f1=float(f1_score(y_true, y_pred, pos_label=pos_label, zero_division=0)),
     )
 
 

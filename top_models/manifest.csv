@@ -1,0 +1,11 @@
+rank,name,model_type,run,f1_defect_positive,top1_accuracy,accuracy,checkpoint_path,img_size,notes
+1,yolo26n_320,yolo,runs3,,1.0000,1.0000,runs3/iter1_yolo_320/train/weights/best.pt,320,img_size=320 batch=64 epochs=50
+2,yolo26s_320,yolo,runs3,,1.0000,1.0000,runs3/iter2_yolo_s/train/weights/best.pt,320,img_size=320 batch=64 epochs=50
+3,mobilenet_selu,mobilenet_finetuned,runs3,0.9517,,0.9493,runs3/iter3_mobilenet_finetune/selu/model.pt,256,img_size=256 epochs=60 patience=12
+4,mlp_boost,mlp,runs3,0.9517,,0.9493,runs3/iter1_mlp_boost/best_model.pt,96,img_size=96 24trials gelu (128-64) dropout=0.2
+5,mobilenet_elu,mobilenet_finetuned,runs1,0.9517,,0.9493,defect_classification_stack/runs/iter3_mobilenet_finetune/elu/model.pt,256,runs1 macOS baseline
+6,mobilenet_gelu,mobilenet_finetuned,runs2,0.9504,,0.9493,runs2/iter3_mobilenet_finetune/gelu/model.pt,256,runs2 CUDA audit
+7,mobilenet_leakyrelu,mobilenet_finetuned,runs1,0.9452,,0.9420,defect_classification_stack/runs/iter3_mobilenet_finetune/leaky_relu/model.pt,256,runs1 macOS baseline
+8,mobilenet_relu,mobilenet_finetuned,runs3,0.9444,,0.9420,runs3/iter3_mobilenet_finetune/relu/model.pt,256,img_size=256 epochs=60 patience=12
+9,mlp_search,mlp,runs1,0.9437,,0.9420,defect_classification_stack/runs/iter1_mlp_search/best_model.pt,64,img_size=64 12trials elu (256,)
+10,mobilenet_gelu,mobilenet_finetuned,runs1,0.9429,,0.9420,defect_classification_stack/runs/iter3_mobilenet_finetune/gelu/model.pt,256,runs1 macOS baseline

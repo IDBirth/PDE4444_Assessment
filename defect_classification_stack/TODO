@@ -1,12 +1,55 @@
-Workflow integrity
-Make the end-to-end workflow reproducible with one documented source-of-truth command sequence or one orchestration script. At the moment the scaffold workflow, the experiment stack, and the live demo path are split across multiple directories.
+# TODO — Defect Classification Stack
 
-Replace the broken machine-specific data linkage in `defect_classification_stack` with a repo-relative path strategy or an explicit setup step. The current macOS absolute symlink is not portable. make the data in the main faile and keep only raw in git: /home/ubu/Desktop/Assessment/zeroq_cup_classification_scaffold/data
+## Pending
 
-Organise all top 10 models and thier run into a single folder for documentation and testing, this will be pushed to git and if somone wants to repeate the same test, they will create diffrent run files not overight the current run. 
+### TensorRT engine build
+`top_models/model_optimized/export_engines.py` (and pipeline step 11) produces
+ONNX by default. Building `.engine` files requires TensorRT:
 
-inside defect_classification_stackmodel/ a model_optimized folder sould be created and .engine for each model in the top 10 list should be added to optimized for this gpu should be made
+    pip install tensorrt
+    .venv/bin/python run_pipeline.py --steps 11 --engine-format engine --engine-half
 
-Fix the positive-class ambiguity across the experiment stack. Several scripts infer class order alphabetically and then compute binary precision/recall/F1, which can silently make `non_defect` the positive class instead of `defect`.
+### Historical metric CSVs reflect old pos_label=1 convention
+runs1 / runs2 / runs3 artefacts on disk were produced before the positive-class
+bug was fixed. Code is now correct (pos_label=0, defect=positive) but saved
+JSON / CSV files have not been re-computed. A `--force` pipeline run writes
+corrected numbers.
 
-Create one final report table with consistent metric semantics across all model families. Do not mirror YOLO top-1 into an F1 column in the aggregate ranking.
+---
+
+## Completed
+
+- [x] **Orchestration script** — `run_pipeline.py` at repo root runs all 12 steps
+      (0 data-prep through 11 engine-export). Skip-if-exists by default,
+      `--force` to re-run, `--steps N M ...` for subsets.
+- [x] **End-to-end reproducibility** — step 0 builds the balanced dataset from
+      `zeroq_cup_classification_scaffold/data/raw/` (balance → split) so a
+      clean machine needs no undocumented prep step.
+- [x] **YOLO26s aggregation** — `aggregate_results.py` now globs `iter*yolo*`
+      and `iter*mlp*`, so runs3 directory names (`iter1_yolo_320`,
+      `iter2_yolo_s`, `iter1_mlp_boost`) are picked up alongside runs1/2.
+- [x] **YOLO F1 inflation** — aggregator sets F1=None for YOLO rows, keeps
+      top1_acc in its own column; manifest.csv follows the same convention.
+- [x] **Positive-class ambiguity** — `pos_label=0` (defect=positive) in
+      `common.py`, `train_sklearn_baseline.py`, `train_cnn_pretrained.py`,
+      `train_keras_mlp_random_search.py`.
+- [x] **Broken macOS symlink** — `defect_classification_stack/data` is now a
+      relative link to `../zeroq_cup_classification_scaffold/data`.
+- [x] **top_models/ folder** — 10 ranked checkpoints as real copied `.pt`
+      files (no symlinks), `manifest.csv` with cleanly machine-readable
+      columns (numeric stays numeric, no string placeholders), `eval_all.py`,
+      `README.md` scoreboard.
+- [x] **model_optimized/ folder** — `export_engines.py` handles YOLO→ONNX/TRT
+      and PyTorch→ONNX; gracefully skips TRT when not installed.
+- [x] **Demo top-6 MobileNet resize** — `demo_live_test_with_video_top6.py`
+      now infers training img_size from the checkpoint path (256 for
+      fine-tuned runs, 224 for frozen) so inference matches training.
+- [x] **Demo top-6 silent model drop** — any extra `--models` beyond the five
+      defaults get auto-generated display names from the checkpoint parent
+      folder instead of being dropped by `zip()`.
+- [x] **README refresh** — Quick Start points at `run_pipeline.py`; per-script
+      examples updated to runs3-tuned settings (MLP 24 trials / 96 px, YOLO
+      img=320 batch=64 epochs=50).
+- [x] **Git hygiene** — `.pt` weights and run outputs (`runs*/`,
+      `defect_classification_stack/runs/`) excluded in `.gitignore`; scripts,
+      manifests, READMEs still tracked.

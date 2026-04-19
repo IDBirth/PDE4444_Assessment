@@ -60,5 +60,9 @@ run_capture/
 # Model weight files — large binaries, not tracked in git.
 # Use Git LFS or download separately; see top_models/README.md.
 top_models/**/*.pt
+top_models/**/*.onnx
+top_models/**/*.engine
+top_models/**/*.torchscript
+top_models/model_optimized/__pycache__/
 runs*/
 defect_classification_stack/runs/

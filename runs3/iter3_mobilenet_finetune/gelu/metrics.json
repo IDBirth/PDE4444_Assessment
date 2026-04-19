@@ -1,0 +1,7 @@
+{
+  "model_name": "mobilenet_gelu",
+  "accuracy": 0.9130434782608695,
+  "precision": 0.8518518518518519,
+  "recall": 1.0,
+  "f1": 0.92
+}

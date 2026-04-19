@@ -1,0 +1,9 @@
+model_name,category,accuracy,precision,recall,f1
+yolo26n_cls_320,YOLO (pretrained),1.0000,1.0000,1.0000,1.0000
+yolo26s_cls_320,YOLO (pretrained),1.0000,1.0000,1.0000,1.0000
+mobilenet_selu,MobileNetV2 (fine-tuned),0.9493,0.9079,1.0000,0.9517
+mlp_random_search,MLP HParam Search,0.9493,0.9079,1.0000,0.9517
+mobilenet_relu,MobileNetV2 (fine-tuned),0.9420,0.9067,0.9855,0.9444
+mobilenet_leaky_relu,MobileNetV2 (fine-tuned),0.9348,0.8846,1.0000,0.9388
+mobilenet_gelu,MobileNetV2 (fine-tuned),0.9130,0.8519,1.0000,0.9200
+mobilenet_elu,MobileNetV2 (fine-tuned),0.8986,0.8395,0.9855,0.9067

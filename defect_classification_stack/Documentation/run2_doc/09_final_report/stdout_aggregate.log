@@ -1,0 +1,35 @@
+/home/ubu/Desktop/Assessment/defect_classification_stack/aggregate_results.py:103: MatplotlibDeprecationWarning: The get_cmap function was deprecated in Matplotlib 3.7 and will be removed in 3.11. Use ``matplotlib.colormaps[name]`` or ``matplotlib.colormaps.get_cmap()`` or ``pyplot.get_cmap()`` instead.
+  cmap = plt.cm.get_cmap("tab10", len(categories))
+
+Saved: runs2/final_report/all_results.csv
+Saved charts to: runs2/final_report
+
+======================================================================
+  FULL MODEL COMPARISON  (sorted by F1 desc)
+======================================================================
+          model_name                 category  accuracy  precision   recall       f1
+         yolo26n_cls        YOLO (pretrained)  0.978261        NaN      NaN 0.978261
+      mobilenet_gelu MobileNetV2 (fine-tuned)  0.949275   0.930556 0.971014 0.950355
+   mlp_random_search        MLP HParam Search  0.934783   0.916667 0.956522 0.936170
+      mobilenet_relu MobileNetV2 (fine-tuned)  0.927536   0.915493 0.942029 0.928571
+      mobilenet_selu MobileNetV2 (fine-tuned)  0.927536   0.915493 0.942029 0.928571
+mobilenet_leaky_relu     MobileNetV2 (frozen)  0.920290   0.891892 0.956522 0.923077
+mobilenet_leaky_relu MobileNetV2 (fine-tuned)  0.920290   0.891892 0.956522 0.923077
+      mobilenet_relu     MobileNetV2 (frozen)  0.913043   0.880000 0.956522 0.916667
+      mobilenet_gelu     MobileNetV2 (frozen)  0.905797   0.888889 0.927536 0.907801
+       mobilenet_elu MobileNetV2 (fine-tuned)  0.898551   0.923077 0.869565 0.895522
+      mobilenet_selu     MobileNetV2 (frozen)  0.869565   0.831169 0.927536 0.876712
+       mobilenet_elu     MobileNetV2 (frozen)  0.862319   0.804878 0.956522 0.874172
+             hog_svm         Sklearn Baseline  0.847826   0.800000 0.927536 0.859060
+             hog_mlp         Sklearn Baseline  0.840580   0.783133 0.942029 0.855263
+          optim_adam     Optimiser Comparison  0.840580   0.813333 0.884058 0.847222
+         optim_lbfgs     Optimiser Comparison  0.782609   0.809524 0.739130 0.772727
+           optim_sgd     Optimiser Comparison  0.746377   0.723684 0.797101 0.758621
+            cnn_gelu              CNN Scratch  0.623188   0.570248 1.000000 0.726316
+            cnn_selu              CNN Scratch  0.615942   0.565574 1.000000 0.722513
+      cnn_leaky_relu              CNN Scratch  0.550725   0.526718 1.000000 0.690000
+            cnn_relu              CNN Scratch  0.536232   0.518797 1.000000 0.683168
+             cnn_elu              CNN Scratch  0.536232   0.518797 1.000000 0.683168
+   optim_nelder_mead     Optimiser Comparison  0.485507   0.491525 0.840580 0.620321
+
+>>> BEST MODEL: yolo26n_cls  (F1=0.9783  Acc=0.9783)

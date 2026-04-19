@@ -164,6 +164,7 @@ def train_activation(
     epochs: int,
     unfreeze: bool,
     seed: int,
+    patience: int = 6,
 ) -> Metrics:
     torch.manual_seed(seed)
     model = build_model(act_cls, unfreeze).to(DEVICE)
@@ -178,7 +179,7 @@ def train_activation(
     scheduler = optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=epochs)
 
     best_val_loss, best_state = float("inf"), {}
-    patience_left = 6
+    patience_left = patience
     history: dict[str, list[float]] = {
         "train_loss": [], "val_loss": [], "train_acc": [], "val_acc": []
     }
@@ -208,7 +209,7 @@ def train_activation(
             best_state = {
                 k: v.cpu().clone() for k, v in model.state_dict().items()
             }
-            patience_left = 6
+            patience_left = patience
         else:
             patience_left -= 1
             if patience_left == 0:
@@ -259,6 +260,8 @@ def main() -> None:
     parser.add_argument("--img-size",   type=int, default=224)
     parser.add_argument("--unfreeze",   action="store_true",
                         help="Unfreeze full backbone (fine-tune).")
+    parser.add_argument("--patience",   type=int, default=6,
+                        help="Early-stopping patience in epochs.")
     parser.add_argument("--seed",       type=int, default=42)
     args = parser.parse_args()
 
@@ -281,6 +284,7 @@ def main() -> None:
             act_name, act_cls,
             train_loader, val_loader, test_loader, class_names,
             pos_weight, output_dir, args.epochs, args.unfreeze, args.seed,
+            patience=args.patience,
         )
         all_metrics.append(metrics)
         histories[act_name] = pd.read_csv(

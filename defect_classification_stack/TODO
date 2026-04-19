@@ -16,3 +16,39 @@ Confidence threshold flag — --confidence-threshold 0.6 so low-confidence frame
 Auto-detect model type — handle both *.pt YOLO weights and PyTorch state_dicts (your MobileNetV2 checkpoints) without separate scripts.
 
 Graceful missing-model handling — current script crashes hard. Print available models in runs/ and exit cleanly.
+
+Workflow integrity
+Choose one canonical dataset state and freeze it for the final submission. Right now the repo mixes the balanced `defect/non_defect` experiment snapshot with the later imbalanced `defective/non_defective` processed split, which makes the final story harder to defend.
+
+Add a dataset lineage manifest that records: raw capture count, augmentation config hash, cleanup settings, balancing step, split seed, and final split counts. This should make it obvious which run folders came from which dataset state.
+
+Make the end-to-end workflow reproducible with one documented source-of-truth command sequence or one orchestration script. At the moment the scaffold workflow, the experiment stack, and the live demo path are split across multiple directories.
+
+Replace the broken machine-specific data linkage in `defect_classification_stack` with a repo-relative path strategy or an explicit setup step. The current macOS absolute symlink is not portable.
+
+Dataset quality
+Reduce dependence on the 360-degree deterministic rotation sweep as the primary augmentation strategy. It creates volume, but it is too synthetic and too correlated to substitute for more real PASS samples.
+
+Add a pre-training dataset summary artifact that saves class counts, source-group counts, and duplicate-removal statistics into one report. This should be generated automatically after cleanup/balancing/splitting.
+
+Add a check that prevents training on an obviously imbalanced `data/processed` split unless the imbalance is intentional and acknowledged. This would have caught the later rerun condition earlier.
+
+Persist a small held-out demo set manifest for the five genuinely unseen live-demo samples so they are not accidentally reused during training or augmentation.
+
+Metrics and reporting
+Fix the positive-class ambiguity across the experiment stack. Several scripts infer class order alphabetically and then compute binary precision/recall/F1, which can silently make `non_defect` the positive class instead of `defect`.
+
+Save a full YOLO test evaluation bundle: confusion matrix, classification report, per-image predictions CSV, and explicit PASS/FAIL mapping. Do not rely only on top-1/top-5 for the final comparison.
+
+Separate "headline accuracy" from "engineering safety metric" in the final tables. For the assessment, defect recall / false-PASS rate needs to be visible, not just aggregate accuracy or top-1.
+
+Create one final report table with consistent metric semantics across all model families. Do not mirror YOLO top-1 into an F1 column in the aggregate ranking.
+
+Demo readiness
+Unify the demo entry point. Decide whether `demo_live_test.py` or `infer_yolo26_cls_stream.py` is the final script and document one exact command for the assessment day.
+
+Move stream credentials out of commands and source files into environment variables or a local config that is excluded from git. This reduces risk and makes the demo safer to run on another machine.
+
+Add an offline demo mode that runs the same overlay and logging flow on a folder of unseen test images or a local video file. That gives a reliable fallback if the live stream fails.
+
+Add explicit setup-status overlays during demo startup: stream connected, auth mode used, model loaded, class names detected, and current frame size. That will make technical questioning easier to handle live.

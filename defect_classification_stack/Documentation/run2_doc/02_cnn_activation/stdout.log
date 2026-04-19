@@ -1,0 +1,85 @@
+
+=== Activation: relu ===
+  Epoch 01  train_loss=0.6990  val_loss=0.6942  val_acc=0.6812
+  Epoch 02  train_loss=0.7021  val_loss=0.6881  val_acc=0.4783
+  Epoch 03  train_loss=0.6964  val_loss=0.6904  val_acc=0.5072
+  Epoch 04  train_loss=0.6953  val_loss=0.6886  val_acc=0.5797
+  Epoch 05  train_loss=0.7004  val_loss=0.6880  val_acc=0.5797
+  Epoch 06  train_loss=0.6988  val_loss=0.6906  val_acc=0.6522
+  Epoch 07  train_loss=0.6970  val_loss=0.6906  val_acc=0.4928
+  Epoch 08  train_loss=0.6971  val_loss=0.6914  val_acc=0.5362
+  Epoch 09  train_loss=0.6937  val_loss=0.6912  val_acc=0.5072
+  Early stopping triggered.
+
+=== Activation: elu ===
+  Epoch 01  train_loss=0.7005  val_loss=0.7023  val_acc=0.5072
+  Epoch 02  train_loss=0.6931  val_loss=0.6929  val_acc=0.5072
+  Epoch 03  train_loss=0.6811  val_loss=0.7243  val_acc=0.5072
+  Epoch 04  train_loss=0.7068  val_loss=0.6768  val_acc=0.5797
+  Epoch 05  train_loss=0.7016  val_loss=0.6862  val_acc=0.5507
+  Epoch 06  train_loss=0.7001  val_loss=0.6827  val_acc=0.4638
+  Epoch 07  train_loss=0.7170  val_loss=0.6967  val_acc=0.5072
+  Epoch 08  train_loss=0.6906  val_loss=0.6838  val_acc=0.7391
+  Early stopping triggered.
+
+=== Activation: gelu ===
+  Epoch 01  train_loss=0.6967  val_loss=0.6931  val_acc=0.5072
+  Epoch 02  train_loss=0.6956  val_loss=0.6935  val_acc=0.5072
+  Epoch 03  train_loss=0.6950  val_loss=0.6901  val_acc=0.5072
+  Epoch 04  train_loss=0.6978  val_loss=0.6876  val_acc=0.5797
+  Epoch 05  train_loss=0.6923  val_loss=0.6847  val_acc=0.5942
+  Epoch 06  train_loss=0.6943  val_loss=0.6863  val_acc=0.5362
+  Epoch 07  train_loss=0.6934  val_loss=0.6838  val_acc=0.5797
+  Epoch 08  train_loss=0.6963  val_loss=0.6846  val_acc=0.5797
+  Epoch 09  train_loss=0.6915  val_loss=0.6885  val_acc=0.5362
+  Epoch 10  train_loss=0.6901  val_loss=0.6853  val_acc=0.5362
+  Epoch 11  train_loss=0.6910  val_loss=0.6835  val_acc=0.5362
+  Epoch 12  train_loss=0.6923  val_loss=0.6731  val_acc=0.5797
+  Epoch 13  train_loss=0.6853  val_loss=0.6826  val_acc=0.5362
+  Epoch 14  train_loss=0.6814  val_loss=0.6770  val_acc=0.5797
+  Epoch 15  train_loss=0.6896  val_loss=0.6703  val_acc=0.7246
+  Epoch 16  train_loss=0.6899  val_loss=0.6794  val_acc=0.5507
+  Epoch 17  train_loss=0.6915  val_loss=0.6857  val_acc=0.5362
+  Epoch 18  train_loss=0.6876  val_loss=0.6867  val_acc=0.5362
+  Epoch 19  train_loss=0.6869  val_loss=0.6837  val_acc=0.5362
+  Early stopping triggered.
+
+=== Activation: selu ===
+  Epoch 01  train_loss=0.7196  val_loss=0.8681  val_acc=0.5072
+  Epoch 02  train_loss=0.7033  val_loss=0.6983  val_acc=0.5072
+  Epoch 03  train_loss=0.7104  val_loss=0.6788  val_acc=0.6522
+  Epoch 04  train_loss=0.7214  val_loss=0.6988  val_acc=0.5072
+  Epoch 05  train_loss=0.6920  val_loss=0.6943  val_acc=0.5072
+  Epoch 06  train_loss=0.6941  val_loss=0.6884  val_acc=0.4783
+  Epoch 07  train_loss=0.7041  val_loss=0.6949  val_acc=0.5072
+  Early stopping triggered.
+
+=== Activation: leaky_relu ===
+  Epoch 01  train_loss=0.7064  val_loss=0.6980  val_acc=0.5072
+  Epoch 02  train_loss=0.6952  val_loss=0.6927  val_acc=0.5072
+  Epoch 03  train_loss=0.7037  val_loss=0.6908  val_acc=0.5072
+  Epoch 04  train_loss=0.6879  val_loss=0.6920  val_acc=0.5072
+  Epoch 05  train_loss=0.6869  val_loss=0.6849  val_acc=0.5362
+  Epoch 06  train_loss=0.6959  val_loss=0.6862  val_acc=0.5362
+  Epoch 07  train_loss=0.7022  val_loss=0.6879  val_acc=0.5362
+  Epoch 08  train_loss=0.6942  val_loss=0.6889  val_acc=0.5217
+  Epoch 09  train_loss=0.6922  val_loss=0.6805  val_acc=0.5797
+  Epoch 10  train_loss=0.7074  val_loss=0.6844  val_acc=0.5362
+  Epoch 11  train_loss=0.6847  val_loss=0.6790  val_acc=0.5942
+  Epoch 12  train_loss=0.6917  val_loss=0.6795  val_acc=0.5797
+  Epoch 13  train_loss=0.6920  val_loss=0.6803  val_acc=0.5652
+  Epoch 14  train_loss=0.6922  val_loss=0.6776  val_acc=0.5797
+  Epoch 15  train_loss=0.6956  val_loss=0.6929  val_acc=0.5072
+  Epoch 16  train_loss=0.6922  val_loss=0.6872  val_acc=0.5362
+  Epoch 17  train_loss=0.6904  val_loss=0.6791  val_acc=0.5797
+  Epoch 18  train_loss=0.6886  val_loss=0.6745  val_acc=0.5797
+  Epoch 19  train_loss=0.6939  val_loss=0.6856  val_acc=0.5652
+  Epoch 20  train_loss=0.6985  val_loss=0.6842  val_acc=0.5652
+
+=== Summary ===
+       model_name  accuracy  precision  recall        f1
+2        cnn_gelu  0.623188   0.570248     1.0  0.726316
+3        cnn_selu  0.615942   0.565574     1.0  0.722513
+4  cnn_leaky_relu  0.550725   0.526718     1.0  0.690000
+0        cnn_relu  0.536232   0.518797     1.0  0.683168
+1         cnn_elu  0.536232   0.518797     1.0  0.683168

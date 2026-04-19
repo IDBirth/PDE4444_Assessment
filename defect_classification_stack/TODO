@@ -1,8 +1,4 @@
 Workflow integrity
-Choose one canonical dataset state and freeze it for the final submission. Right now the repo mixes the balanced `defect/non_defect` experiment snapshot with the later imbalanced `defective/non_defective` processed split, which makes the final story harder to defend.
-
-Add a dataset lineage manifest that records: raw capture count, augmentation config hash, cleanup settings, balancing step, split seed, and final split counts. This should make it obvious which run folders came from which dataset state.
-
 Make the end-to-end workflow reproducible with one documented source-of-truth command sequence or one orchestration script. At the moment the scaffold workflow, the experiment stack, and the live demo path are split across multiple directories.
 
 Replace the broken machine-specific data linkage in `defect_classification_stack` with a repo-relative path strategy or an explicit setup step. The current macOS absolute symlink is not portable.
@@ -24,6 +20,3 @@ Save a full YOLO test evaluation bundle: confusion matrix, classification report
 Separate "headline accuracy" from "engineering safety metric" in the final tables. For the assessment, defect recall / false-PASS rate needs to be visible, not just aggregate accuracy or top-1.
 
 Create one final report table with consistent metric semantics across all model families. Do not mirror YOLO top-1 into an F1 column in the aggregate ranking.
-
-Demo readiness
-Unify the demo entry point. Decide whether `demo_live_test.py` or `infer_yolo26_cls_stream.py` is the final script and document one exact command for the assessment day.

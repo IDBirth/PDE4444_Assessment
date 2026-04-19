@@ -1,0 +1,1046 @@
+{
+  "session_name": "demo_session_20260419_173434",
+  "started_at": "2026-04-19T17:34:34.965469",
+  "ended_at": "2026-04-19T17:34:43.326217",
+  "source": "offline",
+  "last_frame_index": 59,
+  "models": [
+    {
+      "name": "model",
+      "path": "/home/ubu/Desktop/Assessment/runs2/iter3_mobilenet_finetune/selu/model.pt",
+      "type": "mobilenet",
+      "class_names": [
+        "defect",
+        "non_defect"
+      ]
+    }
+  ],
+  "captures": [
+    {
+      "frame_index": 30,
+      "reason": "auto",
+      "path": "/home/ubu/Desktop/Assessment/defect_classification_stack/run_capture/auto_20260419_173441_488561_f000030.jpg"
+    }
+  ],
+  "events": [
+    {
+      "timestamp": "2026-04-19T17:34:37.799441",
+      "frame_index": 1,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6762627959251404,
+      "latency_ms": 119.50504999913392,
+      "probabilities": {
+        "defect": 0.3237372040748596,
+        "non_defect": 0.6762627959251404
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:37.984826",
+      "frame_index": 2,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6762627959251404,
+      "latency_ms": 12.1693029996095,
+      "probabilities": {
+        "defect": 0.3237372040748596,
+        "non_defect": 0.6762627959251404
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:38.204857",
+      "frame_index": 3,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6695041060447693,
+      "latency_ms": 9.394151999003952,
+      "probabilities": {
+        "defect": 0.3304958939552307,
+        "non_defect": 0.6695041060447693
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:38.433523",
+      "frame_index": 4,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6695041060447693,
+      "latency_ms": 9.349326999654295,
+      "probabilities": {
+        "defect": 0.3304958939552307,
+        "non_defect": 0.6695041060447693
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:38.655830",
+      "frame_index": 5,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6695041060447693,
+      "latency_ms": 10.84345600065717,
+      "probabilities": {
+        "defect": 0.3304958939552307,
+        "non_defect": 0.6695041060447693
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:38.820572",
+      "frame_index": 6,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6695041060447693,
+      "latency_ms": 12.285769998925389,
+      "probabilities": {
+        "defect": 0.3304958939552307,
+        "non_defect": 0.6695041060447693
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:39.033941",
+      "frame_index": 7,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6695041060447693,
+      "latency_ms": 9.513820999927702,
+      "probabilities": {
+        "defect": 0.3304958939552307,
+        "non_defect": 0.6695041060447693
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:39.198210",
+      "frame_index": 8,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6709962487220764,
+      "latency_ms": 11.235390000365442,
+      "probabilities": {
+        "defect": 0.3290037512779236,
+        "non_defect": 0.6709962487220764
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:39.394542",
+      "frame_index": 9,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6709962487220764,
+      "latency_ms": 12.06993599953421,
+      "probabilities": {
+        "defect": 0.3290037512779236,
+        "non_defect": 0.6709962487220764
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:39.522180",
+      "frame_index": 10,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6709962487220764,
+      "latency_ms": 9.175161998427939,
+      "probabilities": {
+        "defect": 0.3290037512779236,
+        "non_defect": 0.6709962487220764
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:39.630468",
+      "frame_index": 11,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6709962487220764,
+      "latency_ms": 11.061094999604393,
+      "probabilities": {
+        "defect": 0.3290037512779236,
+        "non_defect": 0.6709962487220764
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:39.777831",
+      "frame_index": 12,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6709962487220764,
+      "latency_ms": 11.888134000400896,
+      "probabilities": {
+        "defect": 0.3290037512779236,
+        "non_defect": 0.6709962487220764
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:39.845158",
+      "frame_index": 13,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6709962487220764,
+      "latency_ms": 9.398461999808205,
+      "probabilities": {
+        "defect": 0.3290037512779236,
+        "non_defect": 0.6709962487220764
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:39.991960",
+      "frame_index": 14,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6728947162628174,
+      "latency_ms": 10.830581000845996,
+      "probabilities": {
+        "defect": 0.3271052837371826,
+        "non_defect": 0.6728947162628174
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:40.133129",
+      "frame_index": 15,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6728947162628174,
+      "latency_ms": 11.847767000290332,
+      "probabilities": {
+        "defect": 0.3271052837371826,
+        "non_defect": 0.6728947162628174
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:40.234604",
+      "frame_index": 16,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6728947162628174,
+      "latency_ms": 9.254577000319841,
+      "probabilities": {
+        "defect": 0.3271052837371826,
+        "non_defect": 0.6728947162628174
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:40.342013",
+      "frame_index": 17,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6728947162628174,
+      "latency_ms": 11.265869001363171,
+      "probabilities": {
+        "defect": 0.3271052837371826,
+        "non_defect": 0.6728947162628174
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:40.463381",
+      "frame_index": 18,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6728947162628174,
+      "latency_ms": 11.844190999909188,
+      "probabilities": {
+        "defect": 0.3271052837371826,
+        "non_defect": 0.6728947162628174
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:40.547733",
+      "frame_index": 19,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6694968342781067,
+      "latency_ms": 9.35420099995099,
+      "probabilities": {
+        "defect": 0.3305031657218933,
+        "non_defect": 0.6694968342781067
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:40.626573",
+      "frame_index": 20,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6694968342781067,
+      "latency_ms": 11.394114999347948,
+      "probabilities": {
+        "defect": 0.3305031657218933,
+        "non_defect": 0.6694968342781067
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:40.711975",
+      "frame_index": 21,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6694968342781067,
+      "latency_ms": 12.045838000631193,
+      "probabilities": {
+        "defect": 0.3305031657218933,
+        "non_defect": 0.6694968342781067
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:40.815201",
+      "frame_index": 22,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6694968342781067,
+      "latency_ms": 9.941737000190187,
+      "probabilities": {
+        "defect": 0.3305031657218933,
+        "non_defect": 0.6694968342781067
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:40.895328",
+      "frame_index": 23,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6694968342781067,
+      "latency_ms": 11.356363000231795,
+      "probabilities": {
+        "defect": 0.3305031657218933,
+        "non_defect": 0.6694968342781067
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:41.006965",
+      "frame_index": 24,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6701309084892273,
+      "latency_ms": 12.329569999565138,
+      "probabilities": {
+        "defect": 0.3298690915107727,
+        "non_defect": 0.6701309084892273
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:41.082429",
+      "frame_index": 25,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6701309084892273,
+      "latency_ms": 9.605606001059641,
+      "probabilities": {
+        "defect": 0.3298690915107727,
+        "non_defect": 0.6701309084892273
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:41.163048",
+      "frame_index": 26,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6701309084892273,
+      "latency_ms": 11.298658000669093,
+      "probabilities": {
+        "defect": 0.3298690915107727,
+        "non_defect": 0.6701309084892273
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:41.261035",
+      "frame_index": 27,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6701309084892273,
+      "latency_ms": 12.38658799957193,
+      "probabilities": {
+        "defect": 0.3298690915107727,
+        "non_defect": 0.6701309084892273
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:41.334918",
+      "frame_index": 28,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6701309084892273,
+      "latency_ms": 9.646452999731991,
+      "probabilities": {
+        "defect": 0.3298690915107727,
+        "non_defect": 0.6701309084892273
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:41.420742",
+      "frame_index": 29,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6720988154411316,
+      "latency_ms": 11.410158998842235,
+      "probabilities": {
+        "defect": 0.3279011845588684,
+        "non_defect": 0.6720988154411316
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:41.485961",
+      "frame_index": 30,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6720988154411316,
+      "latency_ms": 12.296205999518861,
+      "probabilities": {
+        "defect": 0.3279011845588684,
+        "non_defect": 0.6720988154411316
+      },
+      "ground_truth": null,
+      "capture_path": "/home/ubu/Desktop/Assessment/defect_classification_stack/run_capture/auto_20260419_173441_488561_f000030.jpg"
+    },
+    {
+      "timestamp": "2026-04-19T17:34:41.551937",
+      "frame_index": 31,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6720988154411316,
+      "latency_ms": 9.640543999921647,
+      "probabilities": {
+        "defect": 0.3279011845588684,
+        "non_defect": 0.6720988154411316
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:41.638375",
+      "frame_index": 32,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6720988154411316,
+      "latency_ms": 11.40629699875717,
+      "probabilities": {
+        "defect": 0.3279011845588684,
+        "non_defect": 0.6720988154411316
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:41.707189",
+      "frame_index": 33,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6720988154411316,
+      "latency_ms": 12.931783001477015,
+      "probabilities": {
+        "defect": 0.3279011845588684,
+        "non_defect": 0.6720988154411316
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:41.766361",
+      "frame_index": 34,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6715050339698792,
+      "latency_ms": 9.768874999281252,
+      "probabilities": {
+        "defect": 0.32849496603012085,
+        "non_defect": 0.6715050339698792
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:41.854002",
+      "frame_index": 35,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6715050339698792,
+      "latency_ms": 12.812429000405245,
+      "probabilities": {
+        "defect": 0.32849496603012085,
+        "non_defect": 0.6715050339698792
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:41.917373",
+      "frame_index": 36,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6715050339698792,
+      "latency_ms": 12.82732699837652,
+      "probabilities": {
+        "defect": 0.32849496603012085,
+        "non_defect": 0.6715050339698792
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:41.980149",
+      "frame_index": 37,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6715050339698792,
+      "latency_ms": 9.708898000098998,
+      "probabilities": {
+        "defect": 0.32849496603012085,
+        "non_defect": 0.6715050339698792
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:42.066215",
+      "frame_index": 38,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6715050339698792,
+      "latency_ms": 11.735590998796397,
+      "probabilities": {
+        "defect": 0.32849496603012085,
+        "non_defect": 0.6715050339698792
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:42.131434",
+      "frame_index": 39,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6707800626754761,
+      "latency_ms": 13.025067000853596,
+      "probabilities": {
+        "defect": 0.3292199373245239,
+        "non_defect": 0.6707800626754761
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:42.187979",
+      "frame_index": 40,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6707800626754761,
+      "latency_ms": 10.54389999990235,
+      "probabilities": {
+        "defect": 0.3292199373245239,
+        "non_defect": 0.6707800626754761
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:42.256441",
+      "frame_index": 41,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6707800626754761,
+      "latency_ms": 11.960743000599905,
+      "probabilities": {
+        "defect": 0.3292199373245239,
+        "non_defect": 0.6707800626754761
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:42.310786",
+      "frame_index": 42,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6707800626754761,
+      "latency_ms": 12.486847001127899,
+      "probabilities": {
+        "defect": 0.3292199373245239,
+        "non_defect": 0.6707800626754761
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:42.363150",
+      "frame_index": 43,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6719996929168701,
+      "latency_ms": 9.540594001009595,
+      "probabilities": {
+        "defect": 0.3280003070831299,
+        "non_defect": 0.6719996929168701
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:42.419166",
+      "frame_index": 44,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6719996929168701,
+      "latency_ms": 11.510874999657972,
+      "probabilities": {
+        "defect": 0.3280003070831299,
+        "non_defect": 0.6719996929168701
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:42.489296",
+      "frame_index": 45,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6719996929168701,
+      "latency_ms": 12.613762000910356,
+      "probabilities": {
+        "defect": 0.3280003070831299,
+        "non_defect": 0.6719996929168701
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:42.539669",
+      "frame_index": 46,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6719996929168701,
+      "latency_ms": 10.146713999347412,
+      "probabilities": {
+        "defect": 0.3280003070831299,
+        "non_defect": 0.6719996929168701
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:42.592162",
+      "frame_index": 47,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6719996929168701,
+      "latency_ms": 11.611808000452584,
+      "probabilities": {
+        "defect": 0.3280003070831299,
+        "non_defect": 0.6719996929168701
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:42.662763",
+      "frame_index": 48,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6786500215530396,
+      "latency_ms": 13.483471999279573,
+      "probabilities": {
+        "defect": 0.32134997844696045,
+        "non_defect": 0.6786500215530396
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:42.718724",
+      "frame_index": 49,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6786500215530396,
+      "latency_ms": 10.461142999702133,
+      "probabilities": {
+        "defect": 0.32134997844696045,
+        "non_defect": 0.6786500215530396
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:42.772724",
+      "frame_index": 50,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6786500215530396,
+      "latency_ms": 13.456021999445511,
+      "probabilities": {
+        "defect": 0.32134997844696045,
+        "non_defect": 0.6786500215530396
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:42.823641",
+      "frame_index": 51,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6786500215530396,
+      "latency_ms": 12.72054600121919,
+      "probabilities": {
+        "defect": 0.32134997844696045,
+        "non_defect": 0.6786500215530396
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:42.890685",
+      "frame_index": 52,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6779043674468994,
+      "latency_ms": 9.797617998628994,
+      "probabilities": {
+        "defect": 0.3220956325531006,
+        "non_defect": 0.6779043674468994
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:42.959302",
+      "frame_index": 53,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6779043674468994,
+      "latency_ms": 12.094122999769752,
+      "probabilities": {
+        "defect": 0.3220956325531006,
+        "non_defect": 0.6779043674468994
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:43.021772",
+      "frame_index": 54,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6779043674468994,
+      "latency_ms": 12.588818000949686,
+      "probabilities": {
+        "defect": 0.3220956325531006,
+        "non_defect": 0.6779043674468994
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:43.064047",
+      "frame_index": 55,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6779043674468994,
+      "latency_ms": 10.170645000471268,
+      "probabilities": {
+        "defect": 0.3220956325531006,
+        "non_defect": 0.6779043674468994
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:43.111473",
+      "frame_index": 56,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6779043674468994,
+      "latency_ms": 11.97649100140552,
+      "probabilities": {
+        "defect": 0.3220956325531006,
+        "non_defect": 0.6779043674468994
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:43.167330",
+      "frame_index": 57,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6742236018180847,
+      "latency_ms": 12.788691999958246,
+      "probabilities": {
+        "defect": 0.3257763981819153,
+        "non_defect": 0.6742236018180847
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:43.226726",
+      "frame_index": 58,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6742236018180847,
+      "latency_ms": 10.2358739986812,
+      "probabilities": {
+        "defect": 0.3257763981819153,
+        "non_defect": 0.6742236018180847
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:34:43.279669",
+      "frame_index": 59,
+      "source_label": "stream",
+      "model_name": "model",
+      "model_type": "mobilenet",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.6742236018180847,
+      "latency_ms": 11.824275999970268,
+      "probabilities": {
+        "defect": 0.3257763981819153,
+        "non_defect": 0.6742236018180847
+      },
+      "ground_truth": null,
+      "capture_path": null
+    }
+  ],
+  "summary": {
+    "total_events": 59,
+    "per_model": {
+      "model": {
+        "total": 59,
+        "PASS": 59,
+        "FAIL": 0,
+        "UNCERTAIN": 0,
+        "gt_checked": 0,
+        "gt_correct": 0,
+        "mean_latency_ms": 13.082496796568641,
+        "mean_confidence": 0.6724841796745689,
+        "running_accuracy": null
+      }
+    }
+  }
+}

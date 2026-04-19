@@ -1,0 +1,1753 @@
+{
+  "session_name": "demo_session_20260419_170222",
+  "started_at": "2026-04-19T17:02:22.672135",
+  "ended_at": "2026-04-19T17:02:43.015849",
+  "source": "offline",
+  "last_frame_index": 100,
+  "models": [
+    {
+      "name": "best",
+      "path": "/home/ubu/Desktop/Assessment/runs3/iter1_yolo_320/train/weights/best.pt",
+      "type": "yolo",
+      "class_names": [
+        "defective",
+        "non_defective"
+      ]
+    }
+  ],
+  "captures": [
+    {
+      "frame_index": 30,
+      "reason": "auto",
+      "path": "/home/ubu/Desktop/Assessment/defect_classification_stack/run_capture/auto_20260419_170229_883382_f000030.jpg"
+    },
+    {
+      "frame_index": 60,
+      "reason": "auto",
+      "path": "/home/ubu/Desktop/Assessment/defect_classification_stack/run_capture/auto_20260419_170235_040510_f000060.jpg"
+    },
+    {
+      "frame_index": 90,
+      "reason": "auto",
+      "path": "/home/ubu/Desktop/Assessment/defect_classification_stack/run_capture/auto_20260419_170240_738528_f000090.jpg"
+    }
+  ],
+  "events": [
+    {
+      "timestamp": "2026-04-19T17:02:26.151682",
+      "frame_index": 1,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8245835304260254,
+      "latency_ms": 302.971824999986,
+      "probabilities": {
+        "defect": 0.1754164844751358,
+        "non_defect": 0.8245835304260254
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:26.308312",
+      "frame_index": 2,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8232005834579468,
+      "latency_ms": 12.659889000133262,
+      "probabilities": {
+        "defect": 0.176799476146698,
+        "non_defect": 0.8232005834579468
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:26.624338",
+      "frame_index": 3,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8248904347419739,
+      "latency_ms": 11.732918001143844,
+      "probabilities": {
+        "defect": 0.17510952055454254,
+        "non_defect": 0.8248904347419739
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:26.739215",
+      "frame_index": 4,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8250099420547485,
+      "latency_ms": 10.253153999656206,
+      "probabilities": {
+        "defect": 0.17499008774757385,
+        "non_defect": 0.8250099420547485
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:26.896256",
+      "frame_index": 5,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8221802711486816,
+      "latency_ms": 13.49101899904781,
+      "probabilities": {
+        "defect": 0.17781977355480194,
+        "non_defect": 0.8221802711486816
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:27.038565",
+      "frame_index": 6,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8214642405509949,
+      "latency_ms": 10.581108999758726,
+      "probabilities": {
+        "defect": 0.17853574454784393,
+        "non_defect": 0.8214642405509949
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:27.181560",
+      "frame_index": 7,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8236708045005798,
+      "latency_ms": 10.791681999762659,
+      "probabilities": {
+        "defect": 0.17632918059825897,
+        "non_defect": 0.8236708045005798
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:27.324227",
+      "frame_index": 8,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8228350877761841,
+      "latency_ms": 10.686715000701952,
+      "probabilities": {
+        "defect": 0.1771649420261383,
+        "non_defect": 0.8228350877761841
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:27.469236",
+      "frame_index": 9,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8241901397705078,
+      "latency_ms": 11.96408999931009,
+      "probabilities": {
+        "defect": 0.1758098602294922,
+        "non_defect": 0.8241901397705078
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:27.603896",
+      "frame_index": 10,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8239573836326599,
+      "latency_ms": 11.180282999703195,
+      "probabilities": {
+        "defect": 0.17604263126850128,
+        "non_defect": 0.8239573836326599
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:27.719895",
+      "frame_index": 11,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8245309591293335,
+      "latency_ms": 12.25902300029702,
+      "probabilities": {
+        "defect": 0.17546901106834412,
+        "non_defect": 0.8245309591293335
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:27.838360",
+      "frame_index": 12,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8201106190681458,
+      "latency_ms": 10.476258999915444,
+      "probabilities": {
+        "defect": 0.17988938093185425,
+        "non_defect": 0.8201106190681458
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:27.957511",
+      "frame_index": 13,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8243598341941833,
+      "latency_ms": 12.079783000444877,
+      "probabilities": {
+        "defect": 0.17564018070697784,
+        "non_defect": 0.8243598341941833
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:28.069906",
+      "frame_index": 14,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8232311606407166,
+      "latency_ms": 10.311246000128449,
+      "probabilities": {
+        "defect": 0.17676879465579987,
+        "non_defect": 0.8232311606407166
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:28.186329",
+      "frame_index": 15,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8200412392616272,
+      "latency_ms": 12.385871999867959,
+      "probabilities": {
+        "defect": 0.17995873093605042,
+        "non_defect": 0.8200412392616272
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:28.299355",
+      "frame_index": 16,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8189953565597534,
+      "latency_ms": 10.7285200010665,
+      "probabilities": {
+        "defect": 0.18100467324256897,
+        "non_defect": 0.8189953565597534
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:28.416694",
+      "frame_index": 17,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8204203248023987,
+      "latency_ms": 10.863686999073252,
+      "probabilities": {
+        "defect": 0.1795797049999237,
+        "non_defect": 0.8204203248023987
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:28.512656",
+      "frame_index": 18,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8225181698799133,
+      "latency_ms": 12.280917000680347,
+      "probabilities": {
+        "defect": 0.1774817854166031,
+        "non_defect": 0.8225181698799133
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:28.624193",
+      "frame_index": 19,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8202710747718811,
+      "latency_ms": 11.515836999024032,
+      "probabilities": {
+        "defect": 0.1797289401292801,
+        "non_defect": 0.8202710747718811
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:28.715253",
+      "frame_index": 20,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8227609992027283,
+      "latency_ms": 10.916639001152362,
+      "probabilities": {
+        "defect": 0.17723898589611053,
+        "non_defect": 0.8227609992027283
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:28.810172",
+      "frame_index": 21,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8233780264854431,
+      "latency_ms": 10.637606999807758,
+      "probabilities": {
+        "defect": 0.17662201821804047,
+        "non_defect": 0.8233780264854431
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:28.901892",
+      "frame_index": 22,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8230488896369934,
+      "latency_ms": 10.460985000463552,
+      "probabilities": {
+        "defect": 0.17695114016532898,
+        "non_defect": 0.8230488896369934
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:28.999030",
+      "frame_index": 23,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8235945105552673,
+      "latency_ms": 12.14312800038897,
+      "probabilities": {
+        "defect": 0.17640551924705505,
+        "non_defect": 0.8235945105552673
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:29.090698",
+      "frame_index": 24,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8241429328918457,
+      "latency_ms": 10.268529998938902,
+      "probabilities": {
+        "defect": 0.1758570671081543,
+        "non_defect": 0.8241429328918457
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:29.182224",
+      "frame_index": 25,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8236913084983826,
+      "latency_ms": 10.663716000635759,
+      "probabilities": {
+        "defect": 0.17630870640277863,
+        "non_defect": 0.8236913084983826
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:29.271218",
+      "frame_index": 26,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.821684718132019,
+      "latency_ms": 11.420390001148917,
+      "probabilities": {
+        "defect": 0.17831526696681976,
+        "non_defect": 0.821684718132019
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:29.346368",
+      "frame_index": 27,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8238131999969482,
+      "latency_ms": 11.02750900099636,
+      "probabilities": {
+        "defect": 0.17618681490421295,
+        "non_defect": 0.8238131999969482
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:29.478419",
+      "frame_index": 28,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8223733901977539,
+      "latency_ms": 10.863854999115574,
+      "probabilities": {
+        "defect": 0.1776266098022461,
+        "non_defect": 0.8223733901977539
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:29.711466",
+      "frame_index": 29,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8224998712539673,
+      "latency_ms": 11.966042000494781,
+      "probabilities": {
+        "defect": 0.17750011384487152,
+        "non_defect": 0.8224998712539673
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:29.880404",
+      "frame_index": 30,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8238155245780945,
+      "latency_ms": 10.666481999578536,
+      "probabilities": {
+        "defect": 0.17618447542190552,
+        "non_defect": 0.8238155245780945
+      },
+      "ground_truth": null,
+      "capture_path": "/home/ubu/Desktop/Assessment/defect_classification_stack/run_capture/auto_20260419_170229_883382_f000030.jpg"
+    },
+    {
+      "timestamp": "2026-04-19T17:02:30.039590",
+      "frame_index": 31,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8239004015922546,
+      "latency_ms": 10.676335999960429,
+      "probabilities": {
+        "defect": 0.17609955370426178,
+        "non_defect": 0.8239004015922546
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:30.209027",
+      "frame_index": 32,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8195656538009644,
+      "latency_ms": 12.164030000349157,
+      "probabilities": {
+        "defect": 0.18043428659439087,
+        "non_defect": 0.8195656538009644
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:30.412395",
+      "frame_index": 33,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8222469687461853,
+      "latency_ms": 10.85910599977069,
+      "probabilities": {
+        "defect": 0.17775307595729828,
+        "non_defect": 0.8222469687461853
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:30.543393",
+      "frame_index": 34,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8257400393486023,
+      "latency_ms": 11.34562999868649,
+      "probabilities": {
+        "defect": 0.17425993084907532,
+        "non_defect": 0.8257400393486023
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:30.702455",
+      "frame_index": 35,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8241596221923828,
+      "latency_ms": 10.807128999658744,
+      "probabilities": {
+        "defect": 0.175840362906456,
+        "non_defect": 0.8241596221923828
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:30.918620",
+      "frame_index": 36,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.820408046245575,
+      "latency_ms": 10.896863999732886,
+      "probabilities": {
+        "defect": 0.17959195375442505,
+        "non_defect": 0.820408046245575
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:31.080570",
+      "frame_index": 37,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8227881789207458,
+      "latency_ms": 12.108303000786691,
+      "probabilities": {
+        "defect": 0.17721180617809296,
+        "non_defect": 0.8227881789207458
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:31.240715",
+      "frame_index": 38,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8222966194152832,
+      "latency_ms": 11.468418000731617,
+      "probabilities": {
+        "defect": 0.1777033507823944,
+        "non_defect": 0.8222966194152832
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:31.407234",
+      "frame_index": 39,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8223026394844055,
+      "latency_ms": 11.281385999609483,
+      "probabilities": {
+        "defect": 0.17769737541675568,
+        "non_defect": 0.8223026394844055
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:31.581169",
+      "frame_index": 40,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.824363648891449,
+      "latency_ms": 10.930857999483123,
+      "probabilities": {
+        "defect": 0.17563636600971222,
+        "non_defect": 0.824363648891449
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:31.738833",
+      "frame_index": 41,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8216068148612976,
+      "latency_ms": 10.636232000251766,
+      "probabilities": {
+        "defect": 0.1783931702375412,
+        "non_defect": 0.8216068148612976
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:31.897449",
+      "frame_index": 42,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8228060603141785,
+      "latency_ms": 10.905107001235592,
+      "probabilities": {
+        "defect": 0.17719398438930511,
+        "non_defect": 0.8228060603141785
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:32.084254",
+      "frame_index": 43,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.822055459022522,
+      "latency_ms": 10.686576999432873,
+      "probabilities": {
+        "defect": 0.17794455587863922,
+        "non_defect": 0.822055459022522
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:32.285445",
+      "frame_index": 44,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.823593258857727,
+      "latency_ms": 10.975638999298098,
+      "probabilities": {
+        "defect": 0.17640675604343414,
+        "non_defect": 0.823593258857727
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:32.449323",
+      "frame_index": 45,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.824910581111908,
+      "latency_ms": 10.822238999026013,
+      "probabilities": {
+        "defect": 0.17508944869041443,
+        "non_defect": 0.824910581111908
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:32.623527",
+      "frame_index": 46,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8224107027053833,
+      "latency_ms": 10.727224998845486,
+      "probabilities": {
+        "defect": 0.17758934199810028,
+        "non_defect": 0.8224107027053833
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:32.796283",
+      "frame_index": 47,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.823512613773346,
+      "latency_ms": 10.903657999733696,
+      "probabilities": {
+        "defect": 0.17648738622665405,
+        "non_defect": 0.823512613773346
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:32.947828",
+      "frame_index": 48,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8251116275787354,
+      "latency_ms": 11.98191100047552,
+      "probabilities": {
+        "defect": 0.17488840222358704,
+        "non_defect": 0.8251116275787354
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:33.109052",
+      "frame_index": 49,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8223366141319275,
+      "latency_ms": 10.814196000865195,
+      "probabilities": {
+        "defect": 0.1776634156703949,
+        "non_defect": 0.8223366141319275
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:33.277174",
+      "frame_index": 50,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8207690715789795,
+      "latency_ms": 13.31915199989453,
+      "probabilities": {
+        "defect": 0.17923091351985931,
+        "non_defect": 0.8207690715789795
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:33.514515",
+      "frame_index": 51,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.823700487613678,
+      "latency_ms": 10.117960000570747,
+      "probabilities": {
+        "defect": 0.17629949748516083,
+        "non_defect": 0.823700487613678
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:33.674237",
+      "frame_index": 52,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8227324485778809,
+      "latency_ms": 10.207290999460383,
+      "probabilities": {
+        "defect": 0.17726758122444153,
+        "non_defect": 0.8227324485778809
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:33.830965",
+      "frame_index": 53,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8213694095611572,
+      "latency_ms": 10.912440999163664,
+      "probabilities": {
+        "defect": 0.1786305457353592,
+        "non_defect": 0.8213694095611572
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:34.008213",
+      "frame_index": 54,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8236244916915894,
+      "latency_ms": 10.511926000617677,
+      "probabilities": {
+        "defect": 0.17637549340724945,
+        "non_defect": 0.8236244916915894
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:34.159356",
+      "frame_index": 55,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8220692873001099,
+      "latency_ms": 10.587803000817075,
+      "probabilities": {
+        "defect": 0.17793069779872894,
+        "non_defect": 0.8220692873001099
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:34.318604",
+      "frame_index": 56,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8245097398757935,
+      "latency_ms": 10.508888999538613,
+      "probabilities": {
+        "defect": 0.17549024522304535,
+        "non_defect": 0.8245097398757935
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:34.479046",
+      "frame_index": 57,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8212698698043823,
+      "latency_ms": 12.069303000316722,
+      "probabilities": {
+        "defect": 0.17873017489910126,
+        "non_defect": 0.8212698698043823
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:34.666150",
+      "frame_index": 58,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8216013312339783,
+      "latency_ms": 10.856515998966643,
+      "probabilities": {
+        "defect": 0.17839869856834412,
+        "non_defect": 0.8216013312339783
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:34.888669",
+      "frame_index": 59,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8218671083450317,
+      "latency_ms": 12.330647999988287,
+      "probabilities": {
+        "defect": 0.17813289165496826,
+        "non_defect": 0.8218671083450317
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:35.036528",
+      "frame_index": 60,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8214741349220276,
+      "latency_ms": 11.573051999221207,
+      "probabilities": {
+        "defect": 0.17852582037448883,
+        "non_defect": 0.8214741349220276
+      },
+      "ground_truth": null,
+      "capture_path": "/home/ubu/Desktop/Assessment/defect_classification_stack/run_capture/auto_20260419_170235_040510_f000060.jpg"
+    },
+    {
+      "timestamp": "2026-04-19T17:02:35.190243",
+      "frame_index": 61,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8235286474227905,
+      "latency_ms": 12.528478000604082,
+      "probabilities": {
+        "defect": 0.1764713078737259,
+        "non_defect": 0.8235286474227905
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:35.521464",
+      "frame_index": 62,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8226497173309326,
+      "latency_ms": 12.91624499936006,
+      "probabilities": {
+        "defect": 0.1773502379655838,
+        "non_defect": 0.8226497173309326
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:35.593211",
+      "frame_index": 63,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8216109871864319,
+      "latency_ms": 10.580058000414283,
+      "probabilities": {
+        "defect": 0.17838899791240692,
+        "non_defect": 0.8216109871864319
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:35.753425",
+      "frame_index": 64,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8199681043624878,
+      "latency_ms": 10.632052000801195,
+      "probabilities": {
+        "defect": 0.1800319254398346,
+        "non_defect": 0.8199681043624878
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:36.000623",
+      "frame_index": 65,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8221365809440613,
+      "latency_ms": 10.859957001230214,
+      "probabilities": {
+        "defect": 0.1778634786605835,
+        "non_defect": 0.8221365809440613
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:36.158839",
+      "frame_index": 66,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8243707418441772,
+      "latency_ms": 10.673955001038848,
+      "probabilities": {
+        "defect": 0.17562925815582275,
+        "non_defect": 0.8243707418441772
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:36.327035",
+      "frame_index": 67,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.823335587978363,
+      "latency_ms": 10.860337999474723,
+      "probabilities": {
+        "defect": 0.17666439712047577,
+        "non_defect": 0.823335587978363
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:36.477457",
+      "frame_index": 68,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8227993249893188,
+      "latency_ms": 10.622524001519196,
+      "probabilities": {
+        "defect": 0.17720066010951996,
+        "non_defect": 0.8227993249893188
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:36.630562",
+      "frame_index": 69,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8211957216262817,
+      "latency_ms": 13.84408499870915,
+      "probabilities": {
+        "defect": 0.17880432307720184,
+        "non_defect": 0.8211957216262817
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:36.785322",
+      "frame_index": 70,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8239367604255676,
+      "latency_ms": 12.030207999487175,
+      "probabilities": {
+        "defect": 0.17606323957443237,
+        "non_defect": 0.8239367604255676
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:36.944990",
+      "frame_index": 71,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8229523301124573,
+      "latency_ms": 14.501649000521866,
+      "probabilities": {
+        "defect": 0.1770477294921875,
+        "non_defect": 0.8229523301124573
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:37.104582",
+      "frame_index": 72,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.820844829082489,
+      "latency_ms": 10.450071000377648,
+      "probabilities": {
+        "defect": 0.17915521562099457,
+        "non_defect": 0.820844829082489
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:37.325087",
+      "frame_index": 73,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8203968405723572,
+      "latency_ms": 10.730170000897488,
+      "probabilities": {
+        "defect": 0.17960311472415924,
+        "non_defect": 0.8203968405723572
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:37.477280",
+      "frame_index": 74,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.82413250207901,
+      "latency_ms": 10.26403899959405,
+      "probabilities": {
+        "defect": 0.17586751282215118,
+        "non_defect": 0.82413250207901
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:37.642833",
+      "frame_index": 75,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8218828439712524,
+      "latency_ms": 10.720656000557938,
+      "probabilities": {
+        "defect": 0.17811718583106995,
+        "non_defect": 0.8218828439712524
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:37.827546",
+      "frame_index": 76,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8208601474761963,
+      "latency_ms": 11.891430000105174,
+      "probabilities": {
+        "defect": 0.17913979291915894,
+        "non_defect": 0.8208601474761963
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:37.974670",
+      "frame_index": 77,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.822763979434967,
+      "latency_ms": 10.491934001038317,
+      "probabilities": {
+        "defect": 0.17723600566387177,
+        "non_defect": 0.822763979434967
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:38.128110",
+      "frame_index": 78,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8228644728660583,
+      "latency_ms": 11.397071000828873,
+      "probabilities": {
+        "defect": 0.17713546752929688,
+        "non_defect": 0.8228644728660583
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:38.280908",
+      "frame_index": 79,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8254250288009644,
+      "latency_ms": 11.442086999522871,
+      "probabilities": {
+        "defect": 0.17457495629787445,
+        "non_defect": 0.8254250288009644
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:38.813372",
+      "frame_index": 80,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8219425678253174,
+      "latency_ms": 12.546734998977627,
+      "probabilities": {
+        "defect": 0.1780574470758438,
+        "non_defect": 0.8219425678253174
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:38.873583",
+      "frame_index": 81,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8260356187820435,
+      "latency_ms": 10.758399999758694,
+      "probabilities": {
+        "defect": 0.17396442592144012,
+        "non_defect": 0.8260356187820435
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:38.961360",
+      "frame_index": 82,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8214945793151855,
+      "latency_ms": 10.757494999779738,
+      "probabilities": {
+        "defect": 0.17850545048713684,
+        "non_defect": 0.8214945793151855
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:39.174007",
+      "frame_index": 83,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8202289938926697,
+      "latency_ms": 10.692175999793108,
+      "probabilities": {
+        "defect": 0.17977100610733032,
+        "non_defect": 0.8202289938926697
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:39.394362",
+      "frame_index": 84,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8243838548660278,
+      "latency_ms": 10.841575000085868,
+      "probabilities": {
+        "defect": 0.1756160855293274,
+        "non_defect": 0.8243838548660278
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:39.622597",
+      "frame_index": 85,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8210211396217346,
+      "latency_ms": 11.941718999878503,
+      "probabilities": {
+        "defect": 0.17897889018058777,
+        "non_defect": 0.8210211396217346
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:39.878403",
+      "frame_index": 86,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8265027403831482,
+      "latency_ms": 10.700885999540333,
+      "probabilities": {
+        "defect": 0.17349718511104584,
+        "non_defect": 0.8265027403831482
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:40.101485",
+      "frame_index": 87,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8240713477134705,
+      "latency_ms": 12.296675000470714,
+      "probabilities": {
+        "defect": 0.17592866718769073,
+        "non_defect": 0.8240713477134705
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:40.311717",
+      "frame_index": 88,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8214944005012512,
+      "latency_ms": 11.78291900032491,
+      "probabilities": {
+        "defect": 0.17850561439990997,
+        "non_defect": 0.8214944005012512
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:40.519934",
+      "frame_index": 89,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8234677314758301,
+      "latency_ms": 10.91542599897366,
+      "probabilities": {
+        "defect": 0.17653223872184753,
+        "non_defect": 0.8234677314758301
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:40.735623",
+      "frame_index": 90,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.824222981929779,
+      "latency_ms": 10.597730999506894,
+      "probabilities": {
+        "defect": 0.17577695846557617,
+        "non_defect": 0.824222981929779
+      },
+      "ground_truth": null,
+      "capture_path": "/home/ubu/Desktop/Assessment/defect_classification_stack/run_capture/auto_20260419_170240_738528_f000090.jpg"
+    },
+    {
+      "timestamp": "2026-04-19T17:02:40.982242",
+      "frame_index": 91,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8224139213562012,
+      "latency_ms": 10.823599001014372,
+      "probabilities": {
+        "defect": 0.1775861233472824,
+        "non_defect": 0.8224139213562012
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:41.204904",
+      "frame_index": 92,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8247088193893433,
+      "latency_ms": 10.775814000226092,
+      "probabilities": {
+        "defect": 0.17529118061065674,
+        "non_defect": 0.8247088193893433
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:41.400532",
+      "frame_index": 93,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8245880603790283,
+      "latency_ms": 10.597393998978077,
+      "probabilities": {
+        "defect": 0.1754118800163269,
+        "non_defect": 0.8245880603790283
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:42.201188",
+      "frame_index": 94,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8221926689147949,
+      "latency_ms": 11.033224000129849,
+      "probabilities": {
+        "defect": 0.17780736088752747,
+        "non_defect": 0.8221926689147949
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:42.388682",
+      "frame_index": 95,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8193139433860779,
+      "latency_ms": 12.048010001308285,
+      "probabilities": {
+        "defect": 0.18068605661392212,
+        "non_defect": 0.8193139433860779
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:42.418283",
+      "frame_index": 96,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8239460587501526,
+      "latency_ms": 10.459852001076797,
+      "probabilities": {
+        "defect": 0.176053985953331,
+        "non_defect": 0.8239460587501526
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:42.444274",
+      "frame_index": 97,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8228330612182617,
+      "latency_ms": 10.443238001244026,
+      "probabilities": {
+        "defect": 0.1771668940782547,
+        "non_defect": 0.8228330612182617
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:42.505039",
+      "frame_index": 98,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8228653073310852,
+      "latency_ms": 10.297986000296078,
+      "probabilities": {
+        "defect": 0.1771346628665924,
+        "non_defect": 0.8228653073310852
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:42.731030",
+      "frame_index": 99,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8213484883308411,
+      "latency_ms": 9.845638000115287,
+      "probabilities": {
+        "defect": 0.17865146696567535,
+        "non_defect": 0.8213484883308411
+      },
+      "ground_truth": null,
+      "capture_path": null
+    },
+    {
+      "timestamp": "2026-04-19T17:02:42.929377",
+      "frame_index": 100,
+      "source_label": "stream",
+      "model_name": "best",
+      "model_type": "yolo",
+      "class_name": "non_defect",
+      "decision": "PASS",
+      "confidence": 0.8194186091423035,
+      "latency_ms": 9.915462000208208,
+      "probabilities": {
+        "defect": 0.18058136105537415,
+        "non_defect": 0.8194186091423035
+      },
+      "ground_truth": null,
+      "capture_path": null
+    }
+  ],
+  "summary": {
+    "total_events": 100,
+    "per_model": {
+      "best": {
+        "total": 100,
+        "PASS": 100,
+        "FAIL": 0,
+        "UNCERTAIN": 0,
+        "gt_checked": 0,
+        "gt_correct": 0,
+        "mean_latency_ms": 14.117434970066824,
+        "mean_confidence": 0.822725175023079,
+        "running_accuracy": null
+      }
+    }
+  }
+}

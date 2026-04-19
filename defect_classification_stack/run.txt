@@ -1,5 +1,0 @@
-python /home/ubu/Desktop/Assessment/defect_classification_stack/demo_live_test.py \
-   --model /home/ubu/Desktop/Assessment/runs3/iter1_yolo_320/train/weights/best.pt \
-   --stream-url "https://api.baslarlabs.ae/video_feed" \
-   --auth-user 'zeroq' \
-   --auth-password '#@45459xQw'

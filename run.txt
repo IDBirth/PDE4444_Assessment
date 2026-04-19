@@ -1,0 +1,101 @@
+# yolo26n_cls_320
+python /home/ubu/Desktop/Assessment/defect_classification_stack/demo_live_test_with_video.py \
+   --model /home/ubu/Desktop/Assessment/runs3/iter1_yolo_320/train/weights/best.pt \
+   --stream-url "https://api.baslarlabs.ae/video_feed" \
+   --auth-user 'zeroq' \
+   --auth-password '#@45459xQw'
+
+# yolo26s_cls_320
+python /home/ubu/Desktop/Assessment/defect_classification_stack/demo_live_test_with_video.py \
+   --model /home/ubu/Desktop/Assessment/runs3/iter2_yolo_s/train/weights/best.pt \
+   --stream-url "https://api.baslarlabs.ae/video_feed" \
+   --auth-user 'zeroq' \
+   --auth-password '#@45459xQw'
+
+# mobilenet_selu_fine_tuned
+python /home/ubu/Desktop/Assessment/defect_classification_stack/demo_live_test_with_video.py \
+   --model /home/ubu/Desktop/Assessment/runs3/iter3_mobilenet_finetune/selu/model.pt \
+   --stream-url "https://api.baslarlabs.ae/video_feed" \
+   --auth-user 'zeroq' \
+   --auth-password '#@45459xQw'
+
+# mlp_random_search_boosted
+python /home/ubu/Desktop/Assessment/defect_classification_stack/demo_live_test_with_video.py \
+   --model /home/ubu/Desktop/Assessment/runs3/iter1_mlp_boost/best_model.pt \
+   --stream-url "https://api.baslarlabs.ae/video_feed" \
+   --auth-user 'zeroq' \
+   --auth-password '#@45459xQw'
+
+# mobilenetv2_elu_fine_tuned
+python /home/ubu/Desktop/Assessment/defect_classification_stack/demo_live_test_with_video.py \
+   --model /home/ubu/Desktop/Assessment/defect_classification_stack/runs/iter3_mobilenet_finetune/elu/model.pt \
+   --stream-url "https://api.baslarlabs.ae/video_feed" \
+   --auth-user 'zeroq' \
+   --auth-password '#@45459xQw'
+
+# mobilenet_gelu_fine_tuned
+python /home/ubu/Desktop/Assessment/defect_classification_stack/demo_live_test_with_video.py \
+   --model /home/ubu/Desktop/Assessment/runs2/iter3_mobilenet_finetune/gelu/model.pt \
+   --stream-url "https://api.baslarlabs.ae/video_feed" \
+   --auth-user 'zeroq' \
+   --auth-password '#@45459xQw'
+
+# mobilenetv2_leakyrelu_fine_tuned
+python /home/ubu/Desktop/Assessment/defect_classification_stack/demo_live_test_with_video.py \
+   --model /home/ubu/Desktop/Assessment/defect_classification_stack/runs/iter3_mobilenet_finetune/leaky_relu/model.pt \
+   --stream-url "https://api.baslarlabs.ae/video_feed" \
+   --auth-user 'zeroq' \
+   --auth-password '#@45459xQw'
+
+# mobilenet_relu_fine_tuned
+python /home/ubu/Desktop/Assessment/defect_classification_stack/demo_live_test_with_video.py \
+   --model /home/ubu/Desktop/Assessment/runs3/iter3_mobilenet_finetune/relu/model.pt \
+   --stream-url "https://api.baslarlabs.ae/video_feed" \
+   --auth-user 'zeroq' \
+   --auth-password '#@45459xQw'
+
+# mlp_hparam_search_elu_256
+python /home/ubu/Desktop/Assessment/defect_classification_stack/demo_live_test_with_video.py \
+   --model /home/ubu/Desktop/Assessment/defect_classification_stack/runs/iter1_mlp_search/best_model.pt \
+   --stream-url "https://api.baslarlabs.ae/video_feed" \
+   --auth-user 'zeroq' \
+   --auth-password '#@45459xQw'
+
+# mobilenetv2_gelu_fine_tuned
+python /home/ubu/Desktop/Assessment/defect_classification_stack/demo_live_test_with_video.py \
+   --model /home/ubu/Desktop/Assessment/defect_classification_stack/runs/iter3_mobilenet_finetune/gelu/model.pt \
+   --stream-url "https://api.baslarlabs.ae/video_feed" \
+   --auth-user 'zeroq' \
+   --auth-password '#@45459xQw'
+
+
+Next:
+--------------1:
+Copy and make the following demo_live_test_with_video into a demo_live_test_with_video_top6 with top 5 of the models in /home/ubu/Desktop/Assessment/defect_classification_stack/top10_models.md .
+Simultaniusly do the detection and show all 6, and create a overall score by meaning up scores.
+Do not auto capture for this.
+
+Also note that the defected 1.000 to non defected 1.000 is squed towards defected, allow theashold for pass to be 0.4 where as defect to be over 0.7
+
+
+--------------2:
+Final work, Update the readme with accordance with the /home/ubu/Desktop/Assessment/Assessment Details UPDATED.docx:
+
+1. Use the progress from
+/home/ubu/Desktop/Assessment/defect_classification_stack/PROGRESS_AND_RESULTS.md
+
+2. Make sure the work done is explained well in the readme, that can be understood by a Master level ML students
+
+3. make sure the readme has the Correct workflow and repeatability scrips in place
+
+4. Explain Baseline Sklearn fail
+
+5. Explain best mlp_random_search and how this was achived
+
+6. Explain how and why yolo26n-cls runs are better
+
+7. leave unknown URL likes to WWW.URL.COM for me to fill
+
+8. my details: Bilal Baslar M01055955, MSC Robotics at Middlesex Dubai, Course: Machine Learning for Engineers PDE4444
+
+9. 

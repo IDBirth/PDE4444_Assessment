@@ -1,0 +1,2429 @@
+{
+  "class_map": {
+    "0": "non_defect",
+    "1": "defect"
+  },
+  "seed": 42,
+  "test_size": 0.2,
+  "val_size": 0.1,
+  "img_size": [
+    224,
+    224
+  ],
+  "counts": {
+    "train": {
+      "0": 241,
+      "1": 242
+    },
+    "val": {
+      "0": 35,
+      "1": 34
+    },
+    "test": {
+      "0": 69,
+      "1": 69
+    }
+  }
+}
+
+Prepared dataset written to: runs4/data_balanced
+Fitting 1 folds for each of 12 candidates, totalling 12 fits
+Fitting 1 folds for each of 12 candidates, totalling 12 fits
+  model_name  accuracy  precision    recall        f1
+0    hog_svm  0.847826   0.913793  0.768116  0.834646
+1    hog_mlp  0.840580   0.927273  0.739130  0.822581
+
+=== Activation: relu ===
+  Epoch 01  train_loss=0.6990  val_loss=0.6942  val_acc=0.6812
+  Epoch 02  train_loss=0.7018  val_loss=0.6880  val_acc=0.4783
+  Epoch 03  train_loss=0.6969  val_loss=0.6910  val_acc=0.5072
+  Epoch 04  train_loss=0.6948  val_loss=0.6896  val_acc=0.7246
+  Epoch 05  train_loss=0.7004  val_loss=0.6884  val_acc=0.6957
+  Epoch 06  train_loss=0.6976  val_loss=0.6885  val_acc=0.6087
+  Early stopping triggered.
+
+=== Activation: elu ===
+  Epoch 01  train_loss=0.7007  val_loss=0.7745  val_acc=0.5072
+  Epoch 02  train_loss=0.7013  val_loss=0.7075  val_acc=0.5072
+  Epoch 03  train_loss=0.6952  val_loss=0.6897  val_acc=0.5072
+  Epoch 04  train_loss=0.6962  val_loss=0.6801  val_acc=0.5797
+  Epoch 05  train_loss=0.6945  val_loss=0.6955  val_acc=0.5072
+  Epoch 06  train_loss=0.6910  val_loss=0.6934  val_acc=0.5072
+  Epoch 07  train_loss=0.6945  val_loss=0.6747  val_acc=0.5797
+  Epoch 08  train_loss=0.7030  val_loss=0.6901  val_acc=0.4928
+  Epoch 09  train_loss=0.7050  val_loss=0.6913  val_acc=0.4783
+  Epoch 10  train_loss=0.7028  val_loss=0.6955  val_acc=0.5072
+  Epoch 11  train_loss=0.6910  val_loss=0.6844  val_acc=0.5942
+  Early stopping triggered.
+
+=== Activation: gelu ===
+  Epoch 01  train_loss=0.6967  val_loss=0.6931  val_acc=0.5072
+  Epoch 02  train_loss=0.6956  val_loss=0.6935  val_acc=0.5072
+  Epoch 03  train_loss=0.6950  val_loss=0.6901  val_acc=0.5072
+  Epoch 04  train_loss=0.6979  val_loss=0.6876  val_acc=0.5797
+  Epoch 05  train_loss=0.6923  val_loss=0.6847  val_acc=0.5797
+  Epoch 06  train_loss=0.6942  val_loss=0.6862  val_acc=0.5362
+  Epoch 07  train_loss=0.6934  val_loss=0.6838  val_acc=0.5797
+  Epoch 08  train_loss=0.6964  val_loss=0.6845  val_acc=0.5797
+  Epoch 09  train_loss=0.6915  val_loss=0.6885  val_acc=0.5362
+  Epoch 10  train_loss=0.6903  val_loss=0.6852  val_acc=0.5362
+  Epoch 11  train_loss=0.6910  val_loss=0.6836  val_acc=0.5362
+  Epoch 12  train_loss=0.6924  val_loss=0.6735  val_acc=0.5797
+  Epoch 13  train_loss=0.6853  val_loss=0.6827  val_acc=0.5362
+  Epoch 14  train_loss=0.6815  val_loss=0.6773  val_acc=0.5797
+  Epoch 15  train_loss=0.6899  val_loss=0.6703  val_acc=0.7246
+  Epoch 16  train_loss=0.6899  val_loss=0.6796  val_acc=0.5507
+  Epoch 17  train_loss=0.6916  val_loss=0.6857  val_acc=0.5362
+  Epoch 18  train_loss=0.6876  val_loss=0.6865  val_acc=0.5362
+  Epoch 19  train_loss=0.6869  val_loss=0.6836  val_acc=0.5362
+  Early stopping triggered.
+
+=== Activation: selu ===
+  Epoch 01  train_loss=0.7197  val_loss=0.8679  val_acc=0.5072
+  Epoch 02  train_loss=0.7035  val_loss=0.6984  val_acc=0.5072
+  Epoch 03  train_loss=0.7104  val_loss=0.6781  val_acc=0.6812
+  Epoch 04  train_loss=0.7213  val_loss=0.6985  val_acc=0.5072
+  Epoch 05  train_loss=0.6928  val_loss=0.6934  val_acc=0.5072
+  Epoch 06  train_loss=0.6934  val_loss=0.6863  val_acc=0.4493
+  Epoch 07  train_loss=0.7034  val_loss=0.6961  val_acc=0.5072
+  Early stopping triggered.
+
+=== Activation: leaky_relu ===
+  Epoch 01  train_loss=0.7062  val_loss=0.6979  val_acc=0.5072
+  Epoch 02  train_loss=0.6949  val_loss=0.6929  val_acc=0.5072
+  Epoch 03  train_loss=0.7028  val_loss=0.6907  val_acc=0.5072
+  Epoch 04  train_loss=0.6888  val_loss=0.6907  val_acc=0.5072
+  Epoch 05  train_loss=0.6881  val_loss=0.6856  val_acc=0.5362
+  Epoch 06  train_loss=0.6950  val_loss=0.6844  val_acc=0.5362
+  Epoch 07  train_loss=0.7028  val_loss=0.6868  val_acc=0.5797
+  Epoch 08  train_loss=0.6930  val_loss=0.6886  val_acc=0.5217
+  Epoch 09  train_loss=0.6888  val_loss=0.6813  val_acc=0.5652
+  Epoch 10  train_loss=0.7076  val_loss=0.6852  val_acc=0.5652
+  Epoch 11  train_loss=0.6853  val_loss=0.6836  val_acc=0.4783
+  Epoch 12  train_loss=0.6952  val_loss=0.6836  val_acc=0.5942
+  Epoch 13  train_loss=0.6941  val_loss=0.6830  val_acc=0.5652
+  Early stopping triggered.
+
+=== Summary ===
+       model_name  accuracy  precision    recall        f1
+3        cnn_selu  0.630435   0.575000  1.000000  0.730159
+2        cnn_gelu  0.623188   0.570248  1.000000  0.726316
+1         cnn_elu  0.536232   0.518797  1.000000  0.683168
+4  cnn_leaky_relu  0.528986   0.514925  1.000000  0.679803
+0        cnn_relu  0.507246   0.512821  0.289855  0.370370
+/home/ubu/Desktop/Assessment/defect_classification_stack/train_optimizer_comparison.py:168: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  epoch_loss += float(loss) * len(batch_idx)
+Loading images and extracting HOG features...
+HOG dims: 8100  -> PCA dims: 20  (MLP params: ~1217)
+
+============================================================
+  Optimiser: nelder_mead  (zero-order  | Nelder-Mead (derivative-free))
+============================================================
+  [Nelder-Mead] iter   50  train=0.9067  val=0.8740
+  [Nelder-Mead] iter  100  train=0.9067  val=0.8740
+  [Nelder-Mead] iter  150  train=0.9067  val=0.8740
+  [Nelder-Mead] iter  200  train=0.9067  val=0.8740
+  [Nelder-Mead] iter  250  train=0.9067  val=0.8740
+  [Nelder-Mead] iter  300  train=0.9067  val=0.8740
+  [Nelder-Mead] iter  350  train=0.9067  val=0.8740
+  [Nelder-Mead] iter  400  train=0.9067  val=0.8740
+  [Nelder-Mead] iter  450  train=0.9067  val=0.8740
+  [Nelder-Mead] iter  500  train=0.9067  val=0.8740
+  [Nelder-Mead] iter  550  train=0.9067  val=0.8740
+  [Nelder-Mead] iter  600  train=0.9067  val=0.8740
+  [Nelder-Mead] iter  650  train=0.9067  val=0.8740
+  [Nelder-Mead] iter  700  train=0.9067  val=0.8740
+  [Nelder-Mead] iter  750  train=0.9067  val=0.8740
+
+============================================================
+  Optimiser: sgd  (first-order | SGD (mini-batch gradient descent))
+============================================================
+  [SGD] Epoch 001  train=0.7614  val=0.7739
+  [SGD] Epoch 002  train=0.6711  val=0.6939
+  [SGD] Epoch 003  train=0.6321  val=0.7151
+  [SGD] Epoch 004  train=0.6020  val=0.7042
+  [SGD] Epoch 005  train=0.5536  val=0.7936
+  [SGD] Epoch 006  train=0.5207  val=0.6233
+  [SGD] Epoch 007  train=0.5042  val=0.6350
+  [SGD] Epoch 008  train=0.5133  val=0.6659
+  [SGD] Epoch 009  train=0.4895  val=0.5493
+  [SGD] Epoch 010  train=0.4423  val=0.5009
+  [SGD] Epoch 011  train=0.4148  val=0.4849
+  [SGD] Epoch 012  train=0.5161  val=0.5864
+  [SGD] Epoch 013  train=0.5475  val=0.6118
+  [SGD] Epoch 014  train=0.5572  val=0.6379
+  [SGD] Epoch 015  train=0.5335  val=0.4930
+  [SGD] Epoch 016  train=0.4632  val=0.6975
+  [SGD] Epoch 017  train=0.4064  val=0.6152
+  [SGD] Epoch 018  train=0.4245  val=0.4710
+  [SGD] Epoch 019  train=0.4220  val=0.6205
+  [SGD] Epoch 020  train=0.5406  val=0.5007
+  [SGD] Epoch 021  train=0.4335  val=0.4783
+  [SGD] Epoch 022  train=0.4640  val=0.5336
+  [SGD] Epoch 023  train=0.4196  val=0.5308
+  [SGD] Epoch 024  train=0.4202  val=0.5027
+  [SGD] Epoch 025  train=0.3995  val=0.4876
+  [SGD] Epoch 026  train=0.3249  val=0.5170
+  [SGD] Epoch 027  train=0.3417  val=0.5426
+  [SGD] Epoch 028  train=0.3069  val=0.5013
+  [SGD] Epoch 029  train=0.2652  val=0.5492
+  [SGD] Epoch 030  train=0.2574  val=0.6044
+  [SGD] Epoch 031  train=0.2670  val=0.7182
+  [SGD] Epoch 032  train=0.4043  val=0.6437
+  [SGD] Epoch 033  train=0.3304  val=0.6119
+  [SGD] Epoch 034  train=0.3367  val=0.6058
+  [SGD] Epoch 035  train=0.2868  val=0.6989
+  [SGD] Epoch 036  train=0.2714  val=0.5165
+  [SGD] Epoch 037  train=0.3923  val=0.5684
+  [SGD] Epoch 038  train=0.3529  val=0.8440
+  [SGD] Epoch 039  train=0.3222  val=0.6828
+  [SGD] Epoch 040  train=0.3286  val=0.5906
+  [SGD] Epoch 041  train=0.2440  val=0.6963
+  [SGD] Epoch 042  train=0.3151  val=0.5937
+  [SGD] Epoch 043  train=0.2986  val=0.7039
+  [SGD] Epoch 044  train=0.2838  val=0.7493
+  [SGD] Epoch 045  train=0.2806  val=0.8600
+  [SGD] Epoch 046  train=0.2799  val=0.6731
+  [SGD] Epoch 047  train=0.3053  val=0.7414
+  [SGD] Epoch 048  train=0.2839  val=0.6077
+  [SGD] Epoch 049  train=0.2441  val=0.6697
+  [SGD] Epoch 050  train=0.2702  val=0.8623
+
+============================================================
+  Optimiser: adam  (first-order | Adam (adaptive moments))
+============================================================
+  [Adam] Epoch 001  train=0.7929  val=0.7266
+  [Adam] Epoch 002  train=0.6852  val=0.7385
+  [Adam] Epoch 003  train=0.6454  val=0.7323
+  [Adam] Epoch 004  train=0.6235  val=0.7174
+  [Adam] Epoch 005  train=0.5997  val=0.7166
+  [Adam] Epoch 006  train=0.5836  val=0.7246
+  [Adam] Epoch 007  train=0.5674  val=0.6869
+  [Adam] Epoch 008  train=0.5545  val=0.6777
+  [Adam] Epoch 009  train=0.5399  val=0.6609
+  [Adam] Epoch 010  train=0.5260  val=0.6685
+  [Adam] Epoch 011  train=0.5123  val=0.6492
+  [Adam] Epoch 012  train=0.5008  val=0.6357
+  [Adam] Epoch 013  train=0.4890  val=0.6521
+  [Adam] Epoch 014  train=0.4743  val=0.6461
+  [Adam] Epoch 015  train=0.4599  val=0.6360
+  [Adam] Epoch 016  train=0.4494  val=0.6324
+  [Adam] Epoch 017  train=0.4341  val=0.6273
+  [Adam] Epoch 018  train=0.4245  val=0.6234
+  [Adam] Epoch 019  train=0.4127  val=0.6349
+  [Adam] Epoch 020  train=0.4015  val=0.6285
+  [Adam] Epoch 021  train=0.4034  val=0.6251
+  [Adam] Epoch 022  train=0.3916  val=0.6099
+  [Adam] Epoch 023  train=0.3819  val=0.6168
+  [Adam] Epoch 024  train=0.3697  val=0.6203
+  [Adam] Epoch 025  train=0.3623  val=0.5986
+  [Adam] Epoch 026  train=0.3577  val=0.6080
+  [Adam] Epoch 027  train=0.3511  val=0.6228
+  [Adam] Epoch 028  train=0.3470  val=0.6169
+  [Adam] Epoch 029  train=0.3335  val=0.6054
+  [Adam] Epoch 030  train=0.3424  val=0.5748
+  [Adam] Epoch 031  train=0.3351  val=0.5760
+  [Adam] Epoch 032  train=0.3268  val=0.5964
+  [Adam] Epoch 033  train=0.3218  val=0.6143
+  [Adam] Epoch 034  train=0.3091  val=0.6115
+  [Adam] Epoch 035  train=0.3105  val=0.6141
+  [Adam] Epoch 036  train=0.3074  val=0.6198
+  [Adam] Epoch 037  train=0.3100  val=0.5603
+  [Adam] Epoch 038  train=0.3016  val=0.6171
+  [Adam] Epoch 039  train=0.2916  val=0.5989
+  [Adam] Epoch 040  train=0.2886  val=0.5936
+  [Adam] Epoch 041  train=0.2729  val=0.5926
+  [Adam] Epoch 042  train=0.2676  val=0.5816
+  [Adam] Epoch 043  train=0.2707  val=0.5750
+  [Adam] Epoch 044  train=0.2618  val=0.6029
+  [Adam] Epoch 045  train=0.2635  val=0.6175
+  [Adam] Epoch 046  train=0.2618  val=0.5859
+  [Adam] Epoch 047  train=0.2609  val=0.6118
+  [Adam] Epoch 048  train=0.2520  val=0.6127
+  [Adam] Epoch 049  train=0.2418  val=0.6125
+  [Adam] Epoch 050  train=0.2397  val=0.6379
+
+============================================================
+  Optimiser: lbfgs  (second-order| L-BFGS (quasi-Newton))
+============================================================
+  [L-BFGS] Epoch 001  train=0.4415  val=0.6135
+  [L-BFGS] Epoch 002  train=0.2513  val=0.5711
+  [L-BFGS] Epoch 003  train=0.1664  val=0.7666
+  [L-BFGS] Epoch 004  train=0.1007  val=0.9592
+  [L-BFGS] Epoch 005  train=0.0644  val=1.1635
+  [L-BFGS] Epoch 006  train=0.0334  val=1.8802
+  [L-BFGS] Epoch 007  train=0.0221  val=2.6879
+  [L-BFGS] Epoch 008  train=0.0195  val=2.9651
+  [L-BFGS] Epoch 009  train=0.0184  val=3.3477
+  [L-BFGS] Epoch 010  train=0.0177  val=3.9513
+  [L-BFGS] Epoch 011  train=0.0175  val=4.4398
+  [L-BFGS] Epoch 012  train=0.0174  val=4.8974
+  [L-BFGS] Epoch 013  train=0.0173  val=4.9447
+  [L-BFGS] Epoch 014  train=0.0173  val=5.4509
+  [L-BFGS] Epoch 015  train=0.0173  val=5.9521
+  [L-BFGS] Epoch 016  train=0.0173  val=6.1609
+  [L-BFGS] Epoch 017  train=0.0172  val=6.2112
+  [L-BFGS] Epoch 018  train=0.0172  val=6.3352
+  [L-BFGS] Epoch 019  train=0.0172  val=6.6170
+  [L-BFGS] Epoch 020  train=0.0172  val=6.6450
+  [L-BFGS] Epoch 021  train=0.0172  val=6.6357
+  [L-BFGS] Epoch 022  train=0.0172  val=6.6357
+  [L-BFGS] Epoch 023  train=0.0172  val=6.6357
+  [L-BFGS] Epoch 024  train=0.0172  val=6.6357
+  [L-BFGS] Epoch 025  train=0.0172  val=6.6357
+  [L-BFGS] Epoch 026  train=0.0172  val=6.6357
+  [L-BFGS] Epoch 027  train=0.0172  val=6.6357
+  [L-BFGS] Epoch 028  train=0.0172  val=6.6357
+  [L-BFGS] Epoch 029  train=0.0172  val=6.6357
+  [L-BFGS] Epoch 030  train=0.0172  val=6.6357
+  [L-BFGS] Epoch 031  train=0.0172  val=6.6357
+  [L-BFGS] Epoch 032  train=0.0172  val=6.6357
+  [L-BFGS] Epoch 033  train=0.0172  val=6.6357
+  [L-BFGS] Epoch 034  train=0.0172  val=6.6357
+  [L-BFGS] Epoch 035  train=0.0172  val=6.6357
+  [L-BFGS] Epoch 036  train=0.0172  val=6.6357
+  [L-BFGS] Epoch 037  train=0.0172  val=6.6357
+  [L-BFGS] Epoch 038  train=0.0172  val=6.6357
+  [L-BFGS] Epoch 039  train=0.0172  val=6.6357
+  [L-BFGS] Epoch 040  train=0.0172  val=6.6357
+  [L-BFGS] Epoch 041  train=0.0172  val=6.6357
+  [L-BFGS] Epoch 042  train=0.0172  val=6.6357
+  [L-BFGS] Epoch 043  train=0.0172  val=6.6357
+  [L-BFGS] Epoch 044  train=0.0172  val=6.6357
+  [L-BFGS] Epoch 045  train=0.0172  val=6.6357
+  [L-BFGS] Epoch 046  train=0.0172  val=6.6357
+  [L-BFGS] Epoch 047  train=0.0172  val=6.6357
+  [L-BFGS] Epoch 048  train=0.0172  val=6.6357
+  [L-BFGS] Epoch 049  train=0.0172  val=6.6357
+  [L-BFGS] Epoch 050  train=0.0172  val=6.6357
+
+=== Optimiser Summary ===
+ model_name  accuracy  precision   recall       f1
+       adam  0.840580   0.813333 0.884058 0.847222
+      lbfgs  0.782609   0.809524 0.739130 0.772727
+        sgd  0.746377   0.723684 0.797101 0.758621
+nelder_mead  0.485507   0.491525 0.840580 0.620321
+Running 24 trials  |  input_dim=27648  device=cuda
+
+--- Trial 1/24: {'hidden_sizes': (128, 64, 32), 'activation': 'gelu', 'dropout': 0.4, 'lr': 0.0003}
+    best_val_loss=0.1494
+
+--- Trial 2/24: {'hidden_sizes': (256,), 'activation': 'elu', 'dropout': 0.4, 'lr': 0.001}
+    best_val_loss=0.2173
+
+--- Trial 3/24: {'hidden_sizes': (128,), 'activation': 'elu', 'dropout': 0.4, 'lr': 0.0001}
+    best_val_loss=0.2049
+
+--- Trial 4/24: {'hidden_sizes': (256,), 'activation': 'relu', 'dropout': 0.4, 'lr': 0.0001}
+    best_val_loss=0.1533
+
+--- Trial 5/24: {'hidden_sizes': (128,), 'activation': 'elu', 'dropout': 0.2, 'lr': 0.0003}
+    best_val_loss=0.0967
+
+--- Trial 6/24: {'hidden_sizes': (256,), 'activation': 'relu', 'dropout': 0.0, 'lr': 0.0001}
+    best_val_loss=0.1014
+
+--- Trial 7/24: {'hidden_sizes': (256,), 'activation': 'gelu', 'dropout': 0.4, 'lr': 0.0001}
+    best_val_loss=0.1463
+
+--- Trial 8/24: {'hidden_sizes': (256, 128), 'activation': 'elu', 'dropout': 0.4, 'lr': 0.0001}
+    best_val_loss=0.1147
+
+--- Trial 9/24: {'hidden_sizes': (256,), 'activation': 'gelu', 'dropout': 0.4, 'lr': 0.0003}
+    best_val_loss=0.0911
+
+--- Trial 10/24: {'hidden_sizes': (128,), 'activation': 'gelu', 'dropout': 0.0, 'lr': 0.0003}
+    best_val_loss=0.0958
+
+--- Trial 11/24: {'hidden_sizes': (256,), 'activation': 'selu', 'dropout': 0.0, 'lr': 0.001}
+    best_val_loss=0.1315
+
+--- Trial 12/24: {'hidden_sizes': (128,), 'activation': 'selu', 'dropout': 0.2, 'lr': 0.0001}
+    best_val_loss=0.1810
+
+--- Trial 13/24: {'hidden_sizes': (128, 64, 32), 'activation': 'relu', 'dropout': 0.2, 'lr': 0.001}
+    best_val_loss=0.1312
+
+--- Trial 14/24: {'hidden_sizes': (128,), 'activation': 'relu', 'dropout': 0.0, 'lr': 0.001}
+    best_val_loss=0.1019
+
+--- Trial 15/24: {'hidden_sizes': (256, 128), 'activation': 'elu', 'dropout': 0.0, 'lr': 0.0003}
+    best_val_loss=0.1077
+
+--- Trial 16/24: {'hidden_sizes': (256, 128), 'activation': 'gelu', 'dropout': 0.0, 'lr': 0.0003}
+    best_val_loss=0.0861
+
+--- Trial 17/24: {'hidden_sizes': (256, 128), 'activation': 'elu', 'dropout': 0.0, 'lr': 0.001}
+    best_val_loss=0.1763
+
+--- Trial 18/24: {'hidden_sizes': (128, 64, 32), 'activation': 'elu', 'dropout': 0.4, 'lr': 0.0003}
+    best_val_loss=0.0953
+
+--- Trial 19/24: {'hidden_sizes': (128, 64, 32), 'activation': 'gelu', 'dropout': 0.4, 'lr': 0.001}
+    best_val_loss=0.6683
+
+--- Trial 20/24: {'hidden_sizes': (256,), 'activation': 'selu', 'dropout': 0.2, 'lr': 0.0001}
+    best_val_loss=0.1557
+
+--- Trial 21/24: {'hidden_sizes': (128, 64), 'activation': 'gelu', 'dropout': 0.2, 'lr': 0.001}
+    best_val_loss=0.0844
+
+--- Trial 22/24: {'hidden_sizes': (128, 64, 32), 'activation': 'selu', 'dropout': 0.2, 'lr': 0.0001}
+    best_val_loss=0.1169
+
+--- Trial 23/24: {'hidden_sizes': (128,), 'activation': 'gelu', 'dropout': 0.4, 'lr': 0.0003}
+    best_val_loss=0.0890
+
+--- Trial 24/24: {'hidden_sizes': (128, 64), 'activation': 'gelu', 'dropout': 0.2, 'lr': 0.0003}
+    best_val_loss=0.1086
+
+Best HP: {'hidden_sizes': (128, 64), 'activation': 'gelu', 'dropout': 0.2, 'lr': 0.001}  (val_loss=0.0844)
+{
+  "model_name": "mlp_random_search",
+  "accuracy": 0.9492753623188406,
+  "precision": 1.0,
+  "recall": 0.8985507246376812,
+  "f1": 0.9465648854961832
+}
+
+=======================================================
+  MobileNetV2 + relu  (device=cuda)
+=======================================================
+  [relu] E01  tr=0.5763/0.677  vl=0.4904/0.812
+  [relu] E02  tr=0.3957/0.826  vl=0.3154/0.884
+  [relu] E03  tr=0.3977/0.826  vl=0.2934/0.899
+  [relu] E04  tr=0.3673/0.832  vl=0.2168/0.928
+  [relu] E05  tr=0.2844/0.894  vl=0.2699/0.913
+  [relu] E06  tr=0.3000/0.876  vl=0.2892/0.884
+  [relu] E07  tr=0.3279/0.857  vl=0.1790/0.942
+  [relu] E08  tr=0.2811/0.890  vl=0.1996/0.986
+  [relu] E09  tr=0.2370/0.909  vl=0.1819/0.957
+  [relu] E10  tr=0.2557/0.903  vl=0.2287/0.957
+  [relu] E11  tr=0.2716/0.890  vl=0.1672/1.000
+  [relu] E12  tr=0.2296/0.917  vl=0.1712/0.957
+  [relu] E13  tr=0.2366/0.905  vl=0.1712/0.971
+  [relu] E14  tr=0.2613/0.894  vl=0.1306/0.957
+  [relu] E15  tr=0.2720/0.886  vl=0.1387/0.971
+  [relu] E16  tr=0.2442/0.923  vl=0.1433/0.986
+  [relu] E17  tr=0.2252/0.917  vl=0.1473/0.971
+  [relu] E18  tr=0.2312/0.919  vl=0.1513/1.000
+  [relu] E19  tr=0.2324/0.915  vl=0.1336/1.000
+  [relu] E20  tr=0.2309/0.917  vl=0.1090/1.000
+  [relu] E21  tr=0.2567/0.874  vl=0.1172/0.986
+  [relu] E22  tr=0.2319/0.901  vl=0.1171/1.000
+  [relu] E23  tr=0.2161/0.923  vl=0.1075/1.000
+  [relu] E24  tr=0.1995/0.928  vl=0.1155/1.000
+  [relu] E25  tr=0.2050/0.925  vl=0.1110/0.986
+  [relu] E26  tr=0.2300/0.907  vl=0.1105/1.000
+  [relu] E27  tr=0.2297/0.907  vl=0.1150/0.986
+  [relu] E28  tr=0.2279/0.909  vl=0.1173/1.000
+  [relu] E29  tr=0.1926/0.923  vl=0.1190/1.000
+  Early stop.
+
+=======================================================
+  MobileNetV2 + elu  (device=cuda)
+=======================================================
+  [elu] E01  tr=0.5542/0.700  vl=0.4143/0.841
+  [elu] E02  tr=0.3770/0.828  vl=0.2693/0.884
+  [elu] E03  tr=0.3935/0.828  vl=0.2305/0.913
+  [elu] E04  tr=0.3686/0.839  vl=0.1850/0.942
+  [elu] E05  tr=0.2747/0.888  vl=0.2398/0.957
+  [elu] E06  tr=0.3008/0.865  vl=0.2585/0.899
+  [elu] E07  tr=0.3431/0.853  vl=0.1547/0.957
+  [elu] E08  tr=0.2872/0.890  vl=0.1928/0.986
+  [elu] E09  tr=0.2328/0.911  vl=0.1665/0.957
+  [elu] E10  tr=0.2609/0.894  vl=0.2318/0.899
+  [elu] E11  tr=0.2760/0.884  vl=0.1589/0.986
+  [elu] E12  tr=0.2380/0.915  vl=0.1644/0.942
+  [elu] E13  tr=0.2471/0.899  vl=0.1633/0.957
+  Early stop.
+
+=======================================================
+  MobileNetV2 + gelu  (device=cuda)
+=======================================================
+  [gelu] E01  tr=0.5656/0.685  vl=0.4843/0.797
+  [gelu] E02  tr=0.3911/0.824  vl=0.3108/0.884
+  [gelu] E03  tr=0.3959/0.834  vl=0.2825/0.899
+  [gelu] E04  tr=0.3683/0.836  vl=0.2109/0.942
+  [gelu] E05  tr=0.2821/0.888  vl=0.2698/0.913
+  [gelu] E06  tr=0.2967/0.880  vl=0.2982/0.884
+  [gelu] E07  tr=0.3257/0.859  vl=0.1778/0.957
+  [gelu] E08  tr=0.2807/0.896  vl=0.2114/0.986
+  [gelu] E09  tr=0.2341/0.913  vl=0.1886/0.957
+  [gelu] E10  tr=0.2533/0.899  vl=0.2492/0.913
+  [gelu] E11  tr=0.2663/0.890  vl=0.1751/0.986
+  [gelu] E12  tr=0.2273/0.919  vl=0.1729/0.971
+  [gelu] E13  tr=0.2329/0.901  vl=0.1819/0.957
+  [gelu] E14  tr=0.2648/0.886  vl=0.1314/0.986
+  [gelu] E15  tr=0.2761/0.884  vl=0.1418/0.986
+  [gelu] E16  tr=0.2386/0.915  vl=0.1464/0.986
+  [gelu] E17  tr=0.2246/0.917  vl=0.1466/0.971
+  [gelu] E18  tr=0.2307/0.919  vl=0.1540/0.986
+  [gelu] E19  tr=0.2318/0.917  vl=0.1328/0.986
+  [gelu] E20  tr=0.2263/0.917  vl=0.1050/1.000
+  [gelu] E21  tr=0.2573/0.874  vl=0.1128/1.000
+  [gelu] E22  tr=0.2326/0.903  vl=0.1173/0.986
+  [gelu] E23  tr=0.2118/0.921  vl=0.1088/1.000
+  [gelu] E24  tr=0.2018/0.921  vl=0.1168/1.000
+  [gelu] E25  tr=0.2024/0.928  vl=0.1171/0.971
+  [gelu] E26  tr=0.2296/0.917  vl=0.1125/1.000
+  Early stop.
+
+=======================================================
+  MobileNetV2 + selu  (device=cuda)
+=======================================================
+  [selu] E01  tr=0.5699/0.692  vl=0.3756/0.855
+  [selu] E02  tr=0.3797/0.822  vl=0.2477/0.913
+  [selu] E03  tr=0.4004/0.826  vl=0.2223/0.913
+  [selu] E04  tr=0.3754/0.836  vl=0.1827/0.957
+  [selu] E05  tr=0.2778/0.890  vl=0.2550/0.913
+  [selu] E06  tr=0.3110/0.870  vl=0.2621/0.913
+  [selu] E07  tr=0.3503/0.841  vl=0.1538/0.957
+  [selu] E08  tr=0.2978/0.884  vl=0.1929/0.986
+  [selu] E09  tr=0.2407/0.907  vl=0.1695/0.957
+  [selu] E10  tr=0.2696/0.899  vl=0.2194/0.957
+  [selu] E11  tr=0.2852/0.886  vl=0.1654/0.971
+  [selu] E12  tr=0.2476/0.915  vl=0.1714/0.942
+  [selu] E13  tr=0.2570/0.894  vl=0.1642/0.942
+  Early stop.
+
+=======================================================
+  MobileNetV2 + leaky_relu  (device=cuda)
+=======================================================
+  [leaky_relu] E01  tr=0.5753/0.677  vl=0.4890/0.812
+  [leaky_relu] E02  tr=0.3950/0.826  vl=0.3132/0.884
+  [leaky_relu] E03  tr=0.3971/0.826  vl=0.2915/0.899
+  [leaky_relu] E04  tr=0.3680/0.830  vl=0.2158/0.942
+  [leaky_relu] E05  tr=0.2845/0.896  vl=0.2712/0.899
+  [leaky_relu] E06  tr=0.2999/0.876  vl=0.2925/0.884
+  [leaky_relu] E07  tr=0.3272/0.859  vl=0.1801/0.942
+  [leaky_relu] E08  tr=0.2808/0.892  vl=0.2011/0.986
+  [leaky_relu] E09  tr=0.2373/0.907  vl=0.1831/0.957
+  [leaky_relu] E10  tr=0.2552/0.901  vl=0.2305/0.957
+  [leaky_relu] E11  tr=0.2710/0.890  vl=0.1702/0.971
+  [leaky_relu] E12  tr=0.2313/0.923  vl=0.1749/0.971
+  [leaky_relu] E13  tr=0.2355/0.909  vl=0.1749/0.971
+  [leaky_relu] E14  tr=0.2640/0.894  vl=0.1318/0.957
+  [leaky_relu] E15  tr=0.2729/0.888  vl=0.1399/0.971
+  [leaky_relu] E16  tr=0.2435/0.921  vl=0.1460/0.971
+  [leaky_relu] E17  tr=0.2251/0.915  vl=0.1464/0.986
+  [leaky_relu] E18  tr=0.2302/0.919  vl=0.1498/1.000
+  [leaky_relu] E19  tr=0.2335/0.915  vl=0.1336/0.986
+  [leaky_relu] E20  tr=0.2305/0.919  vl=0.1086/1.000
+  [leaky_relu] E21  tr=0.2543/0.878  vl=0.1143/0.986
+  [leaky_relu] E22  tr=0.2321/0.899  vl=0.1208/0.971
+  [leaky_relu] E23  tr=0.2139/0.923  vl=0.1082/1.000
+  [leaky_relu] E24  tr=0.1999/0.923  vl=0.1173/1.000
+  [leaky_relu] E25  tr=0.2043/0.923  vl=0.1120/0.986
+  [leaky_relu] E26  tr=0.2306/0.913  vl=0.1090/1.000
+  [leaky_relu] E27  tr=0.2299/0.903  vl=0.1129/0.986
+  [leaky_relu] E28  tr=0.2255/0.907  vl=0.1145/1.000
+  [leaky_relu] E29  tr=0.1941/0.928  vl=0.1164/1.000
+  Early stop.
+
+=== MobileNetV2 Activation Sweep Summary ===
+          model_name  accuracy  precision   recall       f1
+      mobilenet_relu  0.934783   0.983871 0.884058 0.931298
+mobilenet_leaky_relu  0.927536   0.983607 0.869565 0.923077
+      mobilenet_gelu  0.920290   0.967742 0.869565 0.916031
+      mobilenet_selu  0.876812   0.933333 0.811594 0.868217
+       mobilenet_elu  0.862319   0.946429 0.768116 0.848000
+
+=======================================================
+  MobileNetV2 + relu  (device=cuda)
+=======================================================
+  [relu] E01  tr=0.5765/0.685  vl=0.6511/0.565
+  [relu] E02  tr=0.3729/0.851  vl=0.4903/0.696
+  [relu] E03  tr=0.3180/0.874  vl=0.3276/0.913
+  [relu] E04  tr=0.2832/0.890  vl=0.3502/0.855
+  [relu] E05  tr=0.2368/0.911  vl=0.2616/0.899
+  [relu] E06  tr=0.2519/0.909  vl=0.2383/0.913
+  [relu] E07  tr=0.2752/0.894  vl=0.1959/0.928
+  [relu] E08  tr=0.1926/0.936  vl=0.1902/0.913
+  [relu] E09  tr=0.1913/0.930  vl=0.1987/0.957
+  [relu] E10  tr=0.2019/0.913  vl=0.2091/0.928
+  [relu] E11  tr=0.1928/0.917  vl=0.2658/0.884
+  [relu] E12  tr=0.1669/0.948  vl=0.2273/0.913
+  [relu] E13  tr=0.1631/0.942  vl=0.1810/0.913
+  [relu] E14  tr=0.1624/0.942  vl=0.1888/0.913
+  [relu] E15  tr=0.1805/0.923  vl=0.1699/0.928
+  [relu] E16  tr=0.1444/0.948  vl=0.1782/0.928
+  [relu] E17  tr=0.1430/0.948  vl=0.1763/0.928
+  [relu] E18  tr=0.1402/0.957  vl=0.1792/0.928
+  [relu] E19  tr=0.1667/0.944  vl=0.1873/0.928
+  [relu] E20  tr=0.1461/0.950  vl=0.1245/0.942
+  [relu] E21  tr=0.1518/0.944  vl=0.1237/0.957
+  [relu] E22  tr=0.1611/0.940  vl=0.1266/0.986
+  [relu] E23  tr=0.1202/0.967  vl=0.1090/0.986
+  [relu] E24  tr=0.1158/0.959  vl=0.1352/0.942
+  [relu] E25  tr=0.1332/0.950  vl=0.1076/0.986
+  [relu] E26  tr=0.1389/0.959  vl=0.1151/0.986
+  [relu] E27  tr=0.1438/0.948  vl=0.1011/0.986
+  [relu] E28  tr=0.1229/0.952  vl=0.1103/0.971
+  [relu] E29  tr=0.1323/0.959  vl=0.1159/0.971
+  [relu] E30  tr=0.1209/0.957  vl=0.1089/0.986
+  [relu] E31  tr=0.1208/0.961  vl=0.1003/0.986
+  [relu] E32  tr=0.1205/0.965  vl=0.1285/0.957
+  [relu] E33  tr=0.0951/0.969  vl=0.1532/0.928
+  [relu] E34  tr=0.1267/0.959  vl=0.1237/0.957
+  [relu] E35  tr=0.1047/0.971  vl=0.1115/0.986
+  [relu] E36  tr=0.1194/0.963  vl=0.1129/0.971
+  [relu] E37  tr=0.1160/0.959  vl=0.1205/0.971
+  [relu] E38  tr=0.1049/0.973  vl=0.1003/0.986
+  [relu] E39  tr=0.0961/0.975  vl=0.1132/0.957
+  [relu] E40  tr=0.0923/0.969  vl=0.1013/0.986
+  [relu] E41  tr=0.1003/0.969  vl=0.0959/0.986
+  [relu] E42  tr=0.1277/0.965  vl=0.0900/0.986
+  [relu] E43  tr=0.0952/0.975  vl=0.0883/0.986
+  [relu] E44  tr=0.0968/0.971  vl=0.0946/0.986
+  [relu] E45  tr=0.1410/0.950  vl=0.0907/0.986
+  [relu] E46  tr=0.1129/0.971  vl=0.0911/0.971
+  [relu] E47  tr=0.1236/0.948  vl=0.1020/0.971
+  [relu] E48  tr=0.1040/0.965  vl=0.1090/0.971
+  [relu] E49  tr=0.1057/0.967  vl=0.0980/0.971
+  [relu] E50  tr=0.1026/0.963  vl=0.0949/0.971
+  [relu] E51  tr=0.1020/0.959  vl=0.0905/0.986
+  [relu] E52  tr=0.1077/0.957  vl=0.0916/0.986
+  [relu] E53  tr=0.1143/0.961  vl=0.0880/0.986
+  [relu] E54  tr=0.1044/0.967  vl=0.1066/0.971
+  [relu] E55  tr=0.0932/0.965  vl=0.0996/0.971
+  [relu] E56  tr=0.1189/0.959  vl=0.0931/0.971
+  [relu] E57  tr=0.0893/0.975  vl=0.0957/0.971
+  [relu] E58  tr=0.0948/0.967  vl=0.0969/0.986
+  [relu] E59  tr=0.0902/0.975  vl=0.0847/0.986
+  [relu] E60  tr=0.1028/0.963  vl=0.0877/0.986
+
+=======================================================
+  MobileNetV2 + elu  (device=cuda)
+=======================================================
+  [elu] E01  tr=0.5122/0.737  vl=0.6246/0.580
+  [elu] E02  tr=0.3242/0.857  vl=0.4570/0.739
+  [elu] E03  tr=0.2962/0.882  vl=0.3099/0.913
+  [elu] E04  tr=0.2599/0.901  vl=0.4924/0.739
+  [elu] E05  tr=0.2215/0.907  vl=0.3059/0.870
+  [elu] E06  tr=0.2469/0.903  vl=0.2454/0.899
+  [elu] E07  tr=0.2736/0.901  vl=0.2087/0.928
+  [elu] E08  tr=0.1840/0.934  vl=0.1910/0.942
+  [elu] E09  tr=0.1904/0.930  vl=0.1922/0.928
+  [elu] E10  tr=0.1991/0.915  vl=0.2536/0.928
+  [elu] E11  tr=0.1897/0.915  vl=0.2910/0.870
+  [elu] E12  tr=0.1849/0.942  vl=0.2303/0.913
+  [elu] E13  tr=0.1614/0.940  vl=0.2011/0.913
+  [elu] E14  tr=0.1778/0.934  vl=0.2127/0.913
+  [elu] E15  tr=0.1960/0.921  vl=0.1994/0.928
+  [elu] E16  tr=0.1408/0.946  vl=0.2085/0.928
+  [elu] E17  tr=0.1475/0.952  vl=0.1992/0.928
+  [elu] E18  tr=0.1541/0.942  vl=0.2151/0.899
+  [elu] E19  tr=0.1923/0.928  vl=0.2293/0.899
+  [elu] E20  tr=0.1466/0.944  vl=0.1567/0.928
+  [elu] E21  tr=0.1450/0.954  vl=0.1548/0.928
+  [elu] E22  tr=0.1503/0.946  vl=0.1672/0.928
+  [elu] E23  tr=0.1163/0.961  vl=0.1223/0.971
+  [elu] E24  tr=0.1133/0.961  vl=0.1670/0.942
+  [elu] E25  tr=0.1293/0.950  vl=0.1211/0.957
+  [elu] E26  tr=0.1368/0.954  vl=0.1458/0.957
+  [elu] E27  tr=0.1388/0.946  vl=0.1408/0.971
+  [elu] E28  tr=0.1287/0.946  vl=0.1554/0.957
+  [elu] E29  tr=0.1278/0.957  vl=0.1529/0.942
+  [elu] E30  tr=0.1142/0.957  vl=0.1574/0.971
+  [elu] E31  tr=0.1272/0.963  vl=0.1404/0.971
+  [elu] E32  tr=0.1324/0.963  vl=0.1816/0.928
+  [elu] E33  tr=0.0865/0.975  vl=0.1974/0.942
+  [elu] E34  tr=0.1253/0.950  vl=0.1589/0.942
+  [elu] E35  tr=0.1188/0.963  vl=0.1470/0.971
+  [elu] E36  tr=0.1240/0.957  vl=0.1577/0.942
+  [elu] E37  tr=0.1153/0.961  vl=0.1526/0.928
+  Early stop.
+
+=======================================================
+  MobileNetV2 + gelu  (device=cuda)
+=======================================================
+  [gelu] E01  tr=0.5606/0.702  vl=0.6429/0.580
+  [gelu] E02  tr=0.3652/0.857  vl=0.4849/0.710
+  [gelu] E03  tr=0.3124/0.880  vl=0.3300/0.870
+  [gelu] E04  tr=0.2821/0.901  vl=0.3795/0.826
+  [gelu] E05  tr=0.2378/0.903  vl=0.2821/0.899
+  [gelu] E06  tr=0.2496/0.915  vl=0.2625/0.913
+  [gelu] E07  tr=0.2684/0.903  vl=0.2145/0.928
+  [gelu] E08  tr=0.1912/0.934  vl=0.2081/0.942
+  [gelu] E09  tr=0.1937/0.934  vl=0.2207/0.913
+  [gelu] E10  tr=0.2040/0.919  vl=0.2546/0.913
+  [gelu] E11  tr=0.1876/0.930  vl=0.2868/0.899
+  [gelu] E12  tr=0.1695/0.940  vl=0.2429/0.913
+  [gelu] E13  tr=0.1703/0.942  vl=0.2199/0.913
+  [gelu] E14  tr=0.1723/0.940  vl=0.2197/0.913
+  [gelu] E15  tr=0.1868/0.923  vl=0.2031/0.913
+  [gelu] E16  tr=0.1430/0.946  vl=0.2199/0.899
+  [gelu] E17  tr=0.1593/0.946  vl=0.2314/0.899
+  [gelu] E18  tr=0.1466/0.946  vl=0.2219/0.913
+  [gelu] E19  tr=0.1722/0.942  vl=0.2094/0.913
+  [gelu] E20  tr=0.1414/0.954  vl=0.1745/0.913
+  [gelu] E21  tr=0.1534/0.944  vl=0.1687/0.928
+  [gelu] E22  tr=0.1615/0.934  vl=0.1844/0.928
+  [gelu] E23  tr=0.1261/0.971  vl=0.1684/0.957
+  [gelu] E24  tr=0.1199/0.961  vl=0.1674/0.928
+  [gelu] E25  tr=0.1337/0.952  vl=0.1386/0.971
+  [gelu] E26  tr=0.1404/0.959  vl=0.1487/0.971
+  [gelu] E27  tr=0.1509/0.942  vl=0.1344/0.957
+  [gelu] E28  tr=0.1313/0.948  vl=0.1299/0.957
+  [gelu] E29  tr=0.1345/0.959  vl=0.1445/0.942
+  [gelu] E30  tr=0.1114/0.954  vl=0.1498/0.957
+  [gelu] E31  tr=0.1239/0.963  vl=0.1277/0.957
+  [gelu] E32  tr=0.1225/0.969  vl=0.1601/0.913
+  [gelu] E33  tr=0.0896/0.975  vl=0.1885/0.913
+  [gelu] E34  tr=0.1249/0.954  vl=0.1659/0.942
+  [gelu] E35  tr=0.1200/0.963  vl=0.1440/0.971
+  [gelu] E36  tr=0.1144/0.965  vl=0.1351/0.957
+  [gelu] E37  tr=0.1211/0.965  vl=0.1516/0.913
+  [gelu] E38  tr=0.1144/0.963  vl=0.1249/0.928
+  [gelu] E39  tr=0.0972/0.983  vl=0.1339/0.928
+  [gelu] E40  tr=0.0984/0.975  vl=0.1214/0.957
+  [gelu] E41  tr=0.1093/0.961  vl=0.1159/0.957
+  [gelu] E42  tr=0.1345/0.959  vl=0.1063/0.957
+  [gelu] E43  tr=0.1014/0.973  vl=0.1002/0.971
+  [gelu] E44  tr=0.0979/0.965  vl=0.1200/0.971
+  [gelu] E45  tr=0.1338/0.948  vl=0.1062/0.986
+  [gelu] E46  tr=0.1169/0.967  vl=0.1061/0.957
+  [gelu] E47  tr=0.1142/0.961  vl=0.1241/0.928
+  [gelu] E48  tr=0.0995/0.971  vl=0.1307/0.928
+  [gelu] E49  tr=0.1054/0.965  vl=0.1221/0.913
+  [gelu] E50  tr=0.0954/0.967  vl=0.1155/0.957
+  [gelu] E51  tr=0.0986/0.963  vl=0.1112/0.942
+  [gelu] E52  tr=0.1013/0.965  vl=0.1128/0.971
+  [gelu] E53  tr=0.1229/0.952  vl=0.1075/0.971
+  [gelu] E54  tr=0.1119/0.965  vl=0.1225/0.942
+  [gelu] E55  tr=0.0870/0.979  vl=0.1239/0.942
+  Early stop.
+
+=======================================================
+  MobileNetV2 + selu  (device=cuda)
+=======================================================
+  [selu] E01  tr=0.4988/0.743  vl=0.6087/0.580
+  [selu] E02  tr=0.3148/0.863  vl=0.4416/0.768
+  [selu] E03  tr=0.3012/0.886  vl=0.3060/0.870
+  [selu] E04  tr=0.2690/0.896  vl=0.4588/0.768
+  [selu] E05  tr=0.2237/0.911  vl=0.2998/0.870
+  [selu] E06  tr=0.2637/0.892  vl=0.2523/0.913
+  [selu] E07  tr=0.2806/0.888  vl=0.2002/0.928
+  [selu] E08  tr=0.1948/0.925  vl=0.1789/0.928
+  [selu] E09  tr=0.1946/0.934  vl=0.1970/0.928
+  [selu] E10  tr=0.2170/0.899  vl=0.2639/0.884
+  [selu] E11  tr=0.1974/0.923  vl=0.3261/0.841
+  [selu] E12  tr=0.1895/0.942  vl=0.2393/0.928
+  [selu] E13  tr=0.1736/0.928  vl=0.2031/0.928
+  [selu] E14  tr=0.1748/0.936  vl=0.2284/0.884
+  [selu] E15  tr=0.2104/0.917  vl=0.2257/0.899
+  [selu] E16  tr=0.1621/0.934  vl=0.2830/0.884
+  [selu] E17  tr=0.1730/0.930  vl=0.2565/0.884
+  [selu] E18  tr=0.1504/0.934  vl=0.2400/0.884
+  [selu] E19  tr=0.1807/0.936  vl=0.2179/0.913
+  [selu] E20  tr=0.1537/0.952  vl=0.1445/0.957
+  [selu] E21  tr=0.1535/0.944  vl=0.1490/0.942
+  [selu] E22  tr=0.1626/0.932  vl=0.1588/0.942
+  [selu] E23  tr=0.1299/0.957  vl=0.1328/0.971
+  [selu] E24  tr=0.1142/0.965  vl=0.1584/0.942
+  [selu] E25  tr=0.1450/0.946  vl=0.1326/0.971
+  [selu] E26  tr=0.1625/0.946  vl=0.1648/0.942
+  [selu] E27  tr=0.1534/0.944  vl=0.1322/0.957
+  [selu] E28  tr=0.1269/0.946  vl=0.1392/0.971
+  [selu] E29  tr=0.1369/0.946  vl=0.1533/0.971
+  [selu] E30  tr=0.1172/0.952  vl=0.1510/0.957
+  [selu] E31  tr=0.1238/0.961  vl=0.1457/0.971
+  [selu] E32  tr=0.1316/0.954  vl=0.1893/0.942
+  [selu] E33  tr=0.0943/0.971  vl=0.2170/0.928
+  [selu] E34  tr=0.1254/0.950  vl=0.1748/0.942
+  [selu] E35  tr=0.1150/0.965  vl=0.1503/0.971
+  [selu] E36  tr=0.1268/0.961  vl=0.1484/0.971
+  [selu] E37  tr=0.1254/0.954  vl=0.1582/0.957
+  [selu] E38  tr=0.1167/0.965  vl=0.1265/0.971
+  [selu] E39  tr=0.0985/0.975  vl=0.1483/0.957
+  [selu] E40  tr=0.0887/0.967  vl=0.1314/0.971
+  [selu] E41  tr=0.1111/0.965  vl=0.1395/0.957
+  [selu] E42  tr=0.1469/0.952  vl=0.1171/0.957
+  [selu] E43  tr=0.1073/0.971  vl=0.1007/0.986
+  [selu] E44  tr=0.1034/0.963  vl=0.1244/0.971
+  [selu] E45  tr=0.1534/0.946  vl=0.1110/0.971
+  [selu] E46  tr=0.1262/0.961  vl=0.1222/0.971
+  [selu] E47  tr=0.1309/0.944  vl=0.1382/0.971
+  [selu] E48  tr=0.1112/0.973  vl=0.1543/0.942
+  [selu] E49  tr=0.1080/0.959  vl=0.1407/0.957
+  [selu] E50  tr=0.1163/0.959  vl=0.1310/0.957
+  [selu] E51  tr=0.1140/0.952  vl=0.1267/0.971
+  [selu] E52  tr=0.0987/0.957  vl=0.1282/0.971
+  [selu] E53  tr=0.1204/0.954  vl=0.1154/0.986
+  [selu] E54  tr=0.1179/0.957  vl=0.1386/0.971
+  [selu] E55  tr=0.0953/0.959  vl=0.1255/0.971
+  Early stop.
+
+=======================================================
+  MobileNetV2 + leaky_relu  (device=cuda)
+=======================================================
+  [leaky_relu] E01  tr=0.5751/0.689  vl=0.6506/0.565
+  [leaky_relu] E02  tr=0.3700/0.853  vl=0.4893/0.696
+  [leaky_relu] E03  tr=0.3188/0.876  vl=0.3249/0.899
+  [leaky_relu] E04  tr=0.2798/0.899  vl=0.3533/0.855
+  [leaky_relu] E05  tr=0.2336/0.903  vl=0.2587/0.913
+  [leaky_relu] E06  tr=0.2515/0.903  vl=0.2378/0.913
+  [leaky_relu] E07  tr=0.2689/0.896  vl=0.1854/0.942
+  [leaky_relu] E08  tr=0.1917/0.932  vl=0.1832/0.942
+  [leaky_relu] E09  tr=0.1966/0.930  vl=0.1985/0.928
+  [leaky_relu] E10  tr=0.2010/0.923  vl=0.2201/0.928
+  [leaky_relu] E11  tr=0.1937/0.917  vl=0.2797/0.870
+  [leaky_relu] E12  tr=0.1713/0.936  vl=0.2148/0.928
+  [leaky_relu] E13  tr=0.1575/0.948  vl=0.1629/0.942
+  [leaky_relu] E14  tr=0.1651/0.940  vl=0.1686/0.928
+  [leaky_relu] E15  tr=0.1719/0.934  vl=0.1551/0.942
+  [leaky_relu] E16  tr=0.1421/0.946  vl=0.1690/0.913
+  [leaky_relu] E17  tr=0.1511/0.944  vl=0.1682/0.928
+  [leaky_relu] E18  tr=0.1459/0.946  vl=0.1771/0.928
+  [leaky_relu] E19  tr=0.1706/0.950  vl=0.1831/0.928
+  [leaky_relu] E20  tr=0.1466/0.952  vl=0.1264/0.942
+  [leaky_relu] E21  tr=0.1505/0.940  vl=0.1203/0.957
+  [leaky_relu] E22  tr=0.1491/0.944  vl=0.1427/0.971
+  [leaky_relu] E23  tr=0.1226/0.967  vl=0.1297/0.986
+  [leaky_relu] E24  tr=0.1158/0.965  vl=0.1251/0.957
+  [leaky_relu] E25  tr=0.1250/0.961  vl=0.1051/0.986
+  [leaky_relu] E26  tr=0.1277/0.961  vl=0.1107/0.986
+  [leaky_relu] E27  tr=0.1377/0.954  vl=0.1074/0.986
+  [leaky_relu] E28  tr=0.1287/0.954  vl=0.1177/0.986
+  [leaky_relu] E29  tr=0.1297/0.959  vl=0.1286/0.986
+  [leaky_relu] E30  tr=0.1264/0.954  vl=0.1238/0.986
+  [leaky_relu] E31  tr=0.1242/0.967  vl=0.1068/0.986
+  [leaky_relu] E32  tr=0.1214/0.967  vl=0.1232/0.957
+  [leaky_relu] E33  tr=0.1000/0.967  vl=0.1412/0.942
+  [leaky_relu] E34  tr=0.1240/0.950  vl=0.1261/0.957
+  [leaky_relu] E35  tr=0.1135/0.965  vl=0.1147/0.986
+  [leaky_relu] E36  tr=0.1174/0.961  vl=0.1140/0.986
+  [leaky_relu] E37  tr=0.1132/0.963  vl=0.1190/0.971
+  Early stop.
+
+=== MobileNetV2 Activation Sweep Summary ===
+          model_name  accuracy  precision   recall       f1
+      mobilenet_gelu  0.971014        1.0 0.942029 0.970149
+      mobilenet_relu  0.963768        1.0 0.927536 0.962406
+mobilenet_leaky_relu  0.956522        1.0 0.913043 0.954545
+      mobilenet_selu  0.942029        1.0 0.884058 0.938462
+       mobilenet_elu  0.913043        1.0 0.826087 0.904762
+Ultralytics 8.4.39 🚀 Python-3.12.3 torch-2.11.0+cu130 CUDA:0 (NVIDIA GeForce RTX 4090, 24072MiB)
+[34m[1mengine/trainer: [0magnostic_nms=False, amp=True, angle=1.0, augment=False, auto_augment=randaugment, batch=64, bgr=0.0, box=7.5, cache=False, cfg=None, classes=None, close_mosaic=10, cls=0.5, cls_pw=0.0, compile=False, conf=None, copy_paste=0.0, copy_paste_mode=flip, cos_lr=False, cutmix=0.0, data=runs4/data_balanced, degrees=0.0, deterministic=True, device=None, dfl=1.5, dnn=False, dropout=0.0, dynamic=False, embed=None, end2end=None, epochs=50, erasing=0.4, exist_ok=False, fliplr=0.5, flipud=0.0, format=torchscript, fraction=1.0, freeze=None, half=False, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, imgsz=320, int8=False, iou=0.7, keras=False, kobj=1.0, line_width=None, lr0=0.01, lrf=0.01, mask_ratio=4, max_det=300, mixup=0.0, mode=train, model=yolo26n-cls.pt, momentum=0.937, mosaic=1.0, multi_scale=0.0, name=train, nbs=64, nms=False, opset=None, optimize=False, optimizer=auto, overlap_mask=True, patience=100, perspective=0.0, plots=True, pose=12.0, pretrained=True, profile=False, project=runs4/iter1_yolo, rect=False, resume=False, retina_masks=False, rle=1.0, save=True, save_conf=False, save_crop=False, save_dir=/home/ubu/Desktop/MDX-PDE4444/Bilal--PDE4444/runs/classify/runs4/iter1_yolo/train, save_frames=False, save_json=False, save_period=-1, save_txt=False, scale=0.5, seed=42, shear=0.0, show=False, show_boxes=True, show_conf=True, show_labels=True, simplify=True, single_cls=False, source=None, split=val, stream_buffer=False, task=classify, time=None, tracker=botsort.yaml, translate=0.1, val=True, verbose=True, vid_stride=1, visualize=False, warmup_bias_lr=0.1, warmup_epochs=3.0, warmup_momentum=0.8, weight_decay=0.0005, workers=8, workspace=None
+[34m[1mtrain:[0m /home/ubu/Desktop/Assessment/runs4/data_balanced/train... found 483 images in 2 classes ✅ 
+[34m[1mval:[0m /home/ubu/Desktop/Assessment/runs4/data_balanced/val... found 69 images in 2 classes ✅ 
+[34m[1mtest:[0m /home/ubu/Desktop/Assessment/runs4/data_balanced/test... found 138 images in 2 classes ✅ 
+Overriding model.yaml nc=1000 with nc=2
+
+                   from  n    params  module                                       arguments                     
+  0                  -1  1       464  ultralytics.nn.modules.conv.Conv             [3, 16, 3, 2]                 
+  1                  -1  1      4672  ultralytics.nn.modules.conv.Conv             [16, 32, 3, 2]                
+  2                  -1  1      6640  ultralytics.nn.modules.block.C3k2            [32, 64, 1, False, 0.25]      
+  3                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]                
+  4                  -1  1     26080  ultralytics.nn.modules.block.C3k2            [64, 128, 1, False, 0.25]     
+  5                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]              
+  6                  -1  1     87040  ultralytics.nn.modules.block.C3k2            [128, 128, 1, True]           
+  7                  -1  1    295424  ultralytics.nn.modules.conv.Conv             [128, 256, 3, 2]              
+  8                  -1  1    346112  ultralytics.nn.modules.block.C3k2            [256, 256, 1, True]           
+  9                  -1  1    249728  ultralytics.nn.modules.block.C2PSA           [256, 256, 1]                 
+ 10                  -1  1    332802  ultralytics.nn.modules.head.Classify         [256, 2]                      
+YOLO26n-cls summary: 86 layers, 1,533,666 parameters, 1,533,666 gradients, 3.3 GFLOPs
+Transferred 234/236 items from pretrained weights
+[34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks...
+[34m[1mAMP: [0mchecks passed ✅
+[34m[1mtrain: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 3864.1±2003.1 MB/s, size: 49.3 KB)
+[K[34m[1mtrain: [0mScanning /home/ubu/Desktop/Assessment/runs4/data_balanced/train... 483 images, 0 corrupt: 100% ━━━━━━━━━━━━ 483/483 12.6Kit/s 0.0s
+[34m[1mtrain: [0mNew cache created: /home/ubu/Desktop/Assessment/runs4/data_balanced/train.cache
+[34m[1mval: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 3743.4±1787.8 MB/s, size: 51.5 KB)
+[K[34m[1mval: [0mScanning /home/ubu/Desktop/Assessment/runs4/data_balanced/val... 69 images, 0 corrupt: 100% ━━━━━━━━━━━━ 69/69 10.0Kit/s 0.0s
+[34m[1mval: [0mNew cache created: /home/ubu/Desktop/Assessment/runs4/data_balanced/val.cache
+[34m[1moptimizer:[0m 'optimizer=auto' found, ignoring 'lr0=0.01' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically... 
+[34m[1moptimizer:[0m AdamW(lr=0.001667, momentum=0.9) with parameter groups 39 weight(decay=0.0), 40 weight(decay=0.0005), 40 bias(decay=0.0)
+Image sizes 320 train, 320 val
+Using 8 dataloader workers
+Logging results to [1m/home/ubu/Desktop/MDX-PDE4444/Bilal--PDE4444/runs/classify/runs4/iter1_yolo/train[0m
+Starting training for 50 epochs...
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K       1/50       1.5G     0.7546         64        320: 0% ──────────── 0/8  2.3s[K       1/50      1.67G     0.7229         64        320: 50% ━━━━━━────── 4/8 10.6it/s 2.4s<0.4s[K       1/50      1.68G     0.7142         35        320: 88% ━━━━━━━━━━── 7/8 9.3it/s 2.9s<0.1s[K       1/50      1.68G     0.7142         35        320: 100% ━━━━━━━━━━━━ 8/8 2.7it/s 2.9s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 9.0it/s 0.1s
+                   all      0.522          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K       2/50      1.68G      0.618         64        320: 50% ━━━━━━────── 4/8 10.7it/s 0.1s<0.4s[K       2/50      1.68G     0.5965         35        320: 100% ━━━━━━━━━━━━ 8/8 43.9it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 96.0it/s 0.0s
+                   all       0.58          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K       3/50      1.68G      0.492         64        320: 38% ━━━━──────── 3/8 6.7it/s 0.1s<0.8s[K       3/50      1.68G     0.4346         35        320: 100% ━━━━━━━━━━━━ 8/8 35.2it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 111.6it/s 0.0s
+                   all      0.768          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K       4/50      1.68G     0.3715         64        320: 38% ━━━━──────── 3/8 8.1it/s 0.1s<0.6s[K       4/50      1.68G     0.3317         35        320: 88% ━━━━━━━━━━── 7/8 16.1it/s 0.2s<0.1s[K       4/50      1.68G     0.3317         35        320: 100% ━━━━━━━━━━━━ 8/8 35.3it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 119.8it/s 0.0s
+                   all      0.913          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K       5/50      1.68G     0.2608         64        320: 25% ━━━───────── 2/8 5.8it/s 0.1s<1.0s[K       5/50      1.68G     0.2324         64        320: 75% ━━━━━━━━━─── 6/8 15.9it/s 0.2s<0.1s[K       5/50      1.68G     0.2372         35        320: 100% ━━━━━━━━━━━━ 8/8 35.3it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 90.2it/s 0.0s
+                   all      0.884          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K       6/50      1.68G     0.2606         64        320: 38% ━━━━──────── 3/8 7.7it/s 0.1s<0.7s[K       6/50      1.68G      0.225         35        320: 88% ━━━━━━━━━━── 7/8 17.3it/s 0.2s<0.1s[K       6/50      1.68G      0.225         35        320: 100% ━━━━━━━━━━━━ 8/8 36.7it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 91.8it/s 0.0s
+                   all      0.899          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K       7/50      1.68G     0.2687         64        320: 50% ━━━━━━────── 4/8 9.8it/s 0.1s<0.4s[K       7/50      1.68G     0.3155         35        320: 100% ━━━━━━━━━━━━ 8/8 42.8it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 121.2it/s 0.0s
+                   all      0.928          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K       8/50      1.68G      0.272         64        320: 50% ━━━━━━────── 4/8 9.9it/s 0.1s<0.4s[K       8/50      1.68G     0.2638         35        320: 100% ━━━━━━━━━━━━ 8/8 41.3it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 68.3it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K       9/50      1.68G     0.2099         64        320: 50% ━━━━━━────── 4/8 9.9it/s 0.1s<0.4s[K       9/50      1.68G     0.2334         35        320: 100% ━━━━━━━━━━━━ 8/8 43.0it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 108.4it/s 0.0s
+                   all      0.696          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      10/50      1.68G     0.1848         64        320: 50% ━━━━━━────── 4/8 9.0it/s 0.1s<0.4s[K      10/50      1.68G     0.1906         35        320: 88% ━━━━━━━━━━── 7/8 14.1it/s 0.2s<0.1s[K      10/50      1.68G     0.1906         35        320: 100% ━━━━━━━━━━━━ 8/8 32.2it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 70.7it/s 0.0s
+                   all      0.565          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      11/50      1.68G     0.1951         64        320: 50% ━━━━━━────── 4/8 9.9it/s 0.1s<0.4s[K      11/50      1.68G     0.1948         35        320: 100% ━━━━━━━━━━━━ 8/8 41.4it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 89.7it/s 0.0s
+                   all      0.899          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      12/50      1.68G      0.209         64        320: 25% ━━━───────── 2/8 6.0it/s 0.1s<1.0s[K      12/50      1.68G     0.1789         64        320: 62% ━━━━━━━───── 5/8 12.6it/s 0.2s<0.2s[K      12/50      1.68G     0.2052         35        320: 100% ━━━━━━━━━━━━ 8/8 32.3it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 106.2it/s 0.0s
+                   all      0.928          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      13/50      1.68G     0.1963         64        320: 50% ━━━━━━────── 4/8 10.1it/s 0.1s<0.4s[K      13/50      1.68G     0.2094         35        320: 100% ━━━━━━━━━━━━ 8/8 42.9it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 115.5it/s 0.0s
+                   all      0.913          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      14/50      1.68G     0.2086         64        320: 25% ━━━───────── 2/8 5.4it/s 0.1s<1.1s[K      14/50      1.68G     0.1826         35        320: 88% ━━━━━━━━━━── 7/8 17.0it/s 0.2s<0.1s[K      14/50      1.68G     0.1826         35        320: 100% ━━━━━━━━━━━━ 8/8 35.6it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 118.6it/s 0.0s
+                   all      0.942          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      15/50      1.68G     0.1522         64        320: 38% ━━━━──────── 3/8 8.7it/s 0.1s<0.6s[K      15/50      1.68G     0.1673         64        320: 75% ━━━━━━━━━─── 6/8 13.0it/s 0.2s<0.2s[K      15/50      1.68G     0.1784         35        320: 100% ━━━━━━━━━━━━ 8/8 30.0it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 86.2it/s 0.0s
+                   all      0.841          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      16/50      1.68G     0.1081         64        320: 50% ━━━━━━────── 4/8 10.2it/s 0.1s<0.4s[K      16/50      1.68G     0.1332         35        320: 100% ━━━━━━━━━━━━ 8/8 44.1it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 115.6it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      17/50      1.68G     0.1362         64        320: 38% ━━━━──────── 3/8 8.0it/s 0.1s<0.6s[K      17/50      1.68G     0.1361         35        320: 100% ━━━━━━━━━━━━ 8/8 37.8it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 117.3it/s 0.0s
+                   all      0.986          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      18/50      1.68G     0.1269         64        320: 38% ━━━━──────── 3/8 7.8it/s 0.1s<0.6s[K      18/50      1.68G     0.1562         35        320: 88% ━━━━━━━━━━── 7/8 17.4it/s 0.2s<0.1s[K      18/50      1.68G     0.1562         35        320: 100% ━━━━━━━━━━━━ 8/8 37.1it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 104.9it/s 0.0s
+                   all      0.681          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      19/50      1.68G     0.1215         64        320: 38% ━━━━──────── 3/8 8.8it/s 0.1s<0.6s[K      19/50      1.68G     0.1556         64        320: 75% ━━━━━━━━━─── 6/8 14.3it/s 0.2s<0.1s[K      19/50      1.68G     0.1454         35        320: 100% ━━━━━━━━━━━━ 8/8 35.1it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 105.5it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      20/50      1.68G     0.1621         64        320: 50% ━━━━━━────── 4/8 9.7it/s 0.1s<0.4s[K      20/50      1.68G     0.1826         35        320: 100% ━━━━━━━━━━━━ 8/8 40.8it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 119.9it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      21/50      1.68G     0.1102         64        320: 38% ━━━━──────── 3/8 8.2it/s 0.1s<0.6s[K      21/50      1.68G     0.1379         35        320: 88% ━━━━━━━━━━── 7/8 16.0it/s 0.2s<0.1s[K      21/50      1.68G     0.1379         35        320: 100% ━━━━━━━━━━━━ 8/8 35.3it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 77.4it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      22/50      1.68G     0.1376         64        320: 25% ━━━───────── 2/8 5.3it/s 0.1s<1.1s[K      22/50      1.68G     0.1198         64        320: 75% ━━━━━━━━━─── 6/8 15.3it/s 0.2s<0.1s[K      22/50      1.68G     0.1201         35        320: 100% ━━━━━━━━━━━━ 8/8 33.1it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 88.0it/s 0.0s
+                   all      0.942          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      23/50      1.68G     0.1775         64        320: 38% ━━━━──────── 3/8 8.9it/s 0.1s<0.6s[K      23/50      1.68G      0.128         35        320: 100% ━━━━━━━━━━━━ 8/8 43.2it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 117.6it/s 0.0s
+                   all      0.928          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      24/50      1.68G     0.1115         64        320: 50% ━━━━━━────── 4/8 9.9it/s 0.1s<0.4s[K      24/50      1.68G    0.09443         35        320: 100% ━━━━━━━━━━━━ 8/8 42.6it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 118.1it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      25/50      1.68G    0.09665         64        320: 38% ━━━━──────── 3/8 8.7it/s 0.1s<0.6s[K      25/50      1.68G     0.1023         35        320: 88% ━━━━━━━━━━── 7/8 16.0it/s 0.2s<0.1s[K      25/50      1.68G     0.1023         35        320: 100% ━━━━━━━━━━━━ 8/8 35.6it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 80.5it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      26/50      1.68G    0.07376         64        320: 38% ━━━━──────── 3/8 8.0it/s 0.1s<0.6s[K      26/50      1.68G    0.08191         35        320: 100% ━━━━━━━━━━━━ 8/8 37.5it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 121.1it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      27/50      1.68G     0.1086         64        320: 38% ━━━━──────── 3/8 8.6it/s 0.1s<0.6s[K      27/50      1.68G    0.08765         35        320: 100% ━━━━━━━━━━━━ 8/8 41.0it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 66.6it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      28/50      1.68G    0.09789         64        320: 38% ━━━━──────── 3/8 8.4it/s 0.1s<0.6s[K      28/50      1.68G    0.09447         35        320: 88% ━━━━━━━━━━── 7/8 17.5it/s 0.2s<0.1s[K      28/50      1.68G    0.09447         35        320: 100% ━━━━━━━━━━━━ 8/8 38.0it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 59.3it/s 0.0s
+                   all      0.957          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      29/50      1.68G    0.06953         64        320: 50% ━━━━━━────── 4/8 10.2it/s 0.1s<0.4s[K      29/50      1.68G    0.08156         35        320: 100% ━━━━━━━━━━━━ 8/8 38.8it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 118.2it/s 0.0s
+                   all      0.928          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      30/50      1.68G    0.06121         64        320: 25% ━━━───────── 2/8 5.2it/s 0.1s<1.2s[K      30/50      1.68G    0.07691         64        320: 75% ━━━━━━━━━─── 6/8 13.7it/s 0.2s<0.1s[K      30/50      1.68G    0.08285         35        320: 100% ━━━━━━━━━━━━ 8/8 31.5it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 104.3it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      31/50      1.68G    0.06635         64        320: 50% ━━━━━━────── 4/8 9.4it/s 0.1s<0.4s[K      31/50      1.68G    0.09289         35        320: 100% ━━━━━━━━━━━━ 8/8 39.8it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 119.0it/s 0.0s
+                   all      0.971          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      32/50      1.68G    0.06521         64        320: 50% ━━━━━━────── 4/8 9.8it/s 0.1s<0.4s[K      32/50      1.68G    0.05405         35        320: 100% ━━━━━━━━━━━━ 8/8 42.7it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 110.0it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      33/50      1.68G    0.09321         64        320: 38% ━━━━──────── 3/8 8.9it/s 0.1s<0.6s[K      33/50      1.68G    0.07379         35        320: 88% ━━━━━━━━━━── 7/8 15.3it/s 0.2s<0.1s[K      33/50      1.68G    0.07379         35        320: 100% ━━━━━━━━━━━━ 8/8 34.4it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 53.3it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      34/50      1.68G    0.06798         64        320: 38% ━━━━──────── 3/8 7.6it/s 0.1s<0.7s[K      34/50      1.68G    0.06652         35        320: 88% ━━━━━━━━━━── 7/8 15.7it/s 0.2s<0.1s[K      34/50      1.68G    0.06652         35        320: 100% ━━━━━━━━━━━━ 8/8 34.2it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 90.7it/s 0.0s
+                   all      0.971          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      35/50      1.68G    0.05787         64        320: 25% ━━━───────── 2/8 4.9it/s 0.1s<1.2s[K      35/50      1.68G    0.05751         35        320: 88% ━━━━━━━━━━── 7/8 16.3it/s 0.2s<0.1s[K      35/50      1.68G    0.05751         35        320: 100% ━━━━━━━━━━━━ 8/8 33.3it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 110.1it/s 0.0s
+                   all      0.971          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      36/50      1.68G    0.06282         64        320: 38% ━━━━──────── 3/8 7.8it/s 0.1s<0.6s[K      36/50      1.68G    0.07849         35        320: 100% ━━━━━━━━━━━━ 8/8 39.0it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 91.9it/s 0.0s
+                   all      0.971          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      37/50      1.68G    0.08531         64        320: 38% ━━━━──────── 3/8 8.3it/s 0.1s<0.6s[K      37/50      1.68G    0.09039         35        320: 88% ━━━━━━━━━━── 7/8 17.1it/s 0.2s<0.1s[K      37/50      1.68G    0.09039         35        320: 100% ━━━━━━━━━━━━ 8/8 37.2it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 95.7it/s 0.0s
+                   all      0.986          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      38/50      1.68G    0.06325         64        320: 38% ━━━━──────── 3/8 7.3it/s 0.1s<0.7s[K      38/50      1.68G    0.06479         35        320: 88% ━━━━━━━━━━── 7/8 16.4it/s 0.2s<0.1s[K      38/50      1.68G    0.06479         35        320: 100% ━━━━━━━━━━━━ 8/8 34.9it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 89.0it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      39/50      1.68G    0.03766         64        320: 38% ━━━━──────── 3/8 8.4it/s 0.1s<0.6s[K      39/50      1.68G    0.05322         35        320: 100% ━━━━━━━━━━━━ 8/8 38.8it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 113.7it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      40/50      1.68G    0.06641         64        320: 25% ━━━───────── 2/8 4.8it/s 0.1s<1.3s[K      40/50      1.68G    0.06318         64        320: 75% ━━━━━━━━━─── 6/8 13.5it/s 0.2s<0.1s[K      40/50      1.68G    0.06244         35        320: 100% ━━━━━━━━━━━━ 8/8 29.6it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 118.8it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      41/50      1.68G    0.06284         64        320: 0% ──────────── 0/8  0.4s[K      41/50      1.68G    0.06802         64        320: 38% ━━━━──────── 3/8 7.2it/s 0.5s<0.7s[K      41/50      1.68G    0.06157         64        320: 75% ━━━━━━━━━─── 6/8 13.0it/s 0.6s<0.2s[K      41/50      1.68G    0.06988         35        320: 100% ━━━━━━━━━━━━ 8/8 12.3it/s 0.7s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 54.4it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      42/50      1.68G     0.0285         64        320: 38% ━━━━──────── 3/8 7.4it/s 0.1s<0.7s[K      42/50      1.68G    0.05741         64        320: 75% ━━━━━━━━━─── 6/8 13.9it/s 0.2s<0.1s[K      42/50      1.68G    0.05734         35        320: 100% ━━━━━━━━━━━━ 8/8 30.2it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 70.6it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      43/50      1.68G    0.04408         64        320: 38% ━━━━──────── 3/8 8.5it/s 0.1s<0.6s[K      43/50      1.68G    0.04542         35        320: 88% ━━━━━━━━━━── 7/8 16.9it/s 0.2s<0.1s[K      43/50      1.68G    0.04542         35        320: 100% ━━━━━━━━━━━━ 8/8 37.1it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 106.4it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      44/50      1.68G     0.0576         64        320: 38% ━━━━──────── 3/8 7.8it/s 0.1s<0.6s[K      44/50      1.68G    0.05205         35        320: 88% ━━━━━━━━━━── 7/8 17.1it/s 0.2s<0.1s[K      44/50      1.68G    0.05205         35        320: 100% ━━━━━━━━━━━━ 8/8 36.6it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 116.3it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      45/50      1.68G    0.06612         64        320: 38% ━━━━──────── 3/8 8.1it/s 0.1s<0.6s[K      45/50      1.68G    0.05724         35        320: 88% ━━━━━━━━━━── 7/8 17.2it/s 0.2s<0.1s[K      45/50      1.68G    0.05724         35        320: 100% ━━━━━━━━━━━━ 8/8 37.2it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 114.3it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      46/50      1.68G    0.02321         64        320: 38% ━━━━──────── 3/8 7.5it/s 0.1s<0.7s[K      46/50      1.68G    0.08059         35        320: 100% ━━━━━━━━━━━━ 8/8 36.7it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 115.1it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      47/50      1.68G    0.04796         64        320: 25% ━━━───────── 2/8 5.0it/s 0.1s<1.2s[K      47/50      1.68G    0.05169         64        320: 62% ━━━━━━━───── 5/8 11.5it/s 0.2s<0.3s[K      47/50      1.68G    0.06205         35        320: 100% ━━━━━━━━━━━━ 8/8 28.7it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 105.5it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      48/50      1.68G    0.03463         64        320: 38% ━━━━──────── 3/8 8.8it/s 0.1s<0.6s[K      48/50      1.68G    0.03793         35        320: 88% ━━━━━━━━━━── 7/8 17.3it/s 0.2s<0.1s[K      48/50      1.68G    0.03793         35        320: 100% ━━━━━━━━━━━━ 8/8 38.1it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 56.0it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      49/50      1.68G    0.05906         64        320: 25% ━━━───────── 2/8 5.1it/s 0.1s<1.2s[K      49/50      1.68G    0.06207         64        320: 75% ━━━━━━━━━─── 6/8 14.3it/s 0.2s<0.1s[K      49/50      1.68G    0.05684         35        320: 100% ━━━━━━━━━━━━ 8/8 29.7it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 54.4it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      50/50      1.68G    0.04586         64        320: 38% ━━━━──────── 3/8 8.4it/s 0.1s<0.6s[K      50/50      1.68G     0.0456         35        320: 88% ━━━━━━━━━━── 7/8 17.3it/s 0.2s<0.1s[K      50/50      1.68G     0.0456         35        320: 100% ━━━━━━━━━━━━ 8/8 37.7it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 113.2it/s 0.0s
+                   all          1          1
+
+50 epochs completed in 0.005 hours.
+Optimizer stripped from /home/ubu/Desktop/MDX-PDE4444/Bilal--PDE4444/runs/classify/runs4/iter1_yolo/train/weights/last.pt, 3.2MB
+Optimizer stripped from /home/ubu/Desktop/MDX-PDE4444/Bilal--PDE4444/runs/classify/runs4/iter1_yolo/train/weights/best.pt, 3.2MB
+
+Validating /home/ubu/Desktop/MDX-PDE4444/Bilal--PDE4444/runs/classify/runs4/iter1_yolo/train/weights/best.pt...
+Ultralytics 8.4.39 🚀 Python-3.12.3 torch-2.11.0+cu130 CUDA:0 (NVIDIA GeForce RTX 4090, 24072MiB)
+YOLO26n-cls summary (fused): 47 layers, 1,528,586 parameters, 0 gradients, 3.2 GFLOPs
+[34m[1mtrain:[0m /home/ubu/Desktop/Assessment/runs4/data_balanced/train... found 483 images in 2 classes ✅ 
+[34m[1mval:[0m /home/ubu/Desktop/Assessment/runs4/data_balanced/val... found 69 images in 2 classes ✅ 
+[34m[1mtest:[0m /home/ubu/Desktop/Assessment/runs4/data_balanced/test... found 138 images in 2 classes ✅ 
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 100.5it/s 0.0s
+                   all          1          1
+Speed: 0.1ms preprocess, 0.0ms inference, 0.0ms loss, 0.0ms postprocess per image
+Results saved to [1m/home/ubu/Desktop/MDX-PDE4444/Bilal--PDE4444/runs/classify/runs4/iter1_yolo/train[0m
+Ultralytics 8.4.39 🚀 Python-3.12.3 torch-2.11.0+cu130 CUDA:0 (NVIDIA GeForce RTX 4090, 24072MiB)
+YOLO26n-cls summary (fused): 47 layers, 1,528,586 parameters, 0 gradients, 3.2 GFLOPs
+[34m[1mtrain:[0m /home/ubu/Desktop/Assessment/runs4/data_balanced/train... found 483 images in 2 classes ✅ 
+[34m[1mval:[0m /home/ubu/Desktop/Assessment/runs4/data_balanced/val... found 69 images in 2 classes ✅ 
+[34m[1mtest:[0m /home/ubu/Desktop/Assessment/runs4/data_balanced/test... found 138 images in 2 classes ✅ 
+[34m[1mtest: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 5449.9±1648.7 MB/s, size: 49.4 KB)
+[K[34m[1mtest: [0mScanning /home/ubu/Desktop/Assessment/runs4/data_balanced/test... 138 images, 0 corrupt: 100% ━━━━━━━━━━━━ 138/138 9.5Kit/s 0.0s
+[34m[1mtest: [0mNew cache created: /home/ubu/Desktop/Assessment/runs4/data_balanced/test.cache
+[K               classes   top1_acc   top5_acc: 33% ━━━━──────── 1/3 1.6s/it 0.5s<3.3s[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 3/3 4.2it/s 0.7s
+                   all          1          1
+Speed: 0.3ms preprocess, 2.3ms inference, 0.0ms loss, 0.0ms postprocess per image
+Results saved to [1m/home/ubu/Desktop/MDX-PDE4444/Bilal--PDE4444/runs/classify/val-4[0m
+Exception in thread Thread-46 (_pin_memory_loop):
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/torch/utils/data/_utils/pin_memory.py", line 52, in _pin_memory_loop
+    do_one_step()
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/torch/utils/data/_utils/pin_memory.py", line 28, in do_one_step
+    r = in_queue.get(timeout=MP_STATUS_CHECK_INTERVAL)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 122, in get
+    return _ForkingPickler.loads(res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/torch/multiprocessing/reductions.py", line 540, in rebuild_storage_fd
+    fd = df.detach()
+         ^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/resource_sharer.py", line 57, in detach
+    with _resource_sharer.get_connection(self._id) as conn:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/resource_sharer.py", line 86, in get_connection
+    c = Client(address, authkey=process.current_process().authkey)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/connection.py", line 525, in Client
+    answer_challenge(c, authkey)
+  File "/usr/lib/python3.12/multiprocessing/connection.py", line 953, in answer_challenge
+    message = connection.recv_bytes(256)         # reject large message
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/connection.py", line 216, in recv_bytes
+    buf = self._recv_bytes(maxlength)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/connection.py", line 430, in _recv_bytes
+    buf = self._recv(4)
+          ^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/connection.py", line 395, in _recv
+    chunk = read(handle, remaining)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [Errno 104] Connection reset by peer
+{
+  "model_name": "yolo26n-cls.pt",
+  "classes": [
+    "defect",
+    "non_defect"
+  ],
+  "top1": 1.0,
+  "top5": 1.0,
+  "fitness": 1.0,
+  "save_dir": "/home/ubu/Desktop/MDX-PDE4444/Bilal--PDE4444/runs/classify/runs4/iter1_yolo/train"
+}
+Ultralytics 8.4.39 🚀 Python-3.12.3 torch-2.11.0+cu130 CUDA:0 (NVIDIA GeForce RTX 4090, 24072MiB)
+[34m[1mengine/trainer: [0magnostic_nms=False, amp=True, angle=1.0, augment=False, auto_augment=randaugment, batch=64, bgr=0.0, box=7.5, cache=False, cfg=None, classes=None, close_mosaic=10, cls=0.5, cls_pw=0.0, compile=False, conf=None, copy_paste=0.0, copy_paste_mode=flip, cos_lr=False, cutmix=0.0, data=runs4/data_balanced, degrees=0.0, deterministic=True, device=None, dfl=1.5, dnn=False, dropout=0.0, dynamic=False, embed=None, end2end=None, epochs=50, erasing=0.4, exist_ok=False, fliplr=0.5, flipud=0.0, format=torchscript, fraction=1.0, freeze=None, half=False, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, imgsz=320, int8=False, iou=0.7, keras=False, kobj=1.0, line_width=None, lr0=0.01, lrf=0.01, mask_ratio=4, max_det=300, mixup=0.0, mode=train, model=yolo26s-cls.pt, momentum=0.937, mosaic=1.0, multi_scale=0.0, name=train, nbs=64, nms=False, opset=None, optimize=False, optimizer=auto, overlap_mask=True, patience=100, perspective=0.0, plots=True, pose=12.0, pretrained=True, profile=False, project=runs4/iter1_yolo_s, rect=False, resume=False, retina_masks=False, rle=1.0, save=True, save_conf=False, save_crop=False, save_dir=/home/ubu/Desktop/MDX-PDE4444/Bilal--PDE4444/runs/classify/runs4/iter1_yolo_s/train, save_frames=False, save_json=False, save_period=-1, save_txt=False, scale=0.5, seed=42, shear=0.0, show=False, show_boxes=True, show_conf=True, show_labels=True, simplify=True, single_cls=False, source=None, split=val, stream_buffer=False, task=classify, time=None, tracker=botsort.yaml, translate=0.1, val=True, verbose=True, vid_stride=1, visualize=False, warmup_bias_lr=0.1, warmup_epochs=3.0, warmup_momentum=0.8, weight_decay=0.0005, workers=8, workspace=None
+[34m[1mtrain:[0m /home/ubu/Desktop/Assessment/runs4/data_balanced/train... found 483 images in 2 classes ✅ 
+[34m[1mval:[0m /home/ubu/Desktop/Assessment/runs4/data_balanced/val... found 69 images in 2 classes ✅ 
+[34m[1mtest:[0m /home/ubu/Desktop/Assessment/runs4/data_balanced/test... found 138 images in 2 classes ✅ 
+Overriding model.yaml nc=1000 with nc=2
+
+                   from  n    params  module                                       arguments                     
+  0                  -1  1       928  ultralytics.nn.modules.conv.Conv             [3, 32, 3, 2]                 
+  1                  -1  1     18560  ultralytics.nn.modules.conv.Conv             [32, 64, 3, 2]                
+  2                  -1  1     26080  ultralytics.nn.modules.block.C3k2            [64, 128, 1, False, 0.25]     
+  3                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]              
+  4                  -1  1    103360  ultralytics.nn.modules.block.C3k2            [128, 256, 1, False, 0.25]    
+  5                  -1  1    590336  ultralytics.nn.modules.conv.Conv             [256, 256, 3, 2]              
+  6                  -1  1    346112  ultralytics.nn.modules.block.C3k2            [256, 256, 1, True]           
+  7                  -1  1   1180672  ultralytics.nn.modules.conv.Conv             [256, 512, 3, 2]              
+  8                  -1  1   1380352  ultralytics.nn.modules.block.C3k2            [512, 512, 1, True]           
+  9                  -1  1    990976  ultralytics.nn.modules.block.C2PSA           [512, 512, 1]                 
+ 10                  -1  1    660482  ultralytics.nn.modules.head.Classify         [512, 2]                      
+YOLO26s-cls summary: 86 layers, 5,445,570 parameters, 5,445,570 gradients, 12.1 GFLOPs
+Transferred 234/236 items from pretrained weights
+[34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks...
+[34m[1mAMP: [0mchecks passed ✅
+[34m[1mtrain: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 3602.6±1963.8 MB/s, size: 49.3 KB)
+[K[34m[1mtrain: [0mScanning /home/ubu/Desktop/Assessment/runs4/data_balanced/train... 483 images, 0 corrupt: 100% ━━━━━━━━━━━━ 483/483 253.2Mit/s 0.0s
+[34m[1mval: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 1740.2±743.7 MB/s, size: 51.5 KB)
+[K[34m[1mval: [0mScanning /home/ubu/Desktop/Assessment/runs4/data_balanced/val... 69 images, 0 corrupt: 100% ━━━━━━━━━━━━ 69/69 7.6Mit/s 0.0s
+[34m[1moptimizer:[0m 'optimizer=auto' found, ignoring 'lr0=0.01' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically... 
+[34m[1moptimizer:[0m AdamW(lr=0.001667, momentum=0.9) with parameter groups 39 weight(decay=0.0), 40 weight(decay=0.0005), 40 bias(decay=0.0)
+Image sizes 320 train, 320 val
+Using 8 dataloader workers
+Logging results to [1m/home/ubu/Desktop/MDX-PDE4444/Bilal--PDE4444/runs/classify/runs4/iter1_yolo_s/train[0m
+Starting training for 50 epochs...
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K       1/50       2.7G     0.7303         64        320: 0% ──────────── 0/8  2.3s[K       1/50       2.7G     0.7123         64        320: 38% ━━━━──────── 3/8 7.8it/s 2.5s<0.6s[K       1/50       2.7G     0.6946         64        320: 75% ━━━━━━━━━─── 6/8 14.4it/s 2.6s<0.1s[K       1/50      2.71G     0.6865         35        320: 88% ━━━━━━━━━━── 7/8 11.0it/s 2.9s<0.1s[K       1/50      2.71G     0.6865         35        320: 100% ━━━━━━━━━━━━ 8/8 2.8it/s 2.9s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 9.0it/s 0.1s
+                   all      0.594          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K       2/50      2.71G     0.5971         64        320: 38% ━━━━──────── 3/8 6.8it/s 0.1s<0.7s[K       2/50      2.71G     0.5616         64        320: 75% ━━━━━━━━━─── 6/8 13.7it/s 0.2s<0.1s[K       2/50      2.71G     0.5517         35        320: 100% ━━━━━━━━━━━━ 8/8 30.7it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 64.2it/s 0.0s
+                   all      0.725          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K       3/50      2.71G     0.4131         64        320: 38% ━━━━──────── 3/8 6.8it/s 0.1s<0.7s[K       3/50      2.71G      0.366         64        320: 75% ━━━━━━━━━─── 6/8 13.4it/s 0.2s<0.1s[K       3/50      2.71G     0.3564         35        320: 100% ━━━━━━━━━━━━ 8/8 30.3it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 74.8it/s 0.0s
+                   all      0.928          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K       4/50      2.71G     0.2453         64        320: 38% ━━━━──────── 3/8 6.9it/s 0.1s<0.7s[K       4/50      2.71G     0.2301         64        320: 75% ━━━━━━━━━─── 6/8 13.7it/s 0.2s<0.1s[K       4/50      2.71G     0.2303         35        320: 100% ━━━━━━━━━━━━ 8/8 30.6it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 71.1it/s 0.0s
+                   all      0.986          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K       5/50      2.71G     0.1167         64        320: 25% ━━━───────── 2/8 6.0it/s 0.1s<1.0s[K       5/50      2.71G     0.1235         64        320: 62% ━━━━━━━───── 5/8 13.1it/s 0.2s<0.2s[K       5/50      2.71G     0.1476         35        320: 100% ━━━━━━━━━━━━ 8/8 31.0it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 82.2it/s 0.0s
+                   all      0.913          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K       6/50      2.71G     0.2506         64        320: 25% ━━━───────── 2/8 5.8it/s 0.1s<1.0s[K       6/50      2.71G     0.2139         64        320: 62% ━━━━━━━───── 5/8 12.8it/s 0.2s<0.2s[K       6/50      2.71G      0.183         35        320: 100% ━━━━━━━━━━━━ 8/8 30.6it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 82.9it/s 0.0s
+                   all      0.942          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K       7/50      2.71G     0.1497         64        320: 25% ━━━───────── 2/8 6.0it/s 0.1s<1.0s[K       7/50      2.71G     0.1532         64        320: 62% ━━━━━━━───── 5/8 13.0it/s 0.2s<0.2s[K       7/50      2.71G     0.1793         35        320: 100% ━━━━━━━━━━━━ 8/8 30.8it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 80.8it/s 0.0s
+                   all      0.986          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K       8/50      2.71G     0.1726         64        320: 38% ━━━━──────── 3/8 6.7it/s 0.1s<0.7s[K       8/50      2.71G     0.1816         64        320: 75% ━━━━━━━━━─── 6/8 13.6it/s 0.2s<0.1s[K       8/50      2.71G     0.1918         35        320: 100% ━━━━━━━━━━━━ 8/8 31.1it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 75.7it/s 0.0s
+                   all      0.986          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K       9/50      2.71G     0.1225         64        320: 25% ━━━───────── 2/8 5.7it/s 0.1s<1.0s[K       9/50      2.71G     0.1653         64        320: 62% ━━━━━━━───── 5/8 12.7it/s 0.2s<0.2s[K       9/50      2.71G     0.1695         35        320: 100% ━━━━━━━━━━━━ 8/8 30.0it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 73.2it/s 0.0s
+                   all      0.986          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      10/50      2.71G    0.09336         64        320: 25% ━━━───────── 2/8 5.9it/s 0.1s<1.0s[K      10/50      2.71G     0.1272         64        320: 75% ━━━━━━━━━─── 6/8 13.0it/s 0.2s<0.2s[K      10/50      2.71G     0.1159         35        320: 100% ━━━━━━━━━━━━ 8/8 30.9it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 82.6it/s 0.0s
+                   all      0.971          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      11/50      2.71G      0.227         64        320: 25% ━━━───────── 2/8 5.6it/s 0.1s<1.1s[K      11/50      2.71G     0.1716         64        320: 62% ━━━━━━━───── 5/8 12.3it/s 0.2s<0.2s[K      11/50      2.71G     0.1943         35        320: 100% ━━━━━━━━━━━━ 8/8 29.5it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 78.1it/s 0.0s
+                   all      0.754          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      12/50      2.71G     0.1352         64        320: 25% ━━━───────── 2/8 6.0it/s 0.1s<1.0s[K      12/50      2.71G     0.1223         64        320: 62% ━━━━━━━───── 5/8 13.1it/s 0.2s<0.2s[K      12/50      2.71G     0.1449         35        320: 100% ━━━━━━━━━━━━ 8/8 30.3it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 81.3it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      13/50      2.71G     0.2364         64        320: 38% ━━━━──────── 3/8 7.1it/s 0.1s<0.7s[K      13/50      2.71G     0.2163         64        320: 75% ━━━━━━━━━─── 6/8 13.6it/s 0.2s<0.1s[K      13/50      2.71G     0.2122         35        320: 100% ━━━━━━━━━━━━ 8/8 30.8it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 73.1it/s 0.0s
+                   all      0.957          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      14/50      2.71G     0.2204         64        320: 38% ━━━━──────── 3/8 6.9it/s 0.1s<0.7s[K      14/50      2.71G     0.1983         64        320: 75% ━━━━━━━━━─── 6/8 13.6it/s 0.2s<0.1s[K      14/50      2.71G     0.1814         35        320: 100% ━━━━━━━━━━━━ 8/8 30.6it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 74.8it/s 0.0s
+                   all      0.986          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      15/50      2.71G    0.09432         64        320: 25% ━━━───────── 2/8 5.8it/s 0.1s<1.0s[K      15/50      2.71G    0.09631         64        320: 62% ━━━━━━━───── 5/8 13.0it/s 0.2s<0.2s[K      15/50      2.71G     0.1202         35        320: 100% ━━━━━━━━━━━━ 8/8 30.9it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 78.9it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      16/50      2.71G     0.1494         64        320: 25% ━━━───────── 2/8 5.8it/s 0.1s<1.0s[K      16/50      2.71G     0.1415         64        320: 75% ━━━━━━━━━─── 6/8 13.3it/s 0.2s<0.1s[K      16/50      2.71G     0.1359         35        320: 100% ━━━━━━━━━━━━ 8/8 31.7it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 82.3it/s 0.0s
+                   all      0.986          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      17/50      2.71G      0.165         64        320: 38% ━━━━──────── 3/8 6.8it/s 0.1s<0.7s[K      17/50      2.71G     0.1522         64        320: 75% ━━━━━━━━━─── 6/8 13.6it/s 0.2s<0.1s[K      17/50      2.71G     0.1609         35        320: 100% ━━━━━━━━━━━━ 8/8 31.3it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 80.8it/s 0.0s
+                   all      0.957          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      18/50      2.71G     0.1099         64        320: 25% ━━━───────── 2/8 5.7it/s 0.1s<1.1s[K      18/50      2.71G     0.1115         64        320: 62% ━━━━━━━───── 5/8 12.6it/s 0.2s<0.2s[K      18/50      2.71G     0.1559         35        320: 100% ━━━━━━━━━━━━ 8/8 30.0it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 75.3it/s 0.0s
+                   all      0.942          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      19/50      2.71G      0.174         64        320: 25% ━━━───────── 2/8 5.7it/s 0.1s<1.1s[K      19/50      2.71G     0.1363         64        320: 75% ━━━━━━━━━─── 6/8 13.0it/s 0.2s<0.2s[K      19/50      2.71G     0.1356         35        320: 100% ━━━━━━━━━━━━ 8/8 30.9it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 81.7it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      20/50      2.71G     0.1362         64        320: 25% ━━━───────── 2/8 5.7it/s 0.1s<1.1s[K      20/50      2.71G     0.1488         64        320: 75% ━━━━━━━━━─── 6/8 12.9it/s 0.2s<0.2s[K      20/50      2.71G     0.1591         35        320: 100% ━━━━━━━━━━━━ 8/8 30.6it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 82.3it/s 0.0s
+                   all      0.957          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      21/50      2.71G    0.09561         64        320: 25% ━━━───────── 2/8 5.6it/s 0.1s<1.1s[K      21/50      2.71G     0.1053         64        320: 62% ━━━━━━━───── 5/8 12.8it/s 0.2s<0.2s[K      21/50      2.71G    0.09453         35        320: 100% ━━━━━━━━━━━━ 8/8 30.4it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 79.9it/s 0.0s
+                   all      0.971          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      22/50      2.71G     0.1206         64        320: 25% ━━━───────── 2/8 5.9it/s 0.1s<1.0s[K      22/50      2.71G     0.1023         64        320: 75% ━━━━━━━━━─── 6/8 13.2it/s 0.2s<0.2s[K      22/50      2.71G     0.1047         35        320: 100% ━━━━━━━━━━━━ 8/8 30.4it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 77.9it/s 0.0s
+                   all      0.957          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      23/50      2.71G     0.1444         64        320: 25% ━━━───────── 2/8 5.7it/s 0.1s<1.1s[K      23/50      2.71G     0.1263         64        320: 62% ━━━━━━━───── 5/8 12.4it/s 0.2s<0.2s[K      23/50      2.71G     0.1076         35        320: 100% ━━━━━━━━━━━━ 8/8 30.0it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 80.2it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      24/50      2.71G    0.06581         64        320: 25% ━━━───────── 2/8 5.9it/s 0.1s<1.0s[K      24/50      2.71G     0.0901         64        320: 62% ━━━━━━━───── 5/8 12.8it/s 0.2s<0.2s[K      24/50      2.71G    0.09059         35        320: 100% ━━━━━━━━━━━━ 8/8 30.9it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 80.7it/s 0.0s
+                   all      0.986          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      25/50      2.71G     0.1025         64        320: 25% ━━━───────── 2/8 5.9it/s 0.1s<1.0s[K      25/50      2.71G     0.1009         64        320: 62% ━━━━━━━───── 5/8 13.0it/s 0.2s<0.2s[K      25/50      2.71G    0.08136         35        320: 100% ━━━━━━━━━━━━ 8/8 30.3it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 74.0it/s 0.0s
+                   all      0.986          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      26/50      2.71G    0.06308         64        320: 25% ━━━───────── 2/8 5.8it/s 0.1s<1.0s[K      26/50      2.71G    0.08262         64        320: 75% ━━━━━━━━━─── 6/8 13.0it/s 0.2s<0.2s[K      26/50      2.71G    0.07991         35        320: 100% ━━━━━━━━━━━━ 8/8 30.9it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 78.8it/s 0.0s
+                   all      0.971          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      27/50      2.71G    0.05572         64        320: 25% ━━━───────── 2/8 5.9it/s 0.1s<1.0s[K      27/50      2.71G     0.0637         64        320: 75% ━━━━━━━━━─── 6/8 13.4it/s 0.2s<0.1s[K      27/50      2.71G    0.06219         35        320: 100% ━━━━━━━━━━━━ 8/8 31.8it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 77.6it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      28/50      2.71G    0.07431         64        320: 25% ━━━───────── 2/8 5.9it/s 0.1s<1.0s[K      28/50      2.71G    0.07054         64        320: 62% ━━━━━━━───── 5/8 12.9it/s 0.2s<0.2s[K      28/50      2.71G    0.07352         35        320: 100% ━━━━━━━━━━━━ 8/8 30.9it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 74.8it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      29/50      2.71G     0.0434         64        320: 25% ━━━───────── 2/8 5.9it/s 0.1s<1.0s[K      29/50      2.71G    0.05794         64        320: 62% ━━━━━━━───── 5/8 12.9it/s 0.2s<0.2s[K      29/50      2.71G    0.06536         35        320: 100% ━━━━━━━━━━━━ 8/8 31.0it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 82.0it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      30/50      2.71G    0.05023         64        320: 25% ━━━───────── 2/8 6.0it/s 0.1s<1.0s[K      30/50      2.71G    0.05253         64        320: 62% ━━━━━━━───── 5/8 12.7it/s 0.2s<0.2s[K      30/50      2.71G    0.08175         35        320: 100% ━━━━━━━━━━━━ 8/8 29.9it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 69.6it/s 0.0s
+                   all      0.971          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      31/50      2.71G    0.04507         64        320: 25% ━━━───────── 2/8 5.5it/s 0.1s<1.1s[K      31/50      2.71G    0.05757         64        320: 62% ━━━━━━━───── 5/8 12.7it/s 0.2s<0.2s[K      31/50      2.71G    0.07503         35        320: 100% ━━━━━━━━━━━━ 8/8 29.2it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 73.8it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      32/50      2.71G     0.0748         64        320: 25% ━━━───────── 2/8 5.5it/s 0.1s<1.1s[K      32/50      2.71G    0.05613         64        320: 75% ━━━━━━━━━─── 6/8 13.2it/s 0.2s<0.2s[K      32/50      2.71G    0.05711         35        320: 100% ━━━━━━━━━━━━ 8/8 31.1it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 80.4it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      33/50      2.71G    0.08741         64        320: 25% ━━━───────── 2/8 5.9it/s 0.1s<1.0s[K      33/50      2.71G    0.07202         64        320: 75% ━━━━━━━━━─── 6/8 13.3it/s 0.2s<0.2s[K      33/50      2.71G    0.06544         35        320: 100% ━━━━━━━━━━━━ 8/8 31.5it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 82.3it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      34/50      2.71G    0.04904         64        320: 25% ━━━───────── 2/8 5.8it/s 0.1s<1.0s[K      34/50      2.71G    0.05113         64        320: 62% ━━━━━━━───── 5/8 12.9it/s 0.2s<0.2s[K      34/50      2.71G    0.04643         35        320: 100% ━━━━━━━━━━━━ 8/8 30.1it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 76.0it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      35/50      2.71G    0.03948         64        320: 38% ━━━━──────── 3/8 6.9it/s 0.1s<0.7s[K      35/50      2.71G    0.03663         64        320: 75% ━━━━━━━━━─── 6/8 13.7it/s 0.2s<0.1s[K      35/50      2.71G    0.03561         35        320: 100% ━━━━━━━━━━━━ 8/8 31.5it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 77.9it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      36/50      2.71G    0.02063         64        320: 25% ━━━───────── 2/8 5.8it/s 0.1s<1.0s[K      36/50      2.71G    0.05085         64        320: 75% ━━━━━━━━━─── 6/8 13.2it/s 0.2s<0.2s[K      36/50      2.71G    0.06378         35        320: 100% ━━━━━━━━━━━━ 8/8 31.3it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 75.2it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      37/50      2.71G    0.07918         64        320: 38% ━━━━──────── 3/8 6.6it/s 0.1s<0.8s[K      37/50      2.71G    0.05406         64        320: 75% ━━━━━━━━━─── 6/8 13.4it/s 0.2s<0.1s[K      37/50      2.71G    0.08466         35        320: 100% ━━━━━━━━━━━━ 8/8 30.0it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 76.0it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      38/50      2.71G    0.04915         64        320: 25% ━━━───────── 2/8 5.5it/s 0.1s<1.1s[K      38/50      2.71G    0.05058         64        320: 75% ━━━━━━━━━─── 6/8 12.5it/s 0.2s<0.2s[K      38/50      2.71G    0.04888         35        320: 100% ━━━━━━━━━━━━ 8/8 28.7it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 78.2it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      39/50      2.71G    0.04529         64        320: 25% ━━━───────── 2/8 6.0it/s 0.1s<1.0s[K      39/50      2.71G    0.05903         64        320: 62% ━━━━━━━───── 5/8 12.9it/s 0.2s<0.2s[K      39/50      2.71G    0.05316         35        320: 100% ━━━━━━━━━━━━ 8/8 31.0it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 78.8it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      40/50      2.71G    0.06305         64        320: 38% ━━━━──────── 3/8 6.8it/s 0.1s<0.7s[K      40/50      2.71G    0.04961         35        320: 88% ━━━━━━━━━━── 7/8 14.9it/s 0.2s<0.1s[K      40/50      2.71G    0.04961         35        320: 100% ━━━━━━━━━━━━ 8/8 32.0it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 81.1it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      41/50      2.71G     0.1203         64        320: 0% ──────────── 0/8  0.4s[K      41/50      2.71G     0.1004         64        320: 25% ━━━───────── 2/8 6.0it/s 0.5s<1.0s[K      41/50      2.71G    0.06653         64        320: 62% ━━━━━━━───── 5/8 10.9it/s 0.7s<0.3s[K      41/50      2.71G    0.06294         35        320: 100% ━━━━━━━━━━━━ 8/8 11.1it/s 0.7s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 81.9it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      42/50      2.71G    0.04694         64        320: 25% ━━━───────── 2/8 5.3it/s 0.1s<1.1s[K      42/50      2.71G    0.06524         64        320: 75% ━━━━━━━━━─── 6/8 12.8it/s 0.2s<0.2s[K      42/50      2.71G    0.06246         35        320: 100% ━━━━━━━━━━━━ 8/8 29.7it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 72.0it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      43/50      2.71G    0.04358         64        320: 25% ━━━───────── 2/8 5.8it/s 0.1s<1.0s[K      43/50      2.71G    0.04139         64        320: 62% ━━━━━━━───── 5/8 11.9it/s 0.2s<0.3s[K      43/50      2.71G     0.0389         35        320: 100% ━━━━━━━━━━━━ 8/8 28.6it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 84.3it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      44/50      2.71G    0.04137         64        320: 25% ━━━───────── 2/8 4.2it/s 0.1s<1.4s[K      44/50      2.71G    0.07174         64        320: 62% ━━━━━━━───── 5/8 11.7it/s 0.2s<0.3s[K      44/50      2.71G    0.06217         35        320: 100% ━━━━━━━━━━━━ 8/8 25.7it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 74.2it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      45/50      2.71G     0.0647         64        320: 25% ━━━───────── 2/8 5.1it/s 0.1s<1.2s[K      45/50      2.71G    0.06276         64        320: 62% ━━━━━━━───── 5/8 12.4it/s 0.2s<0.2s[K      45/50      2.71G    0.05315         35        320: 100% ━━━━━━━━━━━━ 8/8 29.2it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 79.4it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      46/50      2.71G    0.02909         64        320: 25% ━━━───────── 2/8 5.3it/s 0.1s<1.1s[K      46/50      2.71G    0.02829         64        320: 62% ━━━━━━━───── 5/8 12.5it/s 0.2s<0.2s[K      46/50      2.71G     0.0448         35        320: 100% ━━━━━━━━━━━━ 8/8 29.6it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 80.8it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      47/50      2.71G    0.04826         64        320: 25% ━━━───────── 2/8 5.9it/s 0.1s<1.0s[K      47/50      2.71G    0.04268         64        320: 75% ━━━━━━━━━─── 6/8 13.0it/s 0.2s<0.2s[K      47/50      2.71G    0.05542         35        320: 100% ━━━━━━━━━━━━ 8/8 30.9it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 77.3it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      48/50      2.71G    0.02921         64        320: 25% ━━━───────── 2/8 5.8it/s 0.1s<1.0s[K      48/50      2.71G    0.03807         64        320: 75% ━━━━━━━━━─── 6/8 13.2it/s 0.2s<0.2s[K      48/50      2.71G    0.04077         35        320: 100% ━━━━━━━━━━━━ 8/8 31.3it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 81.9it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      49/50      2.71G    0.03942         64        320: 38% ━━━━──────── 3/8 6.9it/s 0.1s<0.7s[K      49/50      2.71G    0.04349         35        320: 88% ━━━━━━━━━━── 7/8 15.0it/s 0.2s<0.1s[K      49/50      2.71G    0.04349         35        320: 100% ━━━━━━━━━━━━ 8/8 32.3it/s 0.2s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 82.2it/s 0.0s
+                   all          1          1
+
+      Epoch    GPU_mem       loss  Instances       Size
+[K      50/50      2.71G    0.02662         64        320: 25% ━━━───────── 2/8 5.8it/s 0.1s<1.0s[K      50/50      2.71G    0.03227         64        320: 75% ━━━━━━━━━─── 6/8 13.3it/s 0.2s<0.2s[K      50/50      2.71G    0.03045         35        320: 100% ━━━━━━━━━━━━ 8/8 31.6it/s 0.3s
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 82.2it/s 0.0s
+                   all          1          1
+
+50 epochs completed in 0.006 hours.
+Optimizer stripped from /home/ubu/Desktop/MDX-PDE4444/Bilal--PDE4444/runs/classify/runs4/iter1_yolo_s/train/weights/last.pt, 11.0MB
+Optimizer stripped from /home/ubu/Desktop/MDX-PDE4444/Bilal--PDE4444/runs/classify/runs4/iter1_yolo_s/train/weights/best.pt, 11.0MB
+
+Validating /home/ubu/Desktop/MDX-PDE4444/Bilal--PDE4444/runs/classify/runs4/iter1_yolo_s/train/weights/best.pt...
+Ultralytics 8.4.39 🚀 Python-3.12.3 torch-2.11.0+cu130 CUDA:0 (NVIDIA GeForce RTX 4090, 24072MiB)
+YOLO26s-cls summary (fused): 47 layers, 5,436,690 parameters, 0 gradients, 12.0 GFLOPs
+[34m[1mtrain:[0m /home/ubu/Desktop/Assessment/runs4/data_balanced/train... found 483 images in 2 classes ✅ 
+[34m[1mval:[0m /home/ubu/Desktop/Assessment/runs4/data_balanced/val... found 69 images in 2 classes ✅ 
+[34m[1mtest:[0m /home/ubu/Desktop/Assessment/runs4/data_balanced/test... found 138 images in 2 classes ✅ 
+[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 1/1 78.9it/s 0.0s
+                   all          1          1
+Speed: 0.1ms preprocess, 0.1ms inference, 0.0ms loss, 0.0ms postprocess per image
+Results saved to [1m/home/ubu/Desktop/MDX-PDE4444/Bilal--PDE4444/runs/classify/runs4/iter1_yolo_s/train[0m
+Ultralytics 8.4.39 🚀 Python-3.12.3 torch-2.11.0+cu130 CUDA:0 (NVIDIA GeForce RTX 4090, 24072MiB)
+YOLO26s-cls summary (fused): 47 layers, 5,436,690 parameters, 0 gradients, 12.0 GFLOPs
+[34m[1mtrain:[0m /home/ubu/Desktop/Assessment/runs4/data_balanced/train... found 483 images in 2 classes ✅ 
+[34m[1mval:[0m /home/ubu/Desktop/Assessment/runs4/data_balanced/val... found 69 images in 2 classes ✅ 
+[34m[1mtest:[0m /home/ubu/Desktop/Assessment/runs4/data_balanced/test... found 138 images in 2 classes ✅ 
+[34m[1mtest: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 4455.6±2352.4 MB/s, size: 49.4 KB)
+[K[34m[1mtest: [0mScanning /home/ubu/Desktop/Assessment/runs4/data_balanced/test... 138 images, 0 corrupt: 100% ━━━━━━━━━━━━ 138/138 115.8Mit/s 0.0s
+[K               classes   top1_acc   top5_acc: 33% ━━━━──────── 1/3 1.6s/it 0.5s<3.1s[K               classes   top1_acc   top5_acc: 67% ━━━━━━━━──── 2/3 3.0it/s 0.6s<0.3s[K               classes   top1_acc   top5_acc: 100% ━━━━━━━━━━━━ 3/3 4.2it/s 0.7s
+                   all          1          1
+Speed: 0.5ms preprocess, 1.8ms inference, 0.0ms loss, 0.0ms postprocess per image
+Results saved to [1m/home/ubu/Desktop/MDX-PDE4444/Bilal--PDE4444/runs/classify/val-5[0m
+{
+  "model_name": "yolo26s-cls.pt",
+  "classes": [
+    "defect",
+    "non_defect"
+  ],
+  "top1": 1.0,
+  "top5": 1.0,
+  "fitness": 1.0,
+  "save_dir": "/home/ubu/Desktop/MDX-PDE4444/Bilal--PDE4444/runs/classify/runs4/iter1_yolo_s/train"
+}
+Loading images and extracting HOG features...
+CV pool: 552 samples  |  Test: 138 samples  |  HOG dims: 8100
+/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py:490: FitFailedWarning: 
+15 fits failed out of a total of 40.
+The score on these train-test partitions for these parameters will be set to nan.
+If these failures are not expected, you can try to debug them by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+15 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 833, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1336, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/pipeline.py", line 621, in fit
+    self._final_estimator.fit(Xt, y, **last_step_params["fit"])
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1336, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/svm/_base.py", line 215, in fit
+    y = self._validate_targets(y)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/svm/_base.py", line 759, in _validate_targets
+    raise ValueError(
+ValueError: The number of classes has to be greater than one; got 1 class
+
+  warnings.warn(some_fits_failed_message, FitFailedWarning)
+/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py:927: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 916, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 317, in __call__
+    return self._score(partial(_cached_call, None), estimator, X, y_true, **_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 409, in _score
+    y_pred = method_caller(
+             ^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 96, in _cached_call
+    result, _ = _get_response_values(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/utils/_response.py", line 207, in _get_response_values
+    raise ValueError(
+ValueError: pos_label=1 is not a valid label: It should be one of [0]
+
+  warnings.warn(
+/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py:927: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 916, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 317, in __call__
+    return self._score(partial(_cached_call, None), estimator, X, y_true, **_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 409, in _score
+    y_pred = method_caller(
+             ^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 96, in _cached_call
+    result, _ = _get_response_values(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/utils/_response.py", line 207, in _get_response_values
+    raise ValueError(
+ValueError: pos_label=1 is not a valid label: It should be one of [0]
+
+  warnings.warn(
+/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py:927: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 916, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 317, in __call__
+    return self._score(partial(_cached_call, None), estimator, X, y_true, **_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 409, in _score
+    y_pred = method_caller(
+             ^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 96, in _cached_call
+    result, _ = _get_response_values(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/utils/_response.py", line 207, in _get_response_values
+    raise ValueError(
+ValueError: pos_label=1 is not a valid label: It should be one of [0]
+
+  warnings.warn(
+/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py:927: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 916, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 317, in __call__
+    return self._score(partial(_cached_call, None), estimator, X, y_true, **_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 409, in _score
+    y_pred = method_caller(
+             ^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 96, in _cached_call
+    result, _ = _get_response_values(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/utils/_response.py", line 207, in _get_response_values
+    raise ValueError(
+ValueError: pos_label=1 is not a valid label: It should be one of [0]
+
+  warnings.warn(
+/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py:927: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 916, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 317, in __call__
+    return self._score(partial(_cached_call, None), estimator, X, y_true, **_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 409, in _score
+    y_pred = method_caller(
+             ^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 96, in _cached_call
+    result, _ = _get_response_values(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/utils/_response.py", line 207, in _get_response_values
+    raise ValueError(
+ValueError: pos_label=1 is not a valid label: It should be one of [0]
+
+  warnings.warn(
+/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py:927: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 916, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 317, in __call__
+    return self._score(partial(_cached_call, None), estimator, X, y_true, **_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 409, in _score
+    y_pred = method_caller(
+             ^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 96, in _cached_call
+    result, _ = _get_response_values(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/utils/_response.py", line 207, in _get_response_values
+    raise ValueError(
+ValueError: pos_label=1 is not a valid label: It should be one of [0]
+
+  warnings.warn(
+/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py:927: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 916, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 317, in __call__
+    return self._score(partial(_cached_call, None), estimator, X, y_true, **_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 409, in _score
+    y_pred = method_caller(
+             ^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 96, in _cached_call
+    result, _ = _get_response_values(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/utils/_response.py", line 207, in _get_response_values
+    raise ValueError(
+ValueError: pos_label=1 is not a valid label: It should be one of [0]
+
+  warnings.warn(
+/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py:927: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 916, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 317, in __call__
+    return self._score(partial(_cached_call, None), estimator, X, y_true, **_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 409, in _score
+    y_pred = method_caller(
+             ^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 96, in _cached_call
+    result, _ = _get_response_values(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/utils/_response.py", line 207, in _get_response_values
+    raise ValueError(
+ValueError: pos_label=1 is not a valid label: It should be one of [0]
+
+  warnings.warn(
+/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py:927: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 916, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 317, in __call__
+    return self._score(partial(_cached_call, None), estimator, X, y_true, **_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 409, in _score
+    y_pred = method_caller(
+             ^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 96, in _cached_call
+    result, _ = _get_response_values(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/utils/_response.py", line 207, in _get_response_values
+    raise ValueError(
+ValueError: pos_label=1 is not a valid label: It should be one of [0]
+
+  warnings.warn(
+/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py:927: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 916, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 317, in __call__
+    return self._score(partial(_cached_call, None), estimator, X, y_true, **_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 409, in _score
+    y_pred = method_caller(
+             ^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 96, in _cached_call
+    result, _ = _get_response_values(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/utils/_response.py", line 207, in _get_response_values
+    raise ValueError(
+ValueError: pos_label=1 is not a valid label: It should be one of [0]
+
+  warnings.warn(
+/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py:927: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 916, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 317, in __call__
+    return self._score(partial(_cached_call, None), estimator, X, y_true, **_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 409, in _score
+    y_pred = method_caller(
+             ^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 96, in _cached_call
+    result, _ = _get_response_values(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/utils/_response.py", line 207, in _get_response_values
+    raise ValueError(
+ValueError: pos_label=1 is not a valid label: It should be one of [0]
+
+  warnings.warn(
+/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py:927: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 916, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 317, in __call__
+    return self._score(partial(_cached_call, None), estimator, X, y_true, **_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 409, in _score
+    y_pred = method_caller(
+             ^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 96, in _cached_call
+    result, _ = _get_response_values(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/utils/_response.py", line 207, in _get_response_values
+    raise ValueError(
+ValueError: pos_label=1 is not a valid label: It should be one of [0]
+
+  warnings.warn(
+/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py:927: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 916, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 317, in __call__
+    return self._score(partial(_cached_call, None), estimator, X, y_true, **_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 409, in _score
+    y_pred = method_caller(
+             ^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 96, in _cached_call
+    result, _ = _get_response_values(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/utils/_response.py", line 207, in _get_response_values
+    raise ValueError(
+ValueError: pos_label=1 is not a valid label: It should be one of [0]
+
+  warnings.warn(
+/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py:927: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 916, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 317, in __call__
+    return self._score(partial(_cached_call, None), estimator, X, y_true, **_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 409, in _score
+    y_pred = method_caller(
+             ^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 96, in _cached_call
+    result, _ = _get_response_values(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/utils/_response.py", line 207, in _get_response_values
+    raise ValueError(
+ValueError: pos_label=1 is not a valid label: It should be one of [0]
+
+  warnings.warn(
+/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py:927: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 916, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 317, in __call__
+    return self._score(partial(_cached_call, None), estimator, X, y_true, **_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 409, in _score
+    y_pred = method_caller(
+             ^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 96, in _cached_call
+    result, _ = _get_response_values(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/utils/_response.py", line 207, in _get_response_values
+    raise ValueError(
+ValueError: pos_label=1 is not a valid label: It should be one of [0]
+
+  warnings.warn(
+/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py:927: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 916, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 317, in __call__
+    return self._score(partial(_cached_call, None), estimator, X, y_true, **_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 409, in _score
+    y_pred = method_caller(
+             ^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 96, in _cached_call
+    result, _ = _get_response_values(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/utils/_response.py", line 207, in _get_response_values
+    raise ValueError(
+ValueError: pos_label=1 is not a valid label: It should be one of [0]
+
+  warnings.warn(
+/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py:927: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 916, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 317, in __call__
+    return self._score(partial(_cached_call, None), estimator, X, y_true, **_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 409, in _score
+    y_pred = method_caller(
+             ^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 96, in _cached_call
+    result, _ = _get_response_values(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/utils/_response.py", line 207, in _get_response_values
+    raise ValueError(
+ValueError: pos_label=1 is not a valid label: It should be one of [0]
+
+  warnings.warn(
+/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py:927: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 916, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 317, in __call__
+    return self._score(partial(_cached_call, None), estimator, X, y_true, **_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 409, in _score
+    y_pred = method_caller(
+             ^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 96, in _cached_call
+    result, _ = _get_response_values(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/utils/_response.py", line 207, in _get_response_values
+    raise ValueError(
+ValueError: pos_label=1 is not a valid label: It should be one of [0]
+
+  warnings.warn(
+/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py:927: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 916, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 317, in __call__
+    return self._score(partial(_cached_call, None), estimator, X, y_true, **_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 409, in _score
+    y_pred = method_caller(
+             ^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 96, in _cached_call
+    result, _ = _get_response_values(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/utils/_response.py", line 207, in _get_response_values
+    raise ValueError(
+ValueError: pos_label=1 is not a valid label: It should be one of [0]
+
+  warnings.warn(
+/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py:927: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 916, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 317, in __call__
+    return self._score(partial(_cached_call, None), estimator, X, y_true, **_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 409, in _score
+    y_pred = method_caller(
+             ^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 96, in _cached_call
+    result, _ = _get_response_values(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/utils/_response.py", line 207, in _get_response_values
+    raise ValueError(
+ValueError: pos_label=1 is not a valid label: It should be one of [0]
+
+  warnings.warn(
+/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py:927: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 916, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 317, in __call__
+    return self._score(partial(_cached_call, None), estimator, X, y_true, **_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 409, in _score
+    y_pred = method_caller(
+             ^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 96, in _cached_call
+    result, _ = _get_response_values(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/utils/_response.py", line 207, in _get_response_values
+    raise ValueError(
+ValueError: pos_label=1 is not a valid label: It should be one of [0]
+
+  warnings.warn(
+/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py:927: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 916, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 317, in __call__
+    return self._score(partial(_cached_call, None), estimator, X, y_true, **_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 409, in _score
+    y_pred = method_caller(
+             ^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 96, in _cached_call
+    result, _ = _get_response_values(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/utils/_response.py", line 207, in _get_response_values
+    raise ValueError(
+ValueError: pos_label=1 is not a valid label: It should be one of [0]
+
+  warnings.warn(
+/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py:927: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 916, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 317, in __call__
+    return self._score(partial(_cached_call, None), estimator, X, y_true, **_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 409, in _score
+    y_pred = method_caller(
+             ^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 96, in _cached_call
+    result, _ = _get_response_values(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/utils/_response.py", line 207, in _get_response_values
+    raise ValueError(
+ValueError: pos_label=1 is not a valid label: It should be one of [0]
+
+  warnings.warn(
+/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py:927: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 916, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 317, in __call__
+    return self._score(partial(_cached_call, None), estimator, X, y_true, **_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 409, in _score
+    y_pred = method_caller(
+             ^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 96, in _cached_call
+    result, _ = _get_response_values(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/utils/_response.py", line 207, in _get_response_values
+    raise ValueError(
+ValueError: pos_label=1 is not a valid label: It should be one of [0]
+
+  warnings.warn(
+/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py:927: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 916, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 317, in __call__
+    return self._score(partial(_cached_call, None), estimator, X, y_true, **_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 409, in _score
+    y_pred = method_caller(
+             ^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 96, in _cached_call
+    result, _ = _get_response_values(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/utils/_response.py", line 207, in _get_response_values
+    raise ValueError(
+ValueError: pos_label=1 is not a valid label: It should be one of [0]
+
+  warnings.warn(
+/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py:927: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 916, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 317, in __call__
+    return self._score(partial(_cached_call, None), estimator, X, y_true, **_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 409, in _score
+    y_pred = method_caller(
+             ^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 96, in _cached_call
+    result, _ = _get_response_values(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/utils/_response.py", line 207, in _get_response_values
+    raise ValueError(
+ValueError: pos_label=1 is not a valid label: It should be one of [0]
+
+  warnings.warn(
+/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py:927: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 916, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 317, in __call__
+    return self._score(partial(_cached_call, None), estimator, X, y_true, **_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 409, in _score
+    y_pred = method_caller(
+             ^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 96, in _cached_call
+    result, _ = _get_response_values(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/utils/_response.py", line 207, in _get_response_values
+    raise ValueError(
+ValueError: pos_label=1 is not a valid label: It should be one of [0]
+
+  warnings.warn(
+/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py:927: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 916, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 317, in __call__
+    return self._score(partial(_cached_call, None), estimator, X, y_true, **_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 409, in _score
+    y_pred = method_caller(
+             ^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 96, in _cached_call
+    result, _ = _get_response_values(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/utils/_response.py", line 207, in _get_response_values
+    raise ValueError(
+ValueError: pos_label=1 is not a valid label: It should be one of [0]
+
+  warnings.warn(
+/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py:927: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 916, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 317, in __call__
+    return self._score(partial(_cached_call, None), estimator, X, y_true, **_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 409, in _score
+    y_pred = method_caller(
+             ^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 96, in _cached_call
+    result, _ = _get_response_values(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/utils/_response.py", line 207, in _get_response_values
+    raise ValueError(
+ValueError: pos_label=1 is not a valid label: It should be one of [0]
+
+  warnings.warn(
+/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py:927: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 916, in _score
+    scores = scorer(estimator, X_test, y_test, **score_params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 317, in __call__
+    return self._score(partial(_cached_call, None), estimator, X, y_true, **_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 409, in _score
+    y_pred = method_caller(
+             ^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/metrics/_scorer.py", line 96, in _cached_call
+    result, _ = _get_response_values(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubu/Desktop/Assessment/.venv/lib/python3.12/site-packages/sklearn/utils/_response.py", line 207, in _get_response_values
+    raise ValueError(
+ValueError: pos_label=1 is not a valid label: It should be one of [0]
+
+  warnings.warn(
+
+[hog_svm_cv] 5-Fold CV Results:
+ fold  train_accuracy  val_accuracy   val_f1  overfit_gap
+    1        0.975057      0.711712 0.753846     0.263345
+    2        0.972789      0.729730 0.758065     0.243059
+    3        0.984163      0.781818 0.793103     0.202345
+    4        0.979638      0.763636 0.790323     0.216002
+    5        0.972851      0.781818 0.806452     0.191032
+  Mean val accuracy: 0.7537 +/- 0.0317
+  Mean val F1:       0.7804 +/- 0.0231
+  Mean overfit gap:  0.2232
+
+[hog_mlp_cv] 5-Fold CV Results:
+ fold  train_accuracy  val_accuracy   val_f1  overfit_gap
+    1        0.970522      0.720721 0.743802     0.249801
+    2        0.975057      0.783784 0.806452     0.191273
+    3        0.975113      0.845455 0.852174     0.129659
+    4        0.981900      0.790909 0.816000     0.190991
+    5        0.984163      0.809091 0.803738     0.175072
+  Mean val accuracy: 0.7900 +/- 0.0455
+  Mean val F1:       0.8044 +/- 0.0390
+  Mean overfit gap:  0.1874
+
+Generating learning curves (this may take a moment)...
+
+=== Cross-Validation Complete ===
+Results saved to: runs4/iter1_crossval
+/home/ubu/Desktop/Assessment/defect_classification_stack/aggregate_results.py:117: MatplotlibDeprecationWarning: The get_cmap function was deprecated in Matplotlib 3.7 and will be removed in 3.11. Use ``matplotlib.colormaps[name]`` or ``matplotlib.colormaps.get_cmap()`` or ``pyplot.get_cmap()`` instead.
+  cmap = plt.cm.get_cmap("tab10", len(categories))
+
+Saved: runs4/final_report/all_results.csv
+Traceback (most recent call last):
+  File "/home/ubu/Desktop/Assessment/defect_classification_stack/aggregate_results.py", line 189, in <module>
+    main()
+  File "/home/ubu/Desktop/Assessment/defect_classification_stack/aggregate_results.py", line 172, in main
+    plot_comparison(df, args.output_dir)
+  File "/home/ubu/Desktop/Assessment/defect_classification_stack/aggregate_results.py", line 146, in plot_comparison
+    color=[cat_color[c] for c in acc_df["category"]],
+           ~~~~~~~~~^^^
+KeyError: 'YOLO (pretrained)'
+[INFO] TensorRT 10.16.1.11 found.
+
+[rank 1] yolo26n_320  (yolo)  out_stem=rank01_yolo26n_320
+  Exporting weights/best.pt -> engine (device=0, half=True) ...
+Ultralytics 8.4.39 🚀 Python-3.12.3 torch-2.11.0+cu130 CUDA:0 (NVIDIA GeForce RTX 4090, 24072MiB)
+YOLO26n-cls summary (fused): 47 layers, 1,528,586 parameters, 0 gradients, 3.2 GFLOPs
+
+[34m[1mPyTorch:[0m starting from '/home/ubu/Desktop/Assessment/runs3/iter1_yolo_320/train/weights/best.pt' with input shape (1, 3, 320, 320) BCHW and output shape(s) (1, 2) (3.0 MB)
+
+[34m[1mONNX:[0m starting export with onnx 1.21.0 opset 18...
+[34m[1mONNX:[0m slimming with onnxslim 0.1.91...
+[34m[1mONNX:[0m export success ✅ 0.3s, saved as '/home/ubu/Desktop/Assessment/runs3/iter1_yolo_320/train/weights/best.onnx' (5.9 MB)
+
+[34m[1mTensorRT:[0m starting export with TensorRT 10.16.1.11...
+[04/19/2026-20:53:22] [TRT] [I] [MemUsageChange] Init CUDA: CPU +0, GPU +0, now: CPU 715, GPU 1011 (MiB)
+[04/19/2026-20:53:23] [TRT] [I] ----------------------------------------------------------------
+[04/19/2026-20:53:23] [TRT] [I] Input filename:   /home/ubu/Desktop/Assessment/runs3/iter1_yolo_320/train/weights/best.onnx
+[04/19/2026-20:53:23] [TRT] [I] ONNX IR version:  0.0.8
+[04/19/2026-20:53:23] [TRT] [I] Opset version:    18
+[04/19/2026-20:53:23] [TRT] [I] Producer name:    pytorch
+[04/19/2026-20:53:23] [TRT] [I] Producer version: 2.11.0
+[04/19/2026-20:53:23] [TRT] [I] Domain:           
+[04/19/2026-20:53:23] [TRT] [I] Model version:    0
+[04/19/2026-20:53:23] [TRT] [I] Doc string:       
+[04/19/2026-20:53:23] [TRT] [I] ----------------------------------------------------------------
+[34m[1mTensorRT:[0m input "images" with shape(1, 3, 320, 320) DataType.FLOAT
+[34m[1mTensorRT:[0m output "output0" with shape(1, 2) DataType.FLOAT
+[34m[1mTensorRT:[0m building FP16 engine as /home/ubu/Desktop/Assessment/runs3/iter1_yolo_320/train/weights/best.engine
+[04/19/2026-20:53:23] [TRT] [I] [MemUsageChange] Init builder kernel library: CPU +195, GPU -5, now: CPU 1117, GPU 1006 (MiB)
+[04/19/2026-20:53:23] [TRT] [I] Local timing cache in use. Profiling results in this builder pass will not be stored.
+[04/19/2026-20:54:31] [TRT] [I] Compiler backend is used during engine build.
+[04/19/2026-20:55:01] [TRT] [I] Detected 1 inputs and 1 output network tensors.
+[04/19/2026-20:55:02] [TRT] [I] Total Host Persistent Memory: 229312 bytes
+[04/19/2026-20:55:02] [TRT] [I] Total Device Persistent Memory: 0 bytes
+[04/19/2026-20:55:02] [TRT] [I] Max Scratch Memory: 211456 bytes
+[04/19/2026-20:55:02] [TRT] [I] [BlockAssignment] Started assigning block shifts. This will take 74 steps to complete.
+[04/19/2026-20:55:02] [TRT] [I] [BlockAssignment] Algorithm ShiftNTopDown took 0.938504ms to assign 8 blocks to 74 nodes requiring 2995712 bytes.
+[04/19/2026-20:55:02] [TRT] [I] Total Activation Memory: 2995200 bytes
+[04/19/2026-20:55:02] [TRT] [I] Total Weights Memory: 3080580 bytes
+[04/19/2026-20:55:02] [TRT] [I] Compiler backend is used during engine execution.
+[04/19/2026-20:55:02] [TRT] [I] Engine generation completed in 98.8785 seconds.
+[04/19/2026-20:55:02] [TRT] [I] [MemUsageStats] Peak memory usage of TRT CPU/GPU memory allocators: CPU 0 MiB, GPU 13 MiB
+[34m[1mTensorRT:[0m export success ✅ 99.6s, saved as '/home/ubu/Desktop/Assessment/runs3/iter1_yolo_320/train/weights/best.engine' (3.9 MB)
+
+Export complete (100.0s)
+Results saved to [1m/home/ubu/Desktop/Assessment/runs3/iter1_yolo_320/train/weights[0m
+Predict:         yolo predict task=classify model=/home/ubu/Desktop/Assessment/runs3/iter1_yolo_320/train/weights/best.engine imgsz=320 half
+Validate:        yolo val task=classify model=/home/ubu/Desktop/Assessment/runs3/iter1_yolo_320/train/weights/best.engine imgsz=320 data=defect_classification_stack/runs/data_balanced half 
+Visualize:       https://netron.app
+  -> /home/ubu/Desktop/Assessment/top_models/model_optimized/rank01_yolo26n_320.engine
+  Exporting weights/best.pt -> onnx (device=0, half=True) ...
+Ultralytics 8.4.39 🚀 Python-3.12.3 torch-2.11.0+cu130 CUDA:0 (NVIDIA GeForce RTX 4090, 24072MiB)
+YOLO26n-cls summary (fused): 47 layers, 1,528,586 parameters, 0 gradients, 3.2 GFLOPs
+
+[34m[1mPyTorch:[0m starting from '/home/ubu/Desktop/Assessment/runs3/iter1_yolo_320/train/weights/best.pt' with input shape (1, 3, 320, 320) BCHW and output shape(s) (1, 2) (3.0 MB)
+
+[34m[1mONNX:[0m starting export with onnx 1.21.0 opset 18...
+[34m[1mONNX:[0m slimming with onnxslim 0.1.91...
+[34m[1mONNX:[0m export success ✅ 0.3s, saved as '/home/ubu/Desktop/Assessment/runs3/iter1_yolo_320/train/weights/best.onnx' (3.0 MB)
+
+Export complete (0.3s)
+Results saved to [1m/home/ubu/Desktop/Assessment/runs3/iter1_yolo_320/train/weights[0m
+Predict:         yolo predict task=classify model=/home/ubu/Desktop/Assessment/runs3/iter1_yolo_320/train/weights/best.onnx imgsz=320 half
+Validate:        yolo val task=classify model=/home/ubu/Desktop/Assessment/runs3/iter1_yolo_320/train/weights/best.onnx imgsz=320 data=defect_classification_stack/runs/data_balanced half 
+Visualize:       https://netron.app
+  -> /home/ubu/Desktop/Assessment/top_models/model_optimized/rank01_yolo26n_320.onnx
+  Exporting weights/best.pt -> torchscript (device=0, half=False) ...
+Ultralytics 8.4.39 🚀 Python-3.12.3 torch-2.11.0+cu130 CUDA:0 (NVIDIA GeForce RTX 4090, 24072MiB)
+YOLO26n-cls summary (fused): 47 layers, 1,528,586 parameters, 0 gradients, 3.2 GFLOPs
+
+[34m[1mPyTorch:[0m starting from '/home/ubu/Desktop/Assessment/runs3/iter1_yolo_320/train/weights/best.pt' with input shape (1, 3, 320, 320) BCHW and output shape(s) (1, 2) (3.0 MB)
+
+[34m[1mTorchScript:[0m starting export with torch 2.11.0+cu130...
+[34m[1mTorchScript:[0m export success ✅ 0.3s, saved as '/home/ubu/Desktop/Assessment/runs3/iter1_yolo_320/train/weights/best.torchscript' (6.0 MB)
+
+Export complete (0.3s)
+Results saved to [1m/home/ubu/Desktop/Assessment/runs3/iter1_yolo_320/train/weights[0m
+Predict:         yolo predict task=classify model=/home/ubu/Desktop/Assessment/runs3/iter1_yolo_320/train/weights/best.torchscript imgsz=320 
+Validate:        yolo val task=classify model=/home/ubu/Desktop/Assessment/runs3/iter1_yolo_320/train/weights/best.torchscript imgsz=320 data=defect_classification_stack/runs/data_balanced  
+Visualize:       https://netron.app
+  -> /home/ubu/Desktop/Assessment/top_models/model_optimized/rank01_yolo26n_320.torchscript
+
+[rank 2] yolo26s_320  (yolo)  out_stem=rank02_yolo26s_320
+  Exporting weights/best.pt -> engine (device=0, half=True) ...
+Ultralytics 8.4.39 🚀 Python-3.12.3 torch-2.11.0+cu130 CUDA:0 (NVIDIA GeForce RTX 4090, 24072MiB)
+YOLO26s-cls summary (fused): 47 layers, 5,436,690 parameters, 0 gradients, 12.0 GFLOPs
+
+[34m[1mPyTorch:[0m starting from '/home/ubu/Desktop/Assessment/runs3/iter2_yolo_s/train/weights/best.pt' with input shape (1, 3, 320, 320) BCHW and output shape(s) (1, 2) (10.5 MB)
+
+[34m[1mONNX:[0m starting export with onnx 1.21.0 opset 18...
+[34m[1mONNX:[0m slimming with onnxslim 0.1.91...
+[34m[1mONNX:[0m export success ✅ 0.2s, saved as '/home/ubu/Desktop/Assessment/runs3/iter2_yolo_s/train/weights/best.onnx' (20.8 MB)
+
+[34m[1mTensorRT:[0m starting export with TensorRT 10.16.1.11...
+[04/19/2026-20:55:03] [TRT] [I] ----------------------------------------------------------------
+[04/19/2026-20:55:03] [TRT] [I] Input filename:   /home/ubu/Desktop/Assessment/runs3/iter2_yolo_s/train/weights/best.onnx
+[04/19/2026-20:55:03] [TRT] [I] ONNX IR version:  0.0.8
+[04/19/2026-20:55:03] [TRT] [I] Opset version:    18
+[04/19/2026-20:55:03] [TRT] [I] Producer name:    pytorch
+[04/19/2026-20:55:03] [TRT] [I] Producer version: 2.11.0
+[04/19/2026-20:55:03] [TRT] [I] Domain:           
+[04/19/2026-20:55:03] [TRT] [I] Model version:    0
+[04/19/2026-20:55:03] [TRT] [I] Doc string:       
+[04/19/2026-20:55:03] [TRT] [I] ----------------------------------------------------------------
+[34m[1mTensorRT:[0m input "images" with shape(1, 3, 320, 320) DataType.FLOAT
+[34m[1mTensorRT:[0m output "output0" with shape(1, 2) DataType.FLOAT
+[34m[1mTensorRT:[0m building FP16 engine as /home/ubu/Desktop/Assessment/runs3/iter2_yolo_s/train/weights/best.engine
+[04/19/2026-20:55:03] [TRT] [I] [MemUsageChange] Init builder kernel library: CPU -200, GPU +1, now: CPU 3110, GPU 1219 (MiB)
+[04/19/2026-20:55:03] [TRT] [I] Local timing cache in use. Profiling results in this builder pass will not be stored.
+[04/19/2026-20:55:48] [TRT] [I] Compiler backend is used during engine build.
+[04/19/2026-20:56:18] [TRT] [I] Detected 1 inputs and 1 output network tensors.
+[04/19/2026-20:56:18] [TRT] [I] Total Host Persistent Memory: 227776 bytes
+[04/19/2026-20:56:18] [TRT] [I] Total Device Persistent Memory: 0 bytes
+[04/19/2026-20:56:18] [TRT] [I] Max Scratch Memory: 211456 bytes
+[04/19/2026-20:56:18] [TRT] [I] [BlockAssignment] Started assigning block shifts. This will take 74 steps to complete.
+[04/19/2026-20:56:18] [TRT] [I] [BlockAssignment] Algorithm ShiftNTopDown took 0.864208ms to assign 8 blocks to 74 nodes requiring 4250112 bytes.
+[04/19/2026-20:56:18] [TRT] [I] Total Activation Memory: 4249600 bytes
+[04/19/2026-20:56:18] [TRT] [I] Total Weights Memory: 10893188 bytes
+[04/19/2026-20:56:18] [TRT] [I] Compiler backend is used during engine execution.
+[04/19/2026-20:56:18] [TRT] [I] Engine generation completed in 75.2864 seconds.
+[04/19/2026-20:56:18] [TRT] [I] [MemUsageStats] Peak memory usage of TRT CPU/GPU memory allocators: CPU 2 MiB, GPU 27 MiB
+[34m[1mTensorRT:[0m export success ✅ 75.9s, saved as '/home/ubu/Desktop/Assessment/runs3/iter2_yolo_s/train/weights/best.engine' (11.5 MB)
+
+Export complete (76.0s)
+Results saved to [1m/home/ubu/Desktop/Assessment/runs3/iter2_yolo_s/train/weights[0m
+Predict:         yolo predict task=classify model=/home/ubu/Desktop/Assessment/runs3/iter2_yolo_s/train/weights/best.engine imgsz=320 half
+Validate:        yolo val task=classify model=/home/ubu/Desktop/Assessment/runs3/iter2_yolo_s/train/weights/best.engine imgsz=320 data=defect_classification_stack/runs/data_balanced half 
+Visualize:       https://netron.app
+  -> /home/ubu/Desktop/Assessment/top_models/model_optimized/rank02_yolo26s_320.engine
+  Exporting weights/best.pt -> onnx (device=0, half=True) ...
+Ultralytics 8.4.39 🚀 Python-3.12.3 torch-2.11.0+cu130 CUDA:0 (NVIDIA GeForce RTX 4090, 24072MiB)
+YOLO26s-cls summary (fused): 47 layers, 5,436,690 parameters, 0 gradients, 12.0 GFLOPs
+
+[34m[1mPyTorch:[0m starting from '/home/ubu/Desktop/Assessment/runs3/iter2_yolo_s/train/weights/best.pt' with input shape (1, 3, 320, 320) BCHW and output shape(s) (1, 2) (10.5 MB)
+
+[34m[1mONNX:[0m starting export with onnx 1.21.0 opset 18...
+[34m[1mONNX:[0m slimming with onnxslim 0.1.91...
+[34m[1mONNX:[0m export success ✅ 0.4s, saved as '/home/ubu/Desktop/Assessment/runs3/iter2_yolo_s/train/weights/best.onnx' (10.4 MB)
+
+Export complete (0.4s)
+Results saved to [1m/home/ubu/Desktop/Assessment/runs3/iter2_yolo_s/train/weights[0m
+Predict:         yolo predict task=classify model=/home/ubu/Desktop/Assessment/runs3/iter2_yolo_s/train/weights/best.onnx imgsz=320 half
+Validate:        yolo val task=classify model=/home/ubu/Desktop/Assessment/runs3/iter2_yolo_s/train/weights/best.onnx imgsz=320 data=defect_classification_stack/runs/data_balanced half 
+Visualize:       https://netron.app
+  -> /home/ubu/Desktop/Assessment/top_models/model_optimized/rank02_yolo26s_320.onnx
+  Exporting weights/best.pt -> torchscript (device=0, half=False) ...
+Ultralytics 8.4.39 🚀 Python-3.12.3 torch-2.11.0+cu130 CUDA:0 (NVIDIA GeForce RTX 4090, 24072MiB)
+YOLO26s-cls summary (fused): 47 layers, 5,436,690 parameters, 0 gradients, 12.0 GFLOPs
+
+[34m[1mPyTorch:[0m starting from '/home/ubu/Desktop/Assessment/runs3/iter2_yolo_s/train/weights/best.pt' with input shape (1, 3, 320, 320) BCHW and output shape(s) (1, 2) (10.5 MB)
+
+[34m[1mTorchScript:[0m starting export with torch 2.11.0+cu130...
+[34m[1mTorchScript:[0m export success ✅ 0.2s, saved as '/home/ubu/Desktop/Assessment/runs3/iter2_yolo_s/train/weights/best.torchscript' (20.9 MB)
+
+Export complete (0.3s)
+Results saved to [1m/home/ubu/Desktop/Assessment/runs3/iter2_yolo_s/train/weights[0m
+Predict:         yolo predict task=classify model=/home/ubu/Desktop/Assessment/runs3/iter2_yolo_s/train/weights/best.torchscript imgsz=320 
+Validate:        yolo val task=classify model=/home/ubu/Desktop/Assessment/runs3/iter2_yolo_s/train/weights/best.torchscript imgsz=320 data=defect_classification_stack/runs/data_balanced  
+Visualize:       https://netron.app
+/home/ubu/Desktop/Assessment/top_models/model_optimized/export_engines.py:175: DeprecationWarning: You are using the legacy TorchScript-based ONNX export. Starting in PyTorch 2.9, the new torch.export-based ONNX exporter has become the default. Learn more about the new export logic: https://docs.pytorch.org/docs/stable/onnx_export.html. For exporting control flow: https://pytorch.org/tutorials/beginner/onnx/export_control_flow_model_to_onnx_tutorial.html
+  torch.onnx.export(
+  -> /home/ubu/Desktop/Assessment/top_models/model_optimized/rank02_yolo26s_320.torchscript
+
+[rank 3] mobilenet_selu  (mobilenet)  out_stem=rank03_mobilenet_selu
+  -> /home/ubu/Desktop/Assessment/top_models/model_optimized/rank03_mobilenet_selu.onnx
+  -> /home/ubu/Desktop/Assessment/top_models/model_optimized/rank03_mobilenet_selu.torchscript
+  [INFO] build TRT engine with:
+    trtexec --onnx=/home/ubu/Desktop/Assessment/top_models/model_optimized/rank03_mobilenet_selu.onnx --saveEngine=/home/ubu/Desktop/Assessment/top_models/model_optimized/rank03_mobilenet_selu.engine --fp16
+
+[rank 4] mlp_boost  (mlp)  out_stem=rank04_mlp_boost
+  -> /home/ubu/Desktop/Assessment/top_models/model_optimized/rank04_mlp_boost.onnx
+  -> /home/ubu/Desktop/Assessment/top_models/model_optimized/rank04_mlp_boost.torchscript
+  [INFO] build TRT engine with:
+    trtexec --onnx=/home/ubu/Desktop/Assessment/top_models/model_optimized/rank04_mlp_boost.onnx --saveEngine=/home/ubu/Desktop/Assessment/top_models/model_optimized/rank04_mlp_boost.engine --fp16
+
+[rank 5] mobilenet_elu  (mobilenet)  out_stem=rank05_mobilenet_elu
+  -> /home/ubu/Desktop/Assessment/top_models/model_optimized/rank05_mobilenet_elu.onnx
+  -> /home/ubu/Desktop/Assessment/top_models/model_optimized/rank05_mobilenet_elu.torchscript
+  [INFO] build TRT engine with:
+    trtexec --onnx=/home/ubu/Desktop/Assessment/top_models/model_optimized/rank05_mobilenet_elu.onnx --saveEngine=/home/ubu/Desktop/Assessment/top_models/model_optimized/rank05_mobilenet_elu.engine --fp16
+
+[rank 6] mobilenet_gelu  (mobilenet)  out_stem=rank06_mobilenet_gelu
+  -> /home/ubu/Desktop/Assessment/top_models/model_optimized/rank06_mobilenet_gelu.onnx
+  -> /home/ubu/Desktop/Assessment/top_models/model_optimized/rank06_mobilenet_gelu.torchscript
+  [INFO] build TRT engine with:
+    trtexec --onnx=/home/ubu/Desktop/Assessment/top_models/model_optimized/rank06_mobilenet_gelu.onnx --saveEngine=/home/ubu/Desktop/Assessment/top_models/model_optimized/rank06_mobilenet_gelu.engine --fp16
+
+[rank 7] mobilenet_leakyrelu  (mobilenet)  out_stem=rank07_mobilenet_leakyrelu
+  -> /home/ubu/Desktop/Assessment/top_models/model_optimized/rank07_mobilenet_leakyrelu.onnx
+  -> /home/ubu/Desktop/Assessment/top_models/model_optimized/rank07_mobilenet_leakyrelu.torchscript
+  [INFO] build TRT engine with:
+    trtexec --onnx=/home/ubu/Desktop/Assessment/top_models/model_optimized/rank07_mobilenet_leakyrelu.onnx --saveEngine=/home/ubu/Desktop/Assessment/top_models/model_optimized/rank07_mobilenet_leakyrelu.engine --fp16
+
+[rank 8] mobilenet_relu  (mobilenet)  out_stem=rank08_mobilenet_relu
+  -> /home/ubu/Desktop/Assessment/top_models/model_optimized/rank08_mobilenet_relu.onnx
+  -> /home/ubu/Desktop/Assessment/top_models/model_optimized/rank08_mobilenet_relu.torchscript
+  [INFO] build TRT engine with:
+    trtexec --onnx=/home/ubu/Desktop/Assessment/top_models/model_optimized/rank08_mobilenet_relu.onnx --saveEngine=/home/ubu/Desktop/Assessment/top_models/model_optimized/rank08_mobilenet_relu.engine --fp16
+
+[rank 9] mlp_search  (mlp)  out_stem=rank09_mlp_search
+  -> /home/ubu/Desktop/Assessment/top_models/model_optimized/rank09_mlp_search.onnx
+  -> /home/ubu/Desktop/Assessment/top_models/model_optimized/rank09_mlp_search.torchscript
+  [INFO] build TRT engine with:
+    trtexec --onnx=/home/ubu/Desktop/Assessment/top_models/model_optimized/rank09_mlp_search.onnx --saveEngine=/home/ubu/Desktop/Assessment/top_models/model_optimized/rank09_mlp_search.engine --fp16
+
+[rank 10] mobilenet_gelu  (mobilenet)  out_stem=rank10_mobilenet_gelu
+  -> /home/ubu/Desktop/Assessment/top_models/model_optimized/rank10_mobilenet_gelu.onnx
+  -> /home/ubu/Desktop/Assessment/top_models/model_optimized/rank10_mobilenet_gelu.torchscript
+  [INFO] build TRT engine with:
+    trtexec --onnx=/home/ubu/Desktop/Assessment/top_models/model_optimized/rank10_mobilenet_gelu.onnx --saveEngine=/home/ubu/Desktop/Assessment/top_models/model_optimized/rank10_mobilenet_gelu.engine --fp16
+
+======================================================================
+Done. Produced 22 file(s) in: /home/ubu/Desktop/Assessment/top_models/model_optimized
+  rank01_yolo26n_320.engine
+  rank01_yolo26n_320.onnx
+  rank01_yolo26n_320.torchscript
+  rank02_yolo26s_320.engine
+  rank02_yolo26s_320.onnx
+  rank02_yolo26s_320.torchscript
+  rank03_mobilenet_selu.onnx
+  rank03_mobilenet_selu.torchscript
+  rank04_mlp_boost.onnx
+  rank04_mlp_boost.torchscript
+  rank05_mobilenet_elu.onnx
+  rank05_mobilenet_elu.torchscript
+  rank06_mobilenet_gelu.onnx
+  rank06_mobilenet_gelu.torchscript
+  rank07_mobilenet_leakyrelu.onnx
+  rank07_mobilenet_leakyrelu.torchscript
+  rank08_mobilenet_relu.onnx
+  rank08_mobilenet_relu.torchscript
+  rank09_mlp_search.onnx
+  rank09_mlp_search.torchscript
+  rank10_mobilenet_gelu.onnx
+  rank10_mobilenet_gelu.torchscript
+  [SKIP] balance step — /home/ubu/Desktop/Assessment/zeroq_cup_classification_scaffold/data/interim/balanced already exists.
+
+======================================================================
+  STEP: 0b. split balanced data into train/val/test
+  CMD:  /home/ubu/Desktop/Assessment/.venv/bin/python /home/ubu/Desktop/Assessment/defect_classification_stack/prepare_dataset.py --defect-dir /home/ubu/Desktop/Assessment/zeroq_cup_classification_scaffold/data/interim/balanced/defective --pass-dir /home/ubu/Desktop/Assessment/zeroq_cup_classification_scaffold/data/interim/balanced/non_defective --output-dir runs4/data_balanced --test-size 0.2 --val-size 0.1 --seed 42
+======================================================================
+
+======================================================================
+  STEP: 1. sklearn baselines
+  CMD:  /home/ubu/Desktop/Assessment/.venv/bin/python /home/ubu/Desktop/Assessment/defect_classification_stack/train_sklearn_baseline.py --data-dir runs4/data_balanced --output-dir runs4/iter1_sklearn
+======================================================================
+
+======================================================================
+  STEP: 2. CNN activation sweep (scratch)
+  CMD:  /home/ubu/Desktop/Assessment/.venv/bin/python /home/ubu/Desktop/Assessment/defect_classification_stack/train_cnn_activation_sweep.py --data-dir runs4/data_balanced --output-dir runs4/iter1_cnn_activation
+======================================================================
+
+======================================================================
+  STEP: 3. optimiser comparison
+  CMD:  /home/ubu/Desktop/Assessment/.venv/bin/python /home/ubu/Desktop/Assessment/defect_classification_stack/train_optimizer_comparison.py --data-dir runs4/data_balanced --output-dir runs4/iter1_optimizer
+======================================================================
+
+======================================================================
+  STEP: 4. MLP random search (24 trials, 96px)
+  CMD:  /home/ubu/Desktop/Assessment/.venv/bin/python /home/ubu/Desktop/Assessment/defect_classification_stack/train_keras_mlp_random_search.py --data-dir runs4/data_balanced --output-dir runs4/iter1_mlp_search --max-trials 24 --img-size 96 --batch-size 64 --epochs 35
+======================================================================
+
+======================================================================
+  STEP: 5. MobileNetV2 frozen × 5 activations
+  CMD:  /home/ubu/Desktop/Assessment/.venv/bin/python /home/ubu/Desktop/Assessment/defect_classification_stack/train_cnn_pretrained.py --data-dir runs4/data_balanced --output-dir runs4/iter2_mobilenet --epochs 40
+======================================================================
+
+======================================================================
+  STEP: 6. MobileNetV2 fine-tuned × 5 activations
+  CMD:  /home/ubu/Desktop/Assessment/.venv/bin/python /home/ubu/Desktop/Assessment/defect_classification_stack/train_cnn_pretrained.py --data-dir runs4/data_balanced --output-dir runs4/iter3_mobilenet_finetune --unfreeze --epochs 60 --batch-size 32 --img-size 256 --patience 12
+======================================================================
+
+======================================================================
+  STEP: 7. YOLO26n-cls (img=320, batch=64, epochs=50)
+  CMD:  /home/ubu/Desktop/Assessment/.venv/bin/python /home/ubu/Desktop/Assessment/defect_classification_stack/train_yolo26_cls.py --data-dir runs4/data_balanced --output-dir runs4/iter1_yolo --imgsz 320 --batch 64 --epochs 50
+======================================================================
+
+======================================================================
+  STEP: 8. YOLO26s-cls (img=320, batch=64, epochs=50)
+  CMD:  /home/ubu/Desktop/Assessment/.venv/bin/python /home/ubu/Desktop/Assessment/defect_classification_stack/train_yolo26_cls.py --data-dir runs4/data_balanced --output-dir runs4/iter1_yolo_s --model yolo26s-cls.pt --imgsz 320 --batch 64 --epochs 50
+======================================================================
+
+======================================================================
+  STEP: 9. 5-fold cross-validation
+  CMD:  /home/ubu/Desktop/Assessment/.venv/bin/python /home/ubu/Desktop/Assessment/defect_classification_stack/train_cross_validation.py --data-dir runs4/data_balanced --output-dir runs4/iter1_crossval
+======================================================================
+
+======================================================================
+  STEP: 10. aggregate results + comparison chart
+  CMD:  /home/ubu/Desktop/Assessment/.venv/bin/python /home/ubu/Desktop/Assessment/defect_classification_stack/aggregate_results.py --runs-dir runs4 --output-dir runs4/final_report
+======================================================================
+
+[ERROR] Step '10. aggregate results + comparison chart' failed (exit 1).
+
+======================================================================
+  STEP: 11. export top-10 checkpoints → all
+  CMD:  /home/ubu/Desktop/Assessment/.venv/bin/python /home/ubu/Desktop/Assessment/top_models/model_optimized/export_engines.py --format all --half
+======================================================================
+
+======================================================================
+  Pipeline finished with 1 error(s):
+    x  step 10 — aggregate

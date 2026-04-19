@@ -1,0 +1,4 @@
+Optimiser: lbfgs
+Description: second-order| L-BFGS (quasi-Newton)
+MLP params: 1217
+PCA components: 20

@@ -1,0 +1,11 @@
+{
+  "model_name": "yolo26s-cls.pt",
+  "classes": [
+    "defect",
+    "non_defect"
+  ],
+  "top1": 1.0,
+  "top5": 1.0,
+  "fitness": 1.0,
+  "save_dir": "/home/ubu/Desktop/MDX-PDE4444/Bilal--PDE4444/runs/classify/runs4/iter1_yolo_s/train"
+}

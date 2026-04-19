@@ -113,9 +113,12 @@ def plot_comparison(df: pd.DataFrame, output_dir: Path) -> None:
     plot_df = df.dropna(subset=["f1"]).copy()
     plot_df = plot_df.sort_values("f1")
 
-    categories = plot_df["category"].unique()
-    cmap = plt.cm.get_cmap("tab10", len(categories))
-    cat_color = {c: cmap(i) for i, c in enumerate(categories)}
+    # Build the colour map from all categories (including YOLO rows that
+    # have no F1), so the accuracy chart can look any of them up later.
+    all_categories = df["category"].unique()
+    categories     = plot_df["category"].unique()
+    cmap = plt.cm.get_cmap("tab10", max(len(all_categories), 1))
+    cat_color = {c: cmap(i) for i, c in enumerate(all_categories)}
 
     fig, ax = plt.subplots(figsize=(11, max(6, len(plot_df) * 0.45)))
     bars = ax.barh(

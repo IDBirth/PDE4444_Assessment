@@ -1,0 +1,7 @@
+{
+  "model_name": "cnn_selu",
+  "accuracy": 0.6304347826086957,
+  "precision": 0.575,
+  "recall": 1.0,
+  "f1": 0.7301587301587301
+}

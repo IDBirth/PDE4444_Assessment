@@ -64,5 +64,7 @@ top_models/**/*.onnx
 top_models/**/*.engine
 top_models/**/*.torchscript
 top_models/model_optimized/__pycache__/
-runs*/
 defect_classification_stack/runs/
+runs2/
+runs3/
+defect_classification_stack/Documentation/

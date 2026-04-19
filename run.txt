@@ -68,16 +68,15 @@ python /home/ubu/Desktop/Assessment/defect_classification_stack/demo_live_test_w
    --auth-user 'zeroq' \
    --auth-password '#@45459xQw'
 
+#runtop5
+cd /home/ubu/Desktop/Assessment
+.venv/bin/python defect_classification_stack/demo_live_test_with_video_top6.py \
+    --stream-url "https://api.baslarlabs.ae/video_feed" \
+    --auth-user 'zeroq' \
+    --auth-password '#@45459xQw'
+
 
 Next:
---------------1:
-Copy and make the following demo_live_test_with_video into a demo_live_test_with_video_top6 with top 5 of the models in /home/ubu/Desktop/Assessment/defect_classification_stack/top10_models.md .
-Simultaniusly do the detection and show all 6, and create a overall score by meaning up scores.
-Do not auto capture for this.
-
-Also note that the defected 1.000 to non defected 1.000 is squed towards defected, allow theashold for pass to be 0.4 where as defect to be over 0.7
-
-
 --------------2:
 Final work, Update the readme with accordance with the /home/ubu/Desktop/Assessment/Assessment Details UPDATED.docx:
 

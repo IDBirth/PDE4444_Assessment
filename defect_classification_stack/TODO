@@ -1,7 +1,11 @@
 Workflow integrity
 Make the end-to-end workflow reproducible with one documented source-of-truth command sequence or one orchestration script. At the moment the scaffold workflow, the experiment stack, and the live demo path are split across multiple directories.
 
-Replace the broken machine-specific data linkage in `defect_classification_stack` with a repo-relative path strategy or an explicit setup step. The current macOS absolute symlink is not portable.
+Replace the broken machine-specific data linkage in `defect_classification_stack` with a repo-relative path strategy or an explicit setup step. The current macOS absolute symlink is not portable. make the data in the main faile and keep only raw in git: /home/ubu/Desktop/Assessment/zeroq_cup_classification_scaffold/data
+
+Organise all top 10 models and thier run into a single folder for documentation and testing, this will be pushed to git and if somone wants to repeate the same test, they will create diffrent run files not overight the current run. 
+
+inside defect_classification_stackmodel/ a model_optimized folder sould be created and .engine for each model in the top 10 list should be added to optimized for this gpu should be made
 
 Dataset quality
 Reduce dependence on the 360-degree deterministic rotation sweep as the primary augmentation strategy. It creates volume, but it is too synthetic and too correlated to substitute for more real PASS samples.

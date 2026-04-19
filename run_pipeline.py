@@ -21,10 +21,9 @@ Steps executed:
      4. MLP hyperparameter random search (24 trials, 96px)
      5. MobileNetV2 frozen × 5 activations
      6. MobileNetV2 fine-tuned × 5 activations (patience=12, img=256)
-     7. YOLO26n-cls (img=320, batch=64, epochs=50)
-     8. YOLO26s-cls (img=320, batch=64, epochs=50)
-     9. 5-fold cross-validation (HOG + SVM / MLP)
-    10. Aggregate all results + comparison chart
+     7. YOLO26n-cls (img=320, batch=64, epochs=50, patience=15)
+     8. 5-fold cross-validation (HOG + SVM / MLP)
+     9. Aggregate all results + comparison chart
 
 Resuming: any step whose output directory exists and is non-empty is skipped.
 Use --force to re-run, or --steps N M ... to run a subset.
@@ -38,6 +37,7 @@ Data dependency:
 from __future__ import annotations
 
 import argparse
+import os
 import shutil
 import subprocess
 import sys
@@ -53,6 +53,20 @@ RAW_NON_DEFECTIVE  = SCAFFOLD / "data" / "raw" / "non_defective"
 BALANCED_DIR       = SCAFFOLD / "data" / "interim" / "balanced"
 BALANCE_SCRIPT     = SCAFFOLD / "scripts" / "balance_cleaned_dataset.py"
 PREPARE_SCRIPT     = STACK_ROOT / "prepare_dataset.py"
+DEFAULT_MPLCONFIGDIR = REPO_ROOT / ".cache" / "matplotlib"
+
+
+def configure_matplotlib_env() -> Path:
+    """Ensure subprocesses inherit a writable Matplotlib config/cache path."""
+    configured = os.environ.get("MPLCONFIGDIR")
+    if configured:
+        target = Path(configured).expanduser()
+    else:
+        target = DEFAULT_MPLCONFIGDIR
+        os.environ["MPLCONFIGDIR"] = str(target)
+
+    target.mkdir(parents=True, exist_ok=True)
+    return target
 
 
 def run(cmd: list[str], step_name: str, cwd: Path | None = None) -> bool:
@@ -121,6 +135,8 @@ def step_build_dataset(py: str, data_dir: Path, force: bool) -> bool:
 
 
 def main() -> None:
+    configure_matplotlib_env()
+
     parser = argparse.ArgumentParser(
         description="Full PDE4444 pipeline — raw data to aggregated report."
     )
@@ -137,8 +153,8 @@ def main() -> None:
         help="Re-run steps even if output directory already exists."
     )
     parser.add_argument(
-        "--steps", nargs="+", type=int, default=list(range(0, 11)),
-        metavar="N", help="Run only these step numbers (default: 0-10)."
+        "--steps", nargs="+", type=int, default=list(range(0, 10)),
+        metavar="N", help="Run only these step numbers (default: 0-9)."
     )
     args = parser.parse_args()
 
@@ -237,42 +253,31 @@ def main() -> None:
         if not skip_if_exists(out, force, "YOLO26n-cls"):
             ok = run([py, str(STACK_ROOT / "train_yolo26_cls.py"),
                       "--data-dir", data_str, "--output-dir", str(out),
-                      "--imgsz", "320", "--batch", "64", "--epochs", "50"],
-                     "7. YOLO26n-cls (img=320, batch=64, epochs=50)")
+                      "--imgsz", "320", "--batch", "64", "--epochs", "50",
+                      "--patience", "15"],
+                     "7. YOLO26n-cls (img=320, batch=64, epochs=50, patience=15)")
             if not ok:
                 errors.append("step 7 — YOLO26n-cls")
 
-    # ── Step 8: YOLO26s-cls ──────────────────────────────────────────────────
+    # ── Step 8: 5-fold cross-validation ─────────────────────────────────────
     if 8 in args.steps:
-        out = runs / "iter1_yolo_s"
-        if not skip_if_exists(out, force, "YOLO26s-cls"):
-            ok = run([py, str(STACK_ROOT / "train_yolo26_cls.py"),
-                      "--data-dir", data_str, "--output-dir", str(out),
-                      "--model", "yolo26s-cls.pt",
-                      "--imgsz", "320", "--batch", "64", "--epochs", "50"],
-                     "8. YOLO26s-cls (img=320, batch=64, epochs=50)")
-            if not ok:
-                errors.append("step 8 — YOLO26s-cls")
-
-    # ── Step 9: 5-fold cross-validation ─────────────────────────────────────
-    if 9 in args.steps:
         out = runs / "iter1_crossval"
         if not skip_if_exists(out, force, "5-fold CV"):
             ok = run([py, str(STACK_ROOT / "train_cross_validation.py"),
                       "--data-dir", data_str, "--output-dir", str(out)],
-                     "9. 5-fold cross-validation")
+                     "8. 5-fold cross-validation")
             if not ok:
-                errors.append("step 9 — 5-fold CV")
+                errors.append("step 8 — 5-fold CV")
 
-    # ── Step 10: aggregate ───────────────────────────────────────────────────
-    if 10 in args.steps:
+    # ── Step 9: aggregate ────────────────────────────────────────────────────
+    if 9 in args.steps:
         out = runs / "final_report"
         out.mkdir(parents=True, exist_ok=True)
         ok = run([py, str(STACK_ROOT / "aggregate_results.py"),
                   "--runs-dir", str(runs), "--output-dir", str(out)],
-                 "10. aggregate results + comparison chart")
+                 "9. aggregate results + comparison chart")
         if not ok:
-            errors.append("step 10 — aggregate")
+            errors.append("step 9 — aggregate")
 
     # ── Summary ─────────────────────────────────────────────────────────────
     print(f"\n{'='*70}")

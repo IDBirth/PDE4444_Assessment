@@ -2,24 +2,25 @@
 
 ## Pending
 
-### Historical metric CSVs reflect old pos_label=1 convention
-runs1 / runs2 artefacts on disk were produced before the positive-class bug
-was fixed. Code is now correct (pos_label=0, defect=positive) but the saved
-JSON / CSV files have not been re-computed. runs3 / runs4 were produced with
-the correct code. If runs1/runs2 numbers need to match, re-run the pipeline
-with `--force`.
 
----
 
 ## Completed
 
-- [x] **Orchestration script** — `run_pipeline.py` at repo root runs all 11
-      steps (0 data-prep through 10 aggregate). Skip-if-exists by default,
+- [x] **Orchestration script** — `run_pipeline.py` at repo root runs all 10
+      steps (0 data-prep through 9 aggregate). Skip-if-exists by default,
       `--force` to re-run, `--steps N M ...` for subsets. All models are
       saved as PyTorch `.pt` checkpoints; no engine/ONNX/TorchScript export.
 - [x] **End-to-end reproducibility** — step 0 builds the balanced dataset from
       `zeroq_cup_classification_scaffold/data/raw/` (balance → split) so a
       clean machine needs no undocumented prep step.
+- [x] **Matplotlib cache path** — `run_pipeline.py` now exports a repo-local
+      `MPLCONFIGDIR`, and plotting scripts set the same env var before
+      importing `matplotlib.pyplot`, so future runs do not fall back to an
+      unwritable `/home/ubu/.config/matplotlib`.
+- [x] **YOLO cleanup for post-runs4 pipeline** — `train_yolo26_cls.py`
+      disables Ultralytics classification-time augmentation and preserves the
+      requested `patience=15`; `run_pipeline.py` drops redundant `yolo26s`
+      because runs4 showed it adds no value over `yolo26n`.
 - [x] **YOLO26s aggregation** — `aggregate_results.py` now globs `iter*yolo*`
       and `iter*mlp*`, so runs3 directory names (`iter1_yolo_320`,
       `iter2_yolo_s`, `iter1_mlp_boost`) are picked up alongside runs1/2.

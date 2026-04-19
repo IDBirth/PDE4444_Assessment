@@ -1,0 +1,11 @@
+{
+  "model_name": "yolo26n-cls.pt",
+  "classes": [
+    "defect",
+    "non_defect"
+  ],
+  "top1": 0.9927536249160767,
+  "top5": 1.0,
+  "fitness": 0.9963768124580383,
+  "save_dir": "/home/ubu/Desktop/Assessment/runs5/iter1_yolo/train"
+}

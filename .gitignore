@@ -19,6 +19,7 @@ draw.io/
 # 100 MB per-file limit and should never be committed.
 .venv/
 .pytest_cache/
+.cache/
 
 **/__pycache__/
 *.py[cod]
@@ -64,3 +65,8 @@ runs2/
 runs3/
 defect_classification_stack/Documentation/
 yolo11n.pt
+
+old_models/
+runs*/
+!runs5/
+demo_sessions/

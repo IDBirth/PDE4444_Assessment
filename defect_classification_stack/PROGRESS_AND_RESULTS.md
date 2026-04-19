@@ -6,13 +6,15 @@
 **Dataset:** Defective vs Non-Defective Cup Images  
 **Balanced Test Set:** 138 images (69 defective, 69 non-defective)
 
-**Three training runs captured in this report:**
+**Training runs captured in this report:**
 1. **runs1** — macOS + Apple MPS (original pipeline build, 9 model families) — Sections 1–7
 2. **runs2** — Ubuntu + RTX 4090 CUDA (reproducibility audit, identical configs) — Section 8
 3. **runs3** — Ubuntu + RTX 4090 CUDA (GPU-aware tuning, bigger configs) — Section 9
-4. **Three-run summary & final takeaways** — Section 10
+4. **runs4** — Ubuntu + RTX 4090 CUDA (full root-pipeline rerun, clean aggregate, pre-YOLO-cleanup baseline) — Section 11
+5. **runs5** — Ubuntu CPU-only execution of the cleaned pipeline, still in progress as of April 19, 2026 23:05 +04 — Section 12
+6. **Runs1–3 summary & baseline takeaways** — Section 10
 
-**Environment:** runs1 Apple Silicon + MPS / Python 3.11 / PyTorch 2.11; runs2/runs3 Ubuntu + CUDA / RTX 4090 24 GB / Python 3.12.3 / PyTorch 2.11.0+cu130 / Ultralytics 8.4.39.
+**Environment:** runs1 Apple Silicon + MPS / Python 3.11 / PyTorch 2.11; runs2/runs3/runs4 Ubuntu + CUDA / RTX 4090 24 GB / Python 3.12.3 / PyTorch 2.11.0+cu130 / Ultralytics 8.4.39; runs5 is executing on the same Ubuntu repo snapshot but the active log reports `device=cpu` for the PyTorch training stages.
 
 ---
 
@@ -425,7 +427,7 @@ runs3 is the **tuning pass**: same dataset and code, new configs that exploit th
 
 ---
 
-## 10. Three-Run Summary
+## 10. Runs1–3 Summary
 
 ### 10.1 Headline F1 progression
 
@@ -461,3 +463,83 @@ With YOLO26n-cls at 100% on this test fold, the remaining useful experiments req
 - Grad-CAM/feature-map visualisations on the YOLO backbone for engineering-interpretability writeup
 
 None of these are required to answer the Assessment brief — the current three-run evidence already demonstrates that **a pretrained domain-relevant backbone beats classical, scratch-CNN, and transfer-learning families** on a small (<500 sample) balanced binary defect-classification task.
+
+---
+
+## 11. runs4 — Full CUDA Rerun Before YOLO Cleanup
+
+`runs4` is the first full execution of the repo-root `run_pipeline.py` on the Ubuntu + RTX 4090 stack. It re-ran the entire workflow from dataset build through final aggregation and became the baseline used to decide which pipeline cleanups were worth making before `runs5`.
+
+### 11.1 runs4 headline results
+
+YOLO rows in the aggregate intentionally leave F1 blank because the experiment stack records **top-1 accuracy**, not binary precision/recall/F1. For `runs4`, both YOLO variants reached perfect top-1 on the 138-image test fold.
+
+| Rank | Model | Accuracy | F1 | Notes |
+|---:|---|---:|---:|---|
+| 1 | **yolo26n-cls.pt** | **1.0000 top-1** | — | Perfect 138/138 top-1 |
+| 1 | **yolo26s-cls.pt** | **1.0000 top-1** | — | Same score as nano, heavier model |
+| 3 | **MobileNetV2-GELU (fine-tuned)** | 0.9710 | **0.9701** | Best non-YOLO result in the repo |
+| 4 | MobileNetV2-ReLU (fine-tuned) | 0.9638 | 0.9624 | Close second |
+| 5 | MobileNetV2-LeakyReLU (fine-tuned) | 0.9565 | 0.9545 | Strong third |
+| 6 | MLP random search | 0.9493 | 0.9466 | Best fully-connected model |
+| 7 | MobileNetV2-SELU (fine-tuned) | 0.9420 | 0.9385 | Still above all frozen baselines |
+| 8 | MobileNetV2-ReLU (frozen) | 0.9348 | 0.9313 | Best frozen transfer-learning run |
+
+### 11.2 What runs4 changed in the story
+
+1. **YOLO26s was redundant.** `runs4/final_report_recheck/all_results.csv` shows `yolo26n-cls.pt` and `yolo26s-cls.pt` both at `1.0000` top-1, so the larger `s` variant adds compute but no ranking value on this dataset.
+2. **The best non-YOLO result improved again.** `mobilenet_gelu` fine-tuned reached **0.9701 F1**, which is +1.84 points above the `runs1–runs3` best of `0.9517`.
+3. **The MLP path remained competitive.** `mlp_random_search` reached **0.9466 F1**, keeping the same broad ordering established earlier: YOLO > fine-tuned MobileNet > tuned MLP > classical HOG baselines > scratch CNN / optimiser demos.
+
+### 11.3 Issues revealed by runs4 and fixed before runs5
+
+- `train_yolo26_cls.py` was still using Ultralytics classification-time augmentation, even though the repo already performs offline augmentation. This was disabled before `runs5`.
+- Ultralytics was redirecting YOLO artefacts outside the local run folder. The YOLO training script was updated to copy artefacts back into the repo-local output tree.
+- `yolo26s` was removed from `run_pipeline.py`, and the retained YOLO step keeps `patience=15`.
+
+---
+
+## 12. runs5 — CPU Audit After Pipeline Cleanup (In Progress)
+
+`runs5` was launched after applying the `runs4` recommendations:
+
+- remove `yolo26s` from the pipeline
+- keep YOLO patience at `15`
+- disable Ultralytics online augmentation in `train_yolo26_cls.py`
+
+The repo-local `MPLCONFIGDIR` patch was added **after** `runs5` had already started, so the existing `runs5/pipeline.log` still contains the old Matplotlib writable-directory warning. Future pipeline runs and standalone plotting scripts now inherit the fixed cache path.
+
+As of **April 19, 2026 23:05 +04**, `runs5` has completed:
+
+- sklearn baselines
+- scratch CNN activation sweep
+- optimiser comparison
+- MLP random search
+- MobileNetV2 frozen sweep
+- MobileNetV2 fine-tuned `relu`, `elu`, and `gelu`
+
+It has **not yet completed**:
+
+- MobileNetV2 fine-tuned `selu` and `leaky_relu`
+- YOLO26n
+- cross-validation
+- final aggregation
+
+So the table below is a **snapshot of completed work**, not the final `runs5` ranking.
+
+### 12.1 Completed run5 snapshot vs runs4
+
+| Family | runs4 best F1 | runs5 current best F1 | Δ | Comment |
+|---|---:|---:|---:|---|
+| Sklearn baselines | 0.8346 (`hog_svm`) | 0.8346 (`hog_svm`) | 0.0000 | Bit-identical again |
+| Scratch CNN | 0.7302 (`cnn_selu`) | 0.7582 (`cnn_gelu`) | **+0.0281** | Small stochastic gain |
+| Optimiser comparison | 0.8472 (`adam`) | 0.8472 (`adam`) | 0.0000 | Bit-identical again |
+| MLP random search | 0.9466 | **0.9545** | **+0.0080** | Modest improvement |
+| MobileNetV2 frozen | **0.9313** (`relu`) | 0.9104 (`gelu`) | **−0.0208** | Weaker under CPU-only execution |
+| MobileNetV2 fine-tuned | **0.9701** (`gelu`) | 0.9545 (`relu`, partial) | **−0.0156** | Family incomplete, so not final |
+
+### 12.2 Interpretation so far
+
+1. **Deterministic families reproduce exactly.** The sklearn baselines and the optimiser-comparison MLP are numerically identical between `runs4` and the completed part of `runs5`, which is a good sanity check that the dataset snapshot and preprocessing path are stable.
+2. **The deep-learning families are where the drift lives.** The scratch CNN and MLP moved slightly, while the MobileNet families moved more. That matches the environment shift visible in the logs: `runs4` used CUDA on the RTX 4090, whereas `runs5` is currently executing the PyTorch stages on CPU.
+3. **The cleaned YOLO path still needs its actual evidence.** The meaningful `runs5` question is the upcoming YOLO stage, because that is where online augmentation was disabled and `yolo26s` was removed. Until that step and the final aggregate finish, `runs5` should be treated as an in-progress audit rather than a completed comparison run.

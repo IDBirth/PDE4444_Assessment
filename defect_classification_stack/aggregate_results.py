@@ -8,6 +8,10 @@ import argparse
 import json
 from pathlib import Path
 
+from mpl_config import configure_matplotlib_env
+
+configure_matplotlib_env()
+
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -117,7 +121,7 @@ def plot_comparison(df: pd.DataFrame, output_dir: Path) -> None:
     # have no F1), so the accuracy chart can look any of them up later.
     all_categories = df["category"].unique()
     categories     = plot_df["category"].unique()
-    cmap = plt.cm.get_cmap("tab10", max(len(all_categories), 1))
+    cmap = plt.get_cmap("tab10", max(len(all_categories), 1))
     cat_color = {c: cmap(i) for i, c in enumerate(all_categories)}
 
     fig, ax = plt.subplots(figsize=(11, max(6, len(plot_df) * 0.45)))

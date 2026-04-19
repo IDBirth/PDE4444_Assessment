@@ -1,5 +1,0 @@
-Fitting 1 folds for each of 12 candidates, totalling 12 fits
-Fitting 1 folds for each of 12 candidates, totalling 12 fits
-  model_name  accuracy  precision    recall        f1
-0    hog_svm  0.847826   0.800000  0.927536  0.859060
-1    hog_mlp  0.840580   0.783133  0.942029  0.855263

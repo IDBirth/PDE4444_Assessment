@@ -1,0 +1,7 @@
+{
+  "model_name": "cnn_leaky_relu",
+  "accuracy": 0.6159420289855072,
+  "precision": 0.5655737704918032,
+  "recall": 1.0,
+  "f1": 0.7225130890052355
+}

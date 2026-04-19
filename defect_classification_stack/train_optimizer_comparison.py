@@ -24,6 +24,10 @@ import json
 from pathlib import Path
 
 import cv2
+from mpl_config import configure_matplotlib_env
+
+configure_matplotlib_env()
+
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd

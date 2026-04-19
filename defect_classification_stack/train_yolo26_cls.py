@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import shutil
 from pathlib import Path
 
 import pandas as pd
@@ -15,6 +16,25 @@ from common import ensure_dir, infer_class_names, set_seed
 def find_metrics_csv(project_dir: Path) -> Path | None:
     candidates = sorted(project_dir.rglob("results.csv"))
     return candidates[0] if candidates else None
+
+
+def resolve_best_checkpoint(save_dir: Path) -> Path:
+    best_pt = save_dir / "weights" / "best.pt"
+    if not best_pt.exists():
+        raise FileNotFoundError(f"Expected trained checkpoint not found: {best_pt}")
+    return best_pt
+
+
+def copy_tree(src: Path, dst: Path) -> None:
+    dst.mkdir(parents=True, exist_ok=True)
+    for path in src.rglob("*"):
+        relative = path.relative_to(src)
+        target = dst / relative
+        if path.is_dir():
+            target.mkdir(parents=True, exist_ok=True)
+        else:
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(path, target)
 
 
 class NoAugClassificationTrainer(ClassificationTrainer):
@@ -31,6 +51,7 @@ def main() -> None:
     parser.add_argument("--epochs", type=int, default=30)
     parser.add_argument("--imgsz", type=int, default=224)
     parser.add_argument("--batch", type=int, default=32)
+    parser.add_argument("--patience", type=int, default=15)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--model", type=str, default="yolo26n-cls.pt")
     args = parser.parse_args()
@@ -55,6 +76,7 @@ def main() -> None:
         epochs=args.epochs,
         imgsz=args.imgsz,
         batch=args.batch,
+        patience=args.patience,
         project=str(output_dir),
         name="train",
         seed=args.seed,
@@ -62,7 +84,30 @@ def main() -> None:
         verbose=True,
     )
 
-    val_metrics = model.val(data=str(args.data_dir), split="test", imgsz=args.imgsz, batch=args.batch)
+    external_save_dir = Path(getattr(results, "save_dir", output_dir))
+    local_save_dir = output_dir / external_save_dir.name
+    if external_save_dir.exists() and external_save_dir.resolve() != local_save_dir.resolve():
+        copy_tree(external_save_dir, local_save_dir)
+        print(f"[INFO] copied YOLO artefacts to local run dir: {local_save_dir}")
+    elif external_save_dir.exists():
+        local_save_dir = external_save_dir
+
+    best_checkpoint = resolve_best_checkpoint(local_save_dir)
+
+    # Re-load the trained checkpoint and pin validation outputs to the local run
+    # directory. Without this, Ultralytics may fall back to a global classify/val-*
+    # path from user settings, which breaks reproducibility and can fail in
+    # restricted environments.
+    eval_model = YOLO(str(best_checkpoint))
+    val_metrics = eval_model.val(
+        data=str(args.data_dir),
+        split="test",
+        imgsz=args.imgsz,
+        batch=args.batch,
+        project=str(output_dir),
+        name="val_test",
+        exist_ok=True,
+    )
 
     summary = {
         "model_name": args.model,
@@ -70,7 +115,7 @@ def main() -> None:
         "top1": float(getattr(val_metrics, "top1", 0.0)),
         "top5": float(getattr(val_metrics, "top5", 0.0)),
         "fitness": float(getattr(val_metrics, "fitness", 0.0)),
-        "save_dir": str(getattr(results, "save_dir", output_dir)),
+        "save_dir": str(local_save_dir),
     }
 
     with (output_dir / "metrics.json").open("w", encoding="utf-8") as f:

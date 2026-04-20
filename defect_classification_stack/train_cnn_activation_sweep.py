@@ -214,6 +214,9 @@ def main() -> None:
     parser.add_argument("--data-dir",   required=True, type=Path)
     parser.add_argument("--output-dir", required=True, type=Path)
     parser.add_argument("--epochs",     type=int, default=20)
+    parser.add_argument("--patience",   type=int, default=4,
+                        help="Early-stop patience on val_loss (epochs). "
+                             "Set >= epochs to disable.")
     parser.add_argument("--batch-size", type=int, default=32)
     parser.add_argument("--img-size",   type=int, default=224)
     parser.add_argument("--seed",       type=int, default=42)
@@ -244,7 +247,7 @@ def main() -> None:
         best_val_loss = float("inf")
         best_state: dict = {}
         patience_counter = 0
-        patience = 4
+        patience = args.patience
 
         history: dict[str, list[float]] = {
             "train_loss": [], "val_loss": [],

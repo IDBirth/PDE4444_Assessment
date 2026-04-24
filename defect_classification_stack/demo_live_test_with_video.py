@@ -13,6 +13,7 @@
 from __future__ import annotations
 
 import argparse
+import ast
 import csv
 import json
 import os
@@ -208,24 +209,61 @@ class ModelPrediction:
     thresholded: bool
 
 
+_ACTIVATION_MAP: dict[str, type[nn.Module]] = {
+    "relu": nn.ReLU,
+    "elu": nn.ELU,
+    "gelu": nn.GELU,
+    "selu": nn.SELU,
+    "leaky_relu": nn.LeakyReLU,
+}
+
+
+class MLPModel(nn.Module):
+    def __init__(
+        self,
+        input_dim: int,
+        hidden_sizes: tuple[int, ...],
+        activation: str,
+        dropout: float,
+    ) -> None:
+        super().__init__()
+        act_cls = _ACTIVATION_MAP[activation]
+        layers: list[nn.Module] = [nn.Flatten(), nn.BatchNorm1d(input_dim)]
+        in_dim = input_dim
+        for hidden_size in hidden_sizes:
+            layers += [nn.Linear(in_dim, hidden_size), act_cls()]
+            if dropout > 0:
+                layers.append(nn.Dropout(dropout))
+            in_dim = hidden_size
+        layers.append(nn.Linear(in_dim, 1))
+        self.net = nn.Sequential(*layers)
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        return self.net(x).squeeze(1)
+
+
 class DemoModel:
     def __init__(self, model_path: Path, display_name: str | None = None) -> None:
         self.path = model_path
         self.display_name = display_name or model_path.stem
         self.model_type = detect_model_type(model_path)
         self.class_names = infer_class_names_for_model(model_path, self.model_type)
+        self._yolo: YOLO | None = None
+        self._mobilenet: nn.Module | None = None
+        self._mlp: MLPModel | None = None
+        self._transform: transforms.Compose | None = None
 
         if self.model_type == "yolo":
             self._yolo = YOLO(str(model_path))
-            self._mobilenet = None
-            self._transform = None
         elif self.model_type == "mobilenet":
-            self._yolo = None
             activation_name = detect_activation_from_path(model_path)
-            class_names = infer_class_names_from_report(model_path)
-            self.class_names = class_names
+            self.class_names = infer_class_names_from_report(model_path)
             self._mobilenet = build_mobilenet_model(activation_name, model_path)
-            self._transform = build_mobilenet_transform()
+            self._transform = build_mobilenet_transform(infer_mobilenet_img_size(model_path))
+        elif self.model_type == "mlp":
+            self.class_names = infer_class_names_from_report(model_path)
+            self._mlp, img_size = build_mlp_model_from_checkpoint(model_path)
+            self._transform = build_mlp_transform(img_size)
         else:
             raise ValueError(f"Unsupported model type: {self.model_type}")
 
@@ -243,12 +281,16 @@ class DemoModel:
                 for i, prob in enumerate(probs_tensor)
             }
         else:
-            assert self._mobilenet is not None
             assert self._transform is not None
             rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
             tensor = self._transform(rgb).unsqueeze(0).to(DEVICE)
             with torch.no_grad():
-                logit = self._mobilenet(tensor).squeeze(0)
+                if self.model_type == "mobilenet":
+                    assert self._mobilenet is not None
+                    logit = self._mobilenet(tensor).squeeze(0)
+                else:
+                    assert self._mlp is not None
+                    logit = self._mlp(tensor).squeeze(0)
                 positive_prob = float(torch.sigmoid(logit).item())
 
             negative_label, positive_label = self.class_names
@@ -277,29 +319,64 @@ class DemoModel:
         )
 
 
-def build_mobilenet_transform() -> transforms.Compose:
+_MOBILENET_FT_MARKERS = ("finetune", "iter3_mobilenet", "ft_")
+
+
+def infer_mobilenet_img_size(path: Path) -> int:
+    lower = "/".join(part.lower() for part in path.parts)
+    return 256 if any(marker in lower for marker in _MOBILENET_FT_MARKERS) else 224
+
+
+def build_mobilenet_transform(img_size: int = 224) -> transforms.Compose:
     mean = [0.485, 0.456, 0.406]
     std = [0.229, 0.224, 0.225]
     return transforms.Compose([
         transforms.ToPILImage(),
-        transforms.Resize((224, 224)),
+        transforms.Resize((img_size, img_size)),
         transforms.ToTensor(),
         transforms.Normalize(mean, std),
     ])
 
 
 def activation_module(name: str) -> nn.Module:
-    if name == "relu":
-        return nn.ReLU()
-    if name == "elu":
-        return nn.ELU()
-    if name == "gelu":
-        return nn.GELU()
-    if name == "selu":
-        return nn.SELU()
-    if name == "leaky_relu":
-        return nn.LeakyReLU()
-    raise ValueError(f"Unsupported activation: {name}")
+    try:
+        return _ACTIVATION_MAP[name]()
+    except KeyError as exc:
+        raise ValueError(f"Unsupported activation: {name}") from exc
+
+
+def build_mlp_model_from_checkpoint(checkpoint_path: Path) -> tuple[MLPModel, int]:
+    state = torch.load(checkpoint_path, map_location="cpu", weights_only=True)
+    input_dim = int(state["net.1.weight"].shape[0])
+    img_size = round((input_dim / 3) ** 0.5)
+
+    hp_path = checkpoint_path.parent / "best_hyperparameters.json"
+    if hp_path.exists():
+        hp = json.loads(hp_path.read_text(encoding="utf-8"))
+        hidden_sizes: tuple[int, ...] = ast.literal_eval(hp["hidden_sizes"])
+        activation = hp["activation"]
+        dropout = float(hp["dropout"])
+    else:
+        hidden_sizes = (256,)
+        activation = "elu"
+        dropout = 0.4
+
+    model = MLPModel(input_dim, hidden_sizes, activation, dropout)
+    model.load_state_dict(state, strict=True)
+    model.to(DEVICE)
+    model.eval()
+    return model, img_size
+
+
+def build_mlp_transform(img_size: int) -> transforms.Compose:
+    mean = [0.485, 0.456, 0.406]
+    std = [0.229, 0.224, 0.225]
+    return transforms.Compose([
+        transforms.ToPILImage(),
+        transforms.Resize((img_size, img_size)),
+        transforms.ToTensor(),
+        transforms.Normalize(mean, std),
+    ])
 
 
 def build_mobilenet_model(activation_name: str, checkpoint_path: Path) -> nn.Module:
@@ -355,7 +432,7 @@ def infer_class_names_from_report(path: Path) -> list[str]:
 
 
 def infer_class_names_for_model(path: Path, model_type: str) -> list[str]:
-    if model_type == "mobilenet":
+    if model_type in {"mobilenet", "mlp"}:
         return infer_class_names_from_report(path)
     return ["defective", "non_defective"]
 
@@ -373,12 +450,16 @@ def detect_model_type(path: Path) -> str:
     except Exception as exc:
         raise ValueError(f"Could not determine model type for {path}: {exc}") from exc
 
-    if isinstance(state, dict) and any(str(key).startswith("features.") for key in state.keys()):
-        return "mobilenet"
+    if isinstance(state, dict):
+        keys = [str(key) for key in state.keys()]
+        if any(key.startswith("net.") for key in keys):
+            return "mlp"
+        if any(key.startswith("features.") for key in keys):
+            return "mobilenet"
 
     raise ValueError(
-        "Unsupported checkpoint format. Expected a YOLO classification model or "
-        "a MobileNetV2 state_dict checkpoint."
+        "Unsupported checkpoint format. Expected a YOLO classification model, "
+        "a MobileNetV2 state_dict checkpoint, or an MLP state_dict checkpoint."
     )
 
 

@@ -100,14 +100,14 @@ export is part of the pipeline — the `.pt` checkpoints are the deliverable.
 taken in-situ on the inspection rig: **87 defective** (deformed,
 chipped, cracked, mis-moulded) and **9 non-defective**. The raw images
 live under
-[zeroq_cup_classification_scaffold/data/raw/](../zeroq_cup_classification_scaffold/data/raw/)
+[defect_classification_stack/data/raw/](data/raw/)
 in two per-class folders (`defective/`, `non_defective/`) and are the
 **only** human-labelled inputs into the system. Every downstream sample
 is synthetically derived from one of these 96 originals.
 
 | Raw defective (rig photograph) | Raw non-defective (rig photograph) |
 |:---:|:---:|
-| ![Raw defective sample](../zeroq_cup_classification_scaffold/data/raw/defective/deformed_ayan_20260328_120753.jpg) | ![Raw non-defective sample](../zeroq_cup_classification_scaffold/data/raw/non_defective/perfect_20260329_155936.jpg) |
+| ![Raw defective sample](data/raw/defective/deformed_ayan_20260328_120753.jpg) | ![Raw non-defective sample](data/raw/non_defective/perfect_20260329_155936.jpg) |
 | `deformed_ayan_20260328_120753.jpg` | `perfect_20260329_155936.jpg` |
 
 **Why the raw set is small and imbalanced.** The inspection rig only

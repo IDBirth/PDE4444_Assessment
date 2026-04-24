@@ -28,6 +28,10 @@ draw.io/
 *.rtfd/
 Main_Docs/.tmp_report*
 Main_Docs/__pycache__/
+defect_classification_stack/data/interim
+defect_classification_stack/data/processed
+
+
 
 zeroq_cup_classification_scaffold/data/**
 !zeroq_cup_classification_scaffold/data/

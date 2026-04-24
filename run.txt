@@ -91,27 +91,3 @@ cd /home/ubu/Desktop/Assessment
              top_models/03_mobilenet_selu_r3/model.pt \
              top_models/04_mlp_boost_r3/model.pt \
              top_models/05_mobilenet_elu_r1/model.pt
-
-
-Next:
---------------2:
-Final work, Update the readme with accordance with the /home/ubu/Desktop/Assessment/Assessment Details UPDATED.docx:
-
-1. Use the progress from
-/home/ubu/Desktop/Assessment/defect_classification_stack/PROGRESS_AND_RESULTS.md
-
-2. Make sure the work done is explained well in the readme, that can be understood by a Master level ML students
-
-3. make sure the readme has the Correct workflow and repeatability scrips in place
-
-4. Explain Baseline Sklearn fail
-
-5. Explain best mlp_random_search and how this was achived
-
-6. Explain how and why yolo26n-cls runs are better
-
-7. leave unknown URL likes to WWW.URL.COM for me to fill
-
-8. my details: Bilal Baslar M01055955, MSC Robotics at Middlesex Dubai, Course: Machine Learning for Engineers PDE4444
-
-if you go out of credit wait for approval

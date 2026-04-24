@@ -29,7 +29,7 @@ draw.io/
 Main_Docs/.tmp_report*
 Main_Docs/__pycache__/
 defect_classification_stack/data/interim
-defect_classification_stack/data/processed
+#defect_classification_stack/data/processed/
 
 
 
